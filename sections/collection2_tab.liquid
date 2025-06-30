@@ -1,0 +1,379 @@
+{% if section.blocks.size > 0 %}
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="//code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  {%- style -%}
+     .section-{{ section.id }}-padding {
+       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+     }
+
+     @media screen and (min-width: 750px) {
+       .section-{{ section.id }}-padding {
+         padding-top: {{ section.settings.padding_top }}px;
+         padding-bottom: {{ section.settings.padding_bottom }}px;
+       }
+     }
+     .collection-tabs-section .collage-wrapper-title {
+       text-align: center;
+     }
+     .collection-tabs-section .tabs-content img {
+       max-width: 100%;
+       height: auto;
+       object-fit: cover;
+     }
+     .collection-tabs-section .ui-widget.ui-widget-content {
+       border-radius: 0;
+       border: none;
+       padding: 0;
+       border: none;
+       gap: 30px;
+       background: transparent;
+       max-width: 100%;
+     }
+     .collection-tabs-section .ui-tabs .ui-tabs-panel {
+       padding: 0;
+       font-size: 0;
+       max-width: 100%;
+     }
+    .collection-tabs-section  .ui-tabs .ui-tabs-nav {
+       padding: 0;
+       border-radius: 0;
+       border: none;
+       background: none;
+       margin: 0 auto 30px;
+       display: flex;
+       justify-content: center;
+       flex-flow: wrap;
+       text-align: center;
+     }
+     .collection-tabs-section .ui-tabs .ui-tabs-nav li {
+       border: none;
+       background: none;
+       display: flex;
+       flex-flow: column;
+       opacity: 0.5;
+     }
+
+    .collection-tabs-section .ui-tabs .ui-tabs-nav li.ui-state-active {
+      opacity: 1;
+    }
+     .collection-tabs-section .ui-tabs .ui-tabs-nav li a {
+       cursor: pointer;
+     }
+     .collection-tabs-section .ui-accordion .ui-accordion-content {
+       width: auto;
+       border-radius: 0;
+       white-space: normal;
+       border: none;
+       background: none;
+        margin: 0 -15px;
+        padding: 1rem 0;
+       opacity: 0;
+       height: 0;
+
+     }
+     .collection-tabs-section .ui-accordion .ui-accordion-content.ui-accordion-content-active {
+       opacity: 1;
+       height: auto;
+     }
+     .collection-tabs-section .ui-widget-header .ui-icon {
+       display: none;
+     }
+     .collection-tabs-section .ui-widget-header .h3 {
+       display: flex;
+       justify-content: space-between;
+       color: #000;
+     }
+     .collection-tabs-section .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+       border-radius: 0;
+       background: none;
+       border: none;
+       text-transform: uppercase;
+       font-weight: bold;
+       letter-spacing: 0;
+     }
+    .collection-tabs-section  .ui-tabs .ui-tabs-nav li a {
+       background: #000;
+       border: none;
+     }
+     .collection-tabs-section .ui-widget-content a {
+       color: rgb(var(--color-foreground));
+     }
+     .collection-tabs-section .slick-slider {
+       max-width: 100%;
+     }
+
+     .collection-tabs-section .slick-slide {
+       padding: 0 15px;
+     }
+     @media(min-width: 750px){
+       .collection-tabs-section .tabs-content > h3 { display: none;}
+       .tabs-collections-accordion {
+         display: none;
+       }
+     }
+
+     @media(max-width: 749px){
+       .collection-tabs-section  .tabs-ui-nav {
+         display: none!important;
+       }
+
+       .tabs-collections {
+         display: none;
+       }
+     }
+
+    .collection-tabs-section  .ui-accordion .ui-accordion-header {
+      background: none;
+      color: inherit;
+      border-radius: 0;
+      border: none;
+      padding: 1rem 0;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0;
+      position: relative;
+    }
+
+    .collection-tabs-section  .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+      background: none;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .collection-tabs-section  .ui-accordion .ui-accordion-header .ui-accordion-header-icon:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      background: rgb(var(--color-foreground));
+    }
+    .collection-tabs-section  .ui-accordion .ui-accordion-header .ui-accordion-header-icon:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      display: block;
+      background: rgb(var(--color-foreground));
+    }
+
+      .collection-tabs-section  .ui-accordion .ui-accordion-header.ui-accordion-header-active .ui-accordion-header-icon:before {
+        display: none;
+      }
+  {%- endstyle -%}
+
+  <div class="color-{{ section.settings.color_scheme }} gradient isolate collection-tabs-section">
+    <div class="page-width section-{{ section.id }}-padding">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="collage-wrapper-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+          {{ section.settings.heading }}
+        </h2>
+      {%- endif -%}
+      <div id="{{- section.id -}}-tabs" class="tabs-collections">
+        {% assign tabs_content = '' %}
+        <ul class="tabs-ui-nav">
+          {% for block in section.blocks %}
+            {% if block.settings.collection != blank %}
+              {% assign col = block.settings.collection %}
+              <li>
+                <a href="#tabs--{{- block.id -}}">
+                  {{ block.settings.heading | default: col.title }}
+                </a>
+              </li>
+              {% capture tab_content %}
+                 <h3>{{ block.settings.heading }} </h3>
+                <div id="tabs--{{- block.id -}}" class="tab-content">
+                   <div class="slick-slider">
+                    {%- for product in col.products limit: 8 -%}
+                      <div>
+                        {% render 'card-product',
+                          card_product: product,
+                          media_aspect_ratio: 'adapt',
+                          image_shape: 'default',
+                          show_secondary_image: true,
+                          show_vendor: false,
+                          show_rating: false,
+                          skip_styles: true,
+                          section_id: section.id,
+                          quick_add: "none"
+                        %}
+                      </div>
+                     {%  endfor %}
+                  </div>
+                </div>
+            {% endcapture %}
+              {% assign tabs_content = tabs_content | append: tab_content %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <div class="tabs-content">
+          {{ tabs_content }}
+        </div>
+      </div>
+
+      <div id="{{- section.id -}}-accordion" class="tabs-collections-accordion">
+        {{ tabs_content }}
+      </div>
+      <script>
+        $( function() {
+          $("#{{- section.id -}}-tabs" ).tabs({
+             beforeActivate: function( event, ui ) {
+               $('.slick-slider').slick('refresh');
+             }
+          });
+          $("#{{- section.id -}}-accordion" ).accordion({
+            heightStyle: "content",
+            collapsible: true,
+            active: false,
+            beforeActivate: function( event, ui ) {
+               $('.slick-slider').slick('refresh');
+             }
+          });
+
+          $('.slick-slider').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            dots: false,
+            lazyLoad: 'ondemand',
+            arrows: false,
+            responsive: [
+            {
+              breakpoint: 750,
+              settings: {
+                slidesToShow: 2
+              }
+            }
+          ]
+          });
+
+        });
+      </script>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Collection Tabs",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Shop By Product",
+      "label": "Tabs Title"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "h2"
+        },
+        {
+          "value": "h1",
+          "label": "h1"
+        },
+        {
+          "value": "h0",
+          "label": "h0"
+        },
+        {
+          "value": "hxl",
+          "label": "hxl"
+        },
+        {
+          "value": "hxxl",
+          "label": "hxxl"
+        }
+      ],
+      "default": "h1",
+      "label": "heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "tab",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Step 1: Cleans",
+          "label": "Heading"
+        },
+         {
+          "type": "collection",
+          "id": "collection",
+          "label": "collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Tabs",
+      "blocks": [
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

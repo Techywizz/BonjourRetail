@@ -1,0 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick Shop",
+            "menu": "footer-shop"
+          }
+        },
+        "link_list_WDdgMW": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Bonjour Retail",
+            "menu": "footer-bonjour-retail"
+          }
+        },
+        "link_list_xYtAzD": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Support",
+            "menu": "footer-customer-service"
+          }
+        },
+        "link_list_47xjTD": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Policies",
+            "menu": "footer"
+          }
+        },
+        "image_7nECKp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-in-th-dimention-of-wt.png",
+            "image_width": 400,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "link_list",
+        "link_list_WDdgMW",
+        "link_list_xYtAzD",
+        "link_list_47xjTD",
+        "image_7nECKp"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ss_back_to_top_button_DBkBxj": {
+      "type": "ss-back-to-top-button",
+      "settings": {
+        "hide_on_mobile": false,
+        "show_when_precent_of_page": 30,
+        "pos": "right",
+        "bg_color": "#f4f2f2",
+        "border_color": "#cec5c5",
+        "arrow_color": "#333333",
+        "button_size": 54,
+        "arrow_size": 30,
+        "horizontal_dst_to_edge": 20,
+        "vertical_dst_to_edge": 20
+      }
+    },
+    "ss_wave_2_9pbCHA": {
+      "type": "ss-wave-2",
+      "settings": {
+        "wave_height": 30,
+        "wave_height_mobile": 30,
+        "wave_animation": true,
+        "wave_rotate": false,
+        "wave_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "ss_back_to_top_button_DBkBxj",
+    "ss_wave_2_9pbCHA"
+  ]
+}

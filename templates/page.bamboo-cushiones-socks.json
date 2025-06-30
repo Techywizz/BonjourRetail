@@ -1,0 +1,405 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_QLkmhd": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_HDgHPn": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Our Bamboo Socks",
+            "heading_size": "h1"
+          }
+        },
+        "text_KKjpp6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bamboo socks are made from special blend of 100% bamboo natural yarn, providing unbeatable comfort for both high-intensity activities and everyday wear, perfect for year-around use.</p>"
+          }
+        },
+        "button_ALH7Vw": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_HDgHPn",
+        "text_KKjpp6",
+        "button_ALH7Vw"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1740404407c358160d": {
+      "type": "apps",
+      "blocks": {
+        "slidy_clickable_banner_slider_free_slider_block_7yjzN9": {
+          "type": "shopify://apps/slidy-clickable-banner-slider/blocks/free-slider-block/2db0eda8-6e18-4816-bb87-464932d4f076",
+          "settings": {
+            "cb_is_boxed_layout": false,
+            "cs_auto_rotate": true,
+            "cs_slider_visual": "arrow",
+            "arrow_bg_color": "#FFFFFF",
+            "arrow_size": 20,
+            "cs_change_slides_speed": 5,
+            "image_size": "adapt",
+            "cs_desktop_image_1": "shopify://shop_images/BJ-Bamboo-socks-banner-2.jpg",
+            "cs_mobile_image_1": "shopify://shop_images/BJ-Bamboo-socks-post-2.jpg",
+            "cs_image_link_1": "",
+            "cs_desktop_image_2": "shopify://shop_images/BJ-Bamboo-socks-banner-1.jpg",
+            "cs_mobile_image_2": "shopify://shop_images/BJ-Bamboo-socks-post-1.jpg",
+            "cs_image_link_2": "",
+            "cs_image_link_3": "",
+            "cs_image_link_4": "",
+            "cs_image_link_5": "",
+            "cs_image_link_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "slidy_clickable_banner_slider_free_slider_block_7yjzN9"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_with_text_x8Pm7V": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_REg398": {
+          "type": "heading",
+          "settings": {
+            "heading": "#FeelTheDifference",
+            "heading_size": "h2"
+          }
+        },
+        "text_Gh7iUX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience the ultimate comfort with <strong>Bonjour Bamboo Socks</strong>—crafted from <strong>100% natural bamboo yarn</strong> for a <strong>5x softer feel than cotton</strong>. Designed to keep your feet <strong>fresh and odor-free for up to 7 days</strong>, these eco-friendly socks wick away moisture, ensuring all-day breathability and comfort. 🌿🧦 </p>",
+            "text_style": "body"
+          }
+        },
+        "button_3jQk8m": {
+          "type": "button",
+          "settings": {
+            "button_label": "Explore All",
+            "button_link": "shopify://collections/bamboo-socks",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_REg398",
+        "text_Gh7iUX",
+        "button_3jQk8m"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Socks-elements.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_gHhQJX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xE6wUV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-5.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jjRBmi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aBeKTT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ggHVj6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-4.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AJxB97": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-6.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_trMiXp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_xE6wUV",
+        "column_jjRBmi",
+        "column_aBeKTT",
+        "column_ggHVj6",
+        "column_AJxB97",
+        "column_trMiXp"
+      ],
+      "settings": {
+        "title": "Why choose our Bamboo Socks?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_kD4NCV": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop Bamboo Socks",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bamboo-socks",
+        "products_to_show": 20,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_UHj9gj": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_UPzFDx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/4_511a17aa-dbce-41a9-b6d5-a940e1f59624.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Fabj3p": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/3_b4494426-94e6-4074-998b-ff8861e46c0e.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RFbUCL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/5_ff8cdc4b-0122-4d53-8cf8-aae6dd396a97.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Vtc7x3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/2_125521e5-6d1c-47ea-9720-9c1112b9ccfd.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LftWcV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/1_31ca6ee3-e32c-46d3-afd8-4a640cd718dd.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UPzFDx",
+        "column_Fabj3p",
+        "column_RFbUCL",
+        "column_Vtc7x3",
+        "column_LftWcV"
+      ],
+      "settings": {
+        "title": "Available Colors",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_RXkaY7": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Vedi8e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Bamboo-socks_148535b0-e1b2-431e-9c12-a9de6205d34e.png",
+            "title": "Bamboo Cushioned Socks",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TzQHYW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/infographic-bamboo-socks2.jpg",
+            "title": "Bamboo Formal Socks",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yDmLUL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Compression-black.jpg",
+            "title": "Bamboo Compression Socks",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Vedi8e",
+        "column_TzQHYW",
+        "column_yDmLUL"
+      ],
+      "settings": {
+        "title": "Available Designs",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_QLkmhd",
+    "1740404407c358160d",
+    "image_with_text_x8Pm7V",
+    "multicolumn_gHhQJX",
+    "featured_collection_kD4NCV",
+    "multicolumn_UHj9gj",
+    "multicolumn_RXkaY7"
+  ]
+}

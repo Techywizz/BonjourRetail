@@ -1,0 +1,1252 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1740398519bcd29a39": {
+      "type": "apps",
+      "blocks": {
+        "slidy_clickable_banner_slider_free_slider_block_RQH8Ea": {
+          "type": "shopify://apps/slidy-clickable-banner-slider/blocks/free-slider-block/2db0eda8-6e18-4816-bb87-464932d4f076",
+          "settings": {
+            "cb_is_boxed_layout": true,
+            "cs_auto_rotate": true,
+            "cs_slider_visual": "dots",
+            "arrow_bg_color": "#ffffff",
+            "arrow_size": 20,
+            "cs_change_slides_speed": 5,
+            "image_size": "adapt",
+            "cs_desktop_image_1": "shopify://shop_images/banner1_1b096208-b6cb-4a3f-8db6-7e48ee929ce7.jpg",
+            "cs_mobile_image_1": "shopify://shop_images/1_09973414-12cb-4b51-a3b0-2eb2816d78b3.jpg",
+            "cs_image_link_1": "shopify://products/sprint-blaster-jogger-sports-socks",
+            "cs_desktop_image_2": "shopify://shop_images/banner_2_0d2d3897-6ea6-47a0-a3d0-85a343c07756.jpg",
+            "cs_mobile_image_2": "shopify://shop_images/2_56e441d3-0a29-4c6c-b477-cf0e725a787c.jpg",
+            "cs_image_link_2": "shopify://collections/women-gym-wear",
+            "cs_image_link_3": "",
+            "cs_image_link_4": "",
+            "cs_image_link_5": "",
+            "cs_image_link_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "slidy_clickable_banner_slider_free_slider_block_RQH8Ea"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "slideshow_2_TbFpVE": {
+      "type": "slideshow-2",
+      "blocks": {
+        "slide_PiiDeH": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Sheer_socks.png",
+            "mobile_image": "shopify://shop_images/Banner-2-mobile.jpg",
+            "image_link": "shopify://products/baby-cushion-socks-with-cute-prints-pack-of-4-bro7602",
+            "heading": "SHEER SOCKS",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_HJWpFQ": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Sale-Banner.jpg",
+            "mobile_image": "shopify://shop_images/invisible_socks.png",
+            "image_link": "shopify://products/baby-feather-lite-fur-socks-pack-of-4",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_PiiDeH",
+        "slide_HJWpFQ"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Men_c459fc63-dccd-4cd8-a753-0caab2123c1f.png",
+            "image_link": "shopify://collections/socks-for-men",
+            "title": "Socks",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/socks-for-men"
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/women_9e5ba6d9-c155-4dc8-9959-e4e5ad76a6d3.png",
+            "image_link": "shopify://collections/socks-for-women",
+            "title": "Apparel",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/socks-for-women"
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Kids_c2bf5b00-80fe-420e-9ed3-0b0e3e6c5e60.png",
+            "image_link": "shopify://collections/kids-socks",
+            "title": "Innerwear",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/kids-socks"
+          }
+        },
+        "column_eGVXMN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Exclusive.png",
+            "image_link": "shopify://collections/exclusive-collection",
+            "title": "Accessories",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3",
+        "column_eGVXMN"
+      ],
+      "settings": {
+        "title": "<em><strong>Discover</strong></em> Product Category",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "featured_collection1": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media (min-width: 990px) {slider-component {display: flex; flex-direction: column-reverse; margin-top: -6rem !important; } .slider-buttons {justify-content: flex-end; } .collection__title {padding-right: 20rem; }}"
+      ],
+      "settings": {
+        "title": "<em><strong>Slip into</strong></em> our Best Sellers",
+        "heading_size": "h1",
+        "description": "<p>Comfort & Style That Define</p>",
+        "show_description": true,
+        "description_style": "subtitle",
+        "collection": "best-selling-products",
+        "products_to_show": 10,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_ECPVXk": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_iYmJDF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Bamboo_Socks_b28f7706-ab8a-4dcb-b4a0-1fd23477d4b8.png",
+            "image_link": "shopify://collections/bamboo-socks",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ni7Xa7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/formal_socks_1.png",
+            "image_link": "shopify://collections/formal-socks-for-men",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pA7aPE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Sports_socks_ef668bf0-0514-4e64-baa1-d72079ceab33.png",
+            "image_link": "https://www.bonjourretail.com/collections/men-sports-socks",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_kbVxGY": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/elite_84728eaa-d1ae-4e30-9cfd-3bdc99ab1c93.png",
+            "image_link": "shopify://collections/elite",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DYVCzd": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/invisible_socks_23dbb42d-1081-419d-aad4-d14bd0c76841.png",
+            "image_link": "shopify://collections/buy-loafer-socks",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aqrBnV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/hankerchiefs_43266c9e-9e05-4670-a193-7f6cb855e17b.png",
+            "image_link": "shopify://collections/men-handkerchiefs",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MaK8Qn": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image_link": "",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_iYmJDF",
+        "column_ni7Xa7",
+        "column_pA7aPE",
+        "column_kbVxGY",
+        "column_DYVCzd",
+        "column_aqrBnV",
+        "column_MaK8Qn"
+      ],
+      "settings": {
+        "title": "<em><strong>Shop Trending </strong></em>Socks<strong> </strong>Categories",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
+    "video_slider_KNkzH7": {
+      "type": "video-slider",
+      "blocks": {
+        "testimonial_VGVbTE": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/loafer socks (1).mp4"
+          }
+        },
+        "testimonial_jHdWRL": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/elite socks video.mp4"
+          }
+        },
+        "testimonial_PPq84h": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/BJ INFLUENCER VIDEO.mp4"
+          }
+        },
+        "testimonial_7efwJi": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/Snapinsta.app_video_An9jvdET9hxcZQvfHid0Zhgxyb1y6YcyjTzbODN9dzMrpKArMBUFNIS-KjHeC8TTriPMQJVeNq7yRA9VmTwKlFmj.mp4"
+          }
+        },
+        "testimonial_c3JCVM": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/Snapinsta.app_10000000_401660078162875_3499750048695270826_n.mp4"
+          }
+        },
+        "testimonial_C7taPn": {
+          "type": "testimonial",
+          "settings": {
+            "video": "shopify://files/videos/JULYREEL002.mov"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_VGVbTE",
+        "testimonial_jHdWRL",
+        "testimonial_PPq84h",
+        "testimonial_7efwJi",
+        "testimonial_c3JCVM",
+        "testimonial_C7taPn"
+      ],
+      "settings": {
+        "title": "<em><strong>Trustworthiness</strong></em> in Action",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_9WdbwV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_HBHkGB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Tshirt.png",
+            "image_link": "https://www.bonjourretail.com/collections/men-tshirts",
+            "title": "",
+            "text": "",
+            "link_label": "T Shirt",
+            "link": "https://www.bonjourretail.com/collections/men-tshirts"
+          }
+        },
+        "column_iYnCLx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/6.png",
+            "image_link": "https://www.bonjourretail.com/collections/men-short-kurta",
+            "title": "",
+            "text": "",
+            "link_label": "Short Kurta",
+            "link": "https://www.bonjourretail.com/collections/men-short-kurta"
+          }
+        },
+        "column_eD8tUe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/7.png",
+            "image_link": "https://www.bonjourretail.com/collections/men-lowers",
+            "title": "",
+            "text": "",
+            "link_label": "Lowers",
+            "link": "https://www.bonjourretail.com/collections/men-lowers"
+          }
+        },
+        "column_kn6icL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/8.png",
+            "image_link": "https://www.bonjourretail.com/collections/men-shorts",
+            "title": "",
+            "text": "",
+            "link_label": "Shorts",
+            "link": "https://www.bonjourretail.com/collections/men-shorts"
+          }
+        },
+        "column_dhPrnm": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Untitled-3_0001_DSC01511final.w.w.jpg",
+            "image_link": "",
+            "title": "",
+            "text": "",
+            "link_label": "Mask",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HBHkGB",
+        "column_iYnCLx",
+        "column_eD8tUe",
+        "column_kn6icL",
+        "column_dhPrnm"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info {margin-top: 4px !important; padding-top: 0 !important;}",
+        ".multicolumn-card__image-wrapper {margin-bottom: 0 !important;}"
+      ],
+      "settings": {
+        "title": "<em><strong>Shop Men's</strong></em> Apparel<strong> </strong>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "174039878305c9095b": {
+      "type": "apps",
+      "blocks": {
+        "slidy_clickable_banner_slider_free_slider_block_XWdyKD": {
+          "type": "shopify://apps/slidy-clickable-banner-slider/blocks/free-slider-block/2db0eda8-6e18-4816-bb87-464932d4f076",
+          "settings": {
+            "cb_is_boxed_layout": false,
+            "cs_auto_rotate": true,
+            "cs_slider_visual": "arrow",
+            "arrow_bg_color": "#ffffff",
+            "arrow_size": 20,
+            "cs_change_slides_speed": 5,
+            "image_size": "adapt",
+            "cs_desktop_image_1": "shopify://shop_images/banners_62b99b33-f2ba-49fe-af58-8f4b2a857470.png",
+            "cs_mobile_image_1": "shopify://shop_images/mobile_gym_banner_1.png",
+            "cs_image_link_1": "https://www.bonjourretail.com/collections/women-gym-wear",
+            "cs_image_link_2": "",
+            "cs_image_link_3": "",
+            "cs_image_link_4": "",
+            "cs_image_link_5": "",
+            "cs_image_link_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "slidy_clickable_banner_slider_free_slider_block_XWdyKD"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "featured_collection_3UQ6KQ": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Sports Bra",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "women-sports-bra",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_ypBWkG": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_C4fk4w": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/invisible_socks_2.png",
+            "image_link": "shopify://collections/women-shorts",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3DNBT3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/leggings.png",
+            "image_link": "shopify://collections/women-leggings",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cxEEqU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/invisible_socks_e4a22bb0-9a5d-4991-8949-99d62838f7ab.png",
+            "image_link": "shopify://collections/womens-lower",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8M8LeM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Palazzos.png",
+            "image_link": "shopify://collections/women-plazzos",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pVpUXb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/leggings_2.png",
+            "image_link": "shopify://collections/women-blouses",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mYQTNr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Track_pant_c78b1e0d-ab54-499b-80b0-41ce96e5f7f7.png",
+            "image_link": "shopify://collections/women-track-suits",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_C4fk4w",
+        "column_3DNBT3",
+        "column_cxEEqU",
+        "column_8M8LeM",
+        "column_pVpUXb",
+        "column_mYQTNr"
+      ],
+      "settings": {
+        "title": "<em><strong>Shop Women's</strong></em> Apparel",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custome_slideshow_mQC9md": {
+      "type": "custome-slideshow",
+      "blocks": {
+        "slide_cHPRPH": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/banners.png",
+            "mobile_image": "shopify://shop_images/mobile_gym_banner.png",
+            "image_link": "shopify://products/athleisure-printed-shorts-for-women-vm8001"
+          }
+        }
+      },
+      "block_order": [
+        "slide_cHPRPH"
+      ],
+      "disabled": true,
+      "settings": {
+        "autoplay": true,
+        "autoplay_speed": 3000
+      }
+    },
+    "multicolumn_6UVWC3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_h7wD9C": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/armshield_2cbf189c-dca6-4904-b220-b8634cda0bcd.png",
+            "image_link": "shopify://collections/arm-shield",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bAVexa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Women_Tights.png",
+            "image_link": "shopify://collections/women-tights",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xLaBa7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/brief_22455ba3-a14f-40cc-94ff-fafa247c0a24.png",
+            "image_link": "shopify://collections/women-cycling-shorts",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RgLFTD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/sling_bag_e18d0988-f451-4551-b9f7-b1fde150f5cc.png",
+            "image_link": "shopify://collections/sling-bag",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_3rtxY4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/W_BELTS.png",
+            "image_link": "shopify://collections/women-belts",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HmH3Ri": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/belts.png",
+            "image_link": "shopify://collections/buy-men-belts",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_h7wD9C",
+        "column_bAVexa",
+        "column_xLaBa7",
+        "column_RgLFTD",
+        "column_3rtxY4",
+        "column_HmH3Ri"
+      ],
+      "settings": {
+        "title": "<em><strong>Must Have</strong></em> Accessories",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "View All",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_4w8erM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_ibkDNi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/brief.png",
+            "image_link": "shopify://collections/mens-inner-wear",
+            "title": "Men's Innerwear",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/mens-inner-wear"
+          }
+        },
+        "column_ngDz7r": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Panties.png",
+            "image_link": "shopify://collections/women-panties",
+            "title": "Women's Panties",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/women-panties"
+          }
+        },
+        "column_gUQeyn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/vest_2.png",
+            "image_link": "shopify://collections/men-innerwear-vests",
+            "title": "Men's Vests",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/men-innerwear-vests"
+          }
+        },
+        "column_BJpdHh": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ladies_thermal.png",
+            "image_link": "shopify://collections/women-thermals",
+            "title": "Women's Thermal",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/women-thermals"
+          }
+        },
+        "column_8QNp8c": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/thermal.png",
+            "image_link": "shopify://collections/buy-men-thermals",
+            "title": "Men's Thermal",
+            "text": "",
+            "link_label": "",
+            "link": "shopify://collections/buy-men-thermals"
+          }
+        }
+      },
+      "block_order": [
+        "column_ibkDNi",
+        "column_ngDz7r",
+        "column_gUQeyn",
+        "column_BJpdHh",
+        "column_8QNp8c"
+      ],
+      "custom_css": [
+        ".multicolumn-card__info {margin-top: 4px !important; padding-top: 0 !important;}",
+        ".multicolumn-card__image-wrapper {margin-bottom: 0 !important;}"
+      ],
+      "settings": {
+        "title": "<em><strong>Top Drawer</strong></em> Essentials",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "circle",
+        "columns_desktop": 5,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "View All",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1740485220aac09294": {
+      "type": "apps",
+      "blocks": {
+        "slidy_clickable_banner_slider_free_slider_block_dcDcY8": {
+          "type": "shopify://apps/slidy-clickable-banner-slider/blocks/free-slider-block/2db0eda8-6e18-4816-bb87-464932d4f076",
+          "settings": {
+            "cb_is_boxed_layout": false,
+            "cs_auto_rotate": true,
+            "cs_slider_visual": "arrow",
+            "arrow_bg_color": "#ffffff",
+            "arrow_size": 20,
+            "cs_change_slides_speed": 5,
+            "image_size": "adapt",
+            "cs_desktop_image_1": "shopify://shop_images/Tights_1920_x_600_px_1920_x_550_px.jpg",
+            "cs_image_link_1": "shopify://products/head-to-toe-destress-duo-limited-edition",
+            "cs_image_link_2": "",
+            "cs_image_link_3": "",
+            "cs_image_link_4": "",
+            "cs_image_link_5": "",
+            "cs_image_link_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "slidy_clickable_banner_slider_free_slider_block_dcDcY8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "image_banner_eGXkNn": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_LaNMDe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bamboo Socks Collection",
+            "heading_size": "h2"
+          }
+        },
+        "text_KrLJQM": {
+          "type": "text",
+          "settings": {
+            "text": "Compression | Cushioned | Solids",
+            "text_style": "caption-with-letter-spacing"
+          }
+        }
+      },
+      "block_order": [
+        "heading_LaNMDe",
+        "text_KrLJQM"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/BJ-Bamboo-socks-banner-1.jpg",
+        "image_2": "shopify://shop_images/BJ-Bamboo-socks-post-1.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "collection_list_QdRAbP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_bkhnrE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bamboo-compression-socks"
+          }
+        },
+        "featured_collection_FaAFBc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bamboo-socks"
+          }
+        },
+        "featured_collection_az46fB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bamboo-performance-socks"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_bkhnrE",
+        "featured_collection_FaAFBc",
+        "featured_collection_az46fB"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-3",
+        "show_view_all": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_iABrAQ": {
+      "type": "multirow",
+      "blocks": {
+        "row_XrnBVf": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/MP_Rating_yellow_1.png",
+            "caption": "Trusted by 20M+ Happy Customers",
+            "heading": "Crafted for Comfort, Loved by You!",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_XrnBVf"
+      ],
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_PqmPGE": {
+      "type": "multirow",
+      "blocks": {
+        "row_4er9Yi": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Store_layout_2.png",
+            "caption": "Visit Us Today!",
+            "heading": "Feel the Comfort, Just Walk In",
+            "text": "<p>Discover quality craftsmanship and timeless style with every step you take.</p>",
+            "button_label": "Find Nearby Stores",
+            "button_link": "https://www.bonjourretail.com/pages/store-locator"
+          }
+        },
+        "row_wj9XFd": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/corporate.png",
+            "caption": "Reliable Partner for",
+            "heading": "Bulk & Corporate Orders",
+            "text": "<p>Looking for a trusted supplier for bulk orders or corporate needs? We offers seamless solutions with a commitment to quality, reliability, and excellence. Let’s collaborate and scale together.</p>",
+            "button_label": "Contact Us",
+            "button_link": "https://www.bonjourretail.com/pages/corporate-gifts"
+          }
+        }
+      },
+      "block_order": [
+        "row_4er9Yi",
+        "row_wj9XFd"
+      ],
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "174477728177c58f82": {
+      "type": "apps",
+      "blocks": {
+        "slidy_clickable_banner_slider_free_slider_block_Uj3q4x": {
+          "type": "shopify://apps/slidy-clickable-banner-slider/blocks/free-slider-block/2db0eda8-6e18-4816-bb87-464932d4f076",
+          "settings": {
+            "cb_is_boxed_layout": false,
+            "cs_auto_rotate": true,
+            "cs_slider_visual": "arrow",
+            "arrow_bg_color": "#ffffff",
+            "arrow_size": 20,
+            "cs_change_slides_speed": 5,
+            "image_size": "adapt",
+            "cs_desktop_image_1": "shopify://shop_images/Blinkit_products.png",
+            "cs_mobile_image_1": "shopify://shop_images/blinkit_mobile.png",
+            "cs_image_link_1": "https://blinkit.com/brand/bonjour/425",
+            "cs_image_link_2": "",
+            "cs_image_link_3": "",
+            "cs_image_link_4": "",
+            "cs_image_link_5": "",
+            "cs_image_link_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "slidy_clickable_banner_slider_free_slider_block_Uj3q4x"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "ss_instafeed_2_8Mwc7c": {
+      "type": "ss-instafeed-2",
+      "blocks": {
+        "slide_AmKTKf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/news_18_6c046729-e2d7-4752-8828-5ad285f58850.png",
+            "url": ""
+          }
+        },
+        "slide_VVyxDh": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/images_7be16cfc-7200-4d90-8c88-373745f96941.png",
+            "url": ""
+          }
+        },
+        "slide_kWNPa7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/images_2.png",
+            "url": ""
+          }
+        },
+        "slide_9AEAdG": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/quint_3b2451df-5e76-444b-929b-ef5ba388fd73.png",
+            "url": ""
+          }
+        },
+        "slide_BXmeLt": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/business_of_fashion_bof_logo.jpg",
+            "url": ""
+          }
+        },
+        "slide_ngY3Km": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/styleworld_d548fc02-9a4f-4dde-8de9-48a2fd173a7a.png",
+            "url": ""
+          }
+        },
+        "slide_aVHG48": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/local_samosa_f7f60d25-cab1-4e72-819f-1854a3e8248c.jpg",
+            "url": ""
+          }
+        },
+        "slide_UhUQNm": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/INC42_84447db8-41f8-4d26-87b3-03947de45c0c.png",
+            "url": ""
+          }
+        },
+        "slide_wC7frz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/HZ_cc0bcfd7-444d-4e16-84d3-8d77781b03d1.png",
+            "url": ""
+          }
+        },
+        "slide_CFDgdg": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IG_ad06a78b-0b32-45f9-ade7-90b476c91446.png",
+            "url": ""
+          }
+        },
+        "slide_RRMwX8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/AR_3d4e79e7-f2c1-4fb3-ac42-db2f90900dd2.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_AmKTKf",
+        "slide_VVyxDh",
+        "slide_kWNPa7",
+        "slide_9AEAdG",
+        "slide_BXmeLt",
+        "slide_ngY3Km",
+        "slide_aVHG48",
+        "slide_UhUQNm",
+        "slide_wC7frz",
+        "slide_CFDgdg",
+        "slide_RRMwX8"
+      ],
+      "settings": {
+        "top": "",
+        "top_custom": false,
+        "top_font": "josefin_sans_n4",
+        "top_size": 13,
+        "top_height": 130,
+        "top_align": "center",
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 40,
+        "heading_height": 130,
+        "heading_align": "left",
+        "heading_mt": 0,
+        "subheading": "",
+        "subheading_custom": false,
+        "subheading_font": "josefin_sans_n4",
+        "subheading_size": 16,
+        "subheading_height": 130,
+        "subheading_align": "center",
+        "subheading_mt": 12,
+        "slider_mt": 16,
+        "slider_row": "6",
+        "slider_row_mobile": "3",
+        "slider_gap": 60,
+        "slider_gap_mobile": 26,
+        "autoplay": false,
+        "autoplay_speed": 3,
+        "nav_size": 25,
+        "nav_size_mobile": 25,
+        "hide_nav": false,
+        "hide_nav_mobile": false,
+        "image_radius": 0,
+        "top_color": "#54483c",
+        "heading_color": "#746661",
+        "subheading_color": "#aba49d",
+        "nav_btn_bg": "#54483c",
+        "nav_btn_hover_bg": "#54483c",
+        "nav_border": "#c2b7ac",
+        "nav_border_hover": "#e69e6c",
+        "nav_icon": "#e69e6c",
+        "nav_hover_icon": "#ffffff",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "17392805844af3f031": {
+      "type": "apps",
+      "blocks": {
+        "gsc_instagram_feed_instafeed_yKhnwF": {
+          "type": "shopify://apps/gsc-instagram-feed/blocks/instafeed/96970b1b-b770-454f-b16b-51f47e1aa4ed",
+          "settings": {
+            "widget_id": "GSC-DnBcviQksoFqnIa"
+          }
+        }
+      },
+      "block_order": [
+        "gsc_instagram_feed_instafeed_yKhnwF"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "featured_blog_DPGB7Q": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "1740398519bcd29a39",
+    "slideshow_2_TbFpVE",
+    "multicolumn",
+    "featured_collection1",
+    "multicolumn_ECPVXk",
+    "video_slider_KNkzH7",
+    "multicolumn_9WdbwV",
+    "174039878305c9095b",
+    "featured_collection_3UQ6KQ",
+    "multicolumn_ypBWkG",
+    "custome_slideshow_mQC9md",
+    "multicolumn_6UVWC3",
+    "multicolumn_4w8erM",
+    "1740485220aac09294",
+    "image_banner_eGXkNn",
+    "collection_list_QdRAbP",
+    "multirow_iABrAQ",
+    "multirow_PqmPGE",
+    "174477728177c58f82",
+    "ss_instafeed_2_8Mwc7c",
+    "17392805844af3f031",
+    "featured_blog_DPGB7Q"
+  ]
+}

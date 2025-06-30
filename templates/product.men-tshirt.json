@@ -1,0 +1,555 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "best_seller_WbDCgH": {
+          "type": "best-seller",
+          "settings": {}
+        },
+        "rating_XaijYk": {
+          "type": "rating",
+          "settings": {}
+        },
+        "sku_8Tr9GA": {
+          "type": "sku",
+          "settings": {
+            "text_style": "uppercase"
+          }
+        },
+        "custom_liquid_J8n6YH": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "custom_liquid_4mh7MB": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>"
+          }
+        },
+        "variant_picker_8n6gVQ": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "popup_CeWKU4": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "Shipping",
+            "page": "shipping-policy"
+          }
+        },
+        "quantity_selector_fFH8qe": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "popup_K8cJzw": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "Size Chart",
+            "page": "sizechart-men-socks"
+          }
+        },
+        "buy_buttons_EJnWiH": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "icon_with_text_UJmyY4": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "check_mark",
+            "heading_1": "Get ₹250 off on First Purchase*, <a href=\"/pages/offers-term-and-conditions\" target=\"_blank\" title=\"Offers- Term and Conditions\"><em>view more</em></a>",
+            "icon_2": "price_tag",
+            "heading_2": "Extra ₹20 Off on Prepaid Order",
+            "icon_3": "truck",
+            "heading_3": "Free Shipping over ₹399"
+          }
+        },
+        "complementary_tQQkNY": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Product features",
+            "icon": "check_mark",
+            "content": "<p>Cotton spandex mix<br/>polyester mix<br/>Nylon Mix</p>",
+            "page": "product-features"
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Materials and care",
+            "icon": "box",
+            "content": "",
+            "page": "materials-and-care"
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Merchandising tips",
+            "icon": "check_mark",
+            "content": "",
+            "page": "merchandising-tips"
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "collapsible_tab_3YHyQw": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Size Guide",
+            "icon": "ruler",
+            "content": "",
+            "page": "sizechart-men-socks"
+          }
+        }
+      },
+      "block_order": [
+        "best_seller_WbDCgH",
+        "rating_XaijYk",
+        "sku_8Tr9GA",
+        "custom_liquid_J8n6YH",
+        "title",
+        "price",
+        "custom_liquid_4mh7MB",
+        "variant_picker_8n6gVQ",
+        "popup_CeWKU4",
+        "quantity_selector_fFH8qe",
+        "popup_K8cJzw",
+        "buy_buttons_EJnWiH",
+        "icon_with_text_UJmyY4",
+        "complementary_tQQkNY",
+        "description",
+        "collapsible-row-1",
+        "collapsible-row-0",
+        "collapsible-row-2",
+        "share",
+        "collapsible_tab_3YHyQw"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_b7e6Dc": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<body>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css\" rel=\"stylesheet\">\n  <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap\" rel=\"stylesheet\">\n  <style>\n    body {\n      font-family: 'jost', sans-serif;\n      background-color: #fff;\n      margin: 0;\n      padding: 40px 20px;\n    }\n\n    h2, .wash-title {\n      color: #111;\n      font-weight: 800;\n      margin-bottom: 24px;\n    }\n\n    h2 {\n      font-size: 28px;\n    }\n\n    .cards {\n      display: flex;\n      gap: 16px;\n      overflow-x: auto;\n      scroll-behavior: smooth;\n      padding-bottom: 16px;\n      scroll-snap-type: x mandatory;\n      -webkit-overflow-scrolling: touch;\n    }\n\n    .card {\n      min-width: 260px;\n      height: 340px;\n      border-radius: 16px;\n      overflow: hidden;\n      background-size: cover;\n      background-position: center;\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-end;\n      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);\n      transition: transform 0.3s ease;\n      scroll-snap-align: start;\n      flex: 0 0 auto;\n    }\n\n    .card:hover {\n      transform: translateY(-6px);\n    }\n\n    .card-content {\n      padding: 20px;\n      background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 100%);\n      color: #fff;\n      text-align: center;\n    }\n\n    .card h3 {\n      font-size: 15px;\n      color: #ffffff;\n      margin: 0 0 6px;\n    }\n\n    .card p {\n      font-size: 14px;\n      margin: 0;\n    }\n\n    .badges {\n      display: flex;\n      flex-wrap: wrap;\n      gap: 12px;\n      margin: 24px 0;\n      align-items: center;\n    }\n\n    .badge {\n      display: flex;\n      align-items: center;\n      gap: 8px;\n      padding: 8px 16px;\n      border: 1px solid #ccc;\n      border-radius: 20px;\n      font-size: 14px;\n      color: #111;\n    }\n\n    .badge img {\n      width: 16px;\n      height: 16px;\n      opacity: 0.7;\n    }\n\n    .wash-section {\n      padding: 20px 0;\n    }\n\n    .wash-title {\n      font-size: 30px;\n      text-align: center;\n    }\n\n    .manufacture-title {\n      font-size: 30px;\n      text-align: center;\n    }\n    .wash-box {\n      border: 1px solid #ddd;\n      border-radius: 12px;\n      padding: 25px 20px;\n      display: grid;\n      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));\n      gap: 10px 5px;\n      text-align: center;\n      background-color: off white;\n    }\n\n    .wash-item {\n      font-size: 16px;\n      line-height: 1.2;\n      color: #111;\n    }\n\n    .wash-item i {\n      font-size: 20px;\n      margin-bottom: 4 px;\n    }\n\n    .popular-links {\n      font-family: 'Poppins', sans-serif;\n    }\n\n    .popular-links h3 {\n      color: black;\n    }\n\n    .popular-links a {\n      text-decoration: underline;\n      color: black;\n    }\n\n    @media (max-width: 600px) {\n      h2 {\n        font-size: 22px;\n      }\n\n      .card {\n        min-width: 220px;\n        height: 300px;\n      }\n\n      .card-content {\n        padding: 16px;\n      }\n\n      .card h3 {\n        font-size: 16px;\n      }\n\n      .card p {\n        font-size: 13px;\n      }\n\n      .wash-title {\n        font-size: 25px;\n      }\n      .manufacture-title {\n      font-size: 22px;\n      \n    }\n      .wash-box {\n        grid-template-columns: repeat(2, 1fr);\n        gap: 20px 10px;\n      }\n\n      .badge {\n        font-size: 13px;\n        padding: 6px 12px;\n      }\n    }\n  </style>\n\n\n\n  <h2>Key Highlights</h2>\n  <div class=\"cards\">\n    <div class=\"card\" style=\"background-image: url('https://cdn.shopify.com/s/files/1/0159/2272/4918/files/Artboard_1_copy_55d0f8bd-baea-4452-9e13-54ef1bd74d79.png?v=1745473988');\">\n      <div class=\"card-content\">\n        <h3 style=\"font-color: #fffff\">All-Day Breathability</h3>\n        <p>Stay cool and comfortable</p>\n      </div>\n    </div>\n    <div class=\"card\" style=\"background-image: url('https://cdn.shopify.com/s/files/1/0159/2272/4918/files/Artboard_1_copy_2_e8cc5bf5-f498-47d1-ad33-a51b46b1327d.png?v=1745473989');\">\n      <div class=\"card-content\">\n        <h3>No Shrink, No Surprises</h3>\n        <p>Washes well, fits like day one.</p>\n      </div>\n    </div>\n    <div class=\"card\" style=\"background-image: url('https://cdn.shopify.com/s/files/1/0159/2272/4918/files/Artboard_1_ee557914-7800-45fc-929f-442dbc0cfeec.png?v=1745473989');\">\n      <div class=\"card-content\">\n        <h3>Luxury-Dyed Finish</h3>\n        <p>Rich tones with a premium touch.</p>\n      </div>\n    </div>\n    <div class=\"card\" style=\"background-image: url('https://cdn.shopify.com/s/files/1/0159/2272/4918/files/Artboard_1_copy_3_276078ca-ac34-41de-a96a-4d6ca1d6417f.jpg?v=1745473988');\">\n      <div class=\"card-content\">\n        <h3>Made for Warm Weather</h3>\n        <p>Lightweight feel, designed to beat the heat.</p>\n      </div>\n    </div>\n  </div>\n<div><br></div>\n  <div class=\"fabric-line\">\n   <marquee> 100% Super Combed Cotton | Half Sleeve | Round Neck | Label Free For All Day Comfort</marquee>\n  </div>\n\n  <div class=\"badges\">\n    <div class=\"badge\">\n<img src=\"https://img.icons8.com/ios-filled/50/clock.png\" alt=\"All Day Wear\"> All Day Wear</div>\n<div class=\"badge\">\n<img src=\"https://img.icons8.com/ios-filled/50/clock.png\" alt=\"All Day Wear\"> All Day Wear</div>\n    <div class=\"badge\">\n<img src=\"https://img.icons8.com/ios-filled/50/suitcase.png\" alt=\"Travel Ready\"> Travel</div>\n   <div class=\"badge\">\n<img src=\"https://img.icons8.com/ios-filled/50/suitcase.png\" alt=\"Travel Ready\"> Travel</div>\n   <div class=\"badge\">\n<img src=\"https://img.icons8.com/ios-filled/50/suitcase.png\" alt=\"Travel Ready\"> Travel</div>\n   <div class=\"badge\">\n<img src=\"https://img.icons8.com/ios-filled/50/suitcase.png\" alt=\"Travel Ready\"> Travel</div>\n  </div>\n\n  <div class=\"wash-section\">\n    <h3 class=\"wash-title\">Washing Instructions</h3>\n    <div class=\"wash-box\">\n      <div class=\"wash-item\">\n<i class=\"fas fa-temperature-low\"></i><div>Gentle wash<br>40°C</div>\n</div>\n      <div class=\"wash-item\">\n<i class=\"fas fa-ban\"></i><div>Do not bleach</div>\n</div>\n      <div class=\"wash-item\">\n<i class=\"fas fa-sync-alt\"></i><div>Do not wring</div>\n</div>\n      <div class=\"wash-item\">\n<i class=\"fas fa-tshirt\"></i><div>Tumble dry<br>low</div>\n</div>\n      <div class=\"wash-item\">\n<i class=\"fas fa-times-circle\"></i><div>Do not dry<br>clean</div>\n</div>\n      <div class=\"wash-item\">\n<i class=\"fas fa-retweet\"></i><div>Wash inside<br>out with like<br>colours</div>\n</div>\n    </div>\n  </div>\n<div>\n    <div class=\"fabric-line\">\n   <h3 class=\"manufacture-title\">Manufacturing & Seller Info</h3><p style=\"text-align: center;\"><strong>Manufactured/Packaged By:</strong><br>\n Zonac Knitting Machines Pvt. Limited, <br>Plot No. 18-19, Ecotech Extension 1, Kasna, Greater Noida, 201308<br>\nCIN:U74899DL1988PTC030908\n<br><br>\n <strong>Marketed & Sold by:</strong><br>\n Bonjour Retail,<br> Plot No.D-1, Site B Block A, Surajpur, Dist., Greater Noida, 201307<br>\nCustomer Care Number :\n +91-9711611690<br><div class=\"badges\">\n    <div class=\"badge\">\n<p>Country of Origin :</p><img src=\"https://img.icons8.com/?size=200&id=32584&format=png\" alt=\"India\"> INDIA</div>\n  </div></p>\n \n</body>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_NCcaw4": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_YGr768": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bonjour – Where Comfort Meets Quality, Every Day.",
+            "heading_size": "h2"
+          }
+        },
+        "text_8H9ydH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From <a href=\"/collections/frontpage\" target=\"_blank\" title=\"Home page\"><strong>premium socks</strong></a> to <strong>stylish apparel</strong> and <a href=\"/collections/accessories\" target=\"_blank\" title=\"Accessories\"><strong>accessories</strong></a>, every product from Bonjour is crafted with the finest materials to deliver <strong>exceptional comfort</strong>, <strong>long-lasting durability</strong>, and <strong>timeless style</strong>. Whether you're at work, at play, or unwinding at home, Bonjour is designed to support you <strong>through every moment</strong> of your day, with products built for <strong>every season and every occasion</strong>.</p>"
+          }
+        },
+        "button_dTpeht": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YGr768",
+        "text_8H9ydH",
+        "button_dTpeht"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "slideshow_Da8DXM": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_brcje7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Boiler-banner_31123f4c-768b-4fc9-b202-5a2211fef475.jpg",
+            "image_link": "",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_brcje7"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": ""
+      }
+    },
+    "collapsible_content_7QdPrP": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_YfWaN7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Premium Quality, Crafted for Comfort",
+            "icon": "eye",
+            "row_content": "<p>\"Experience the Perfect Blend of Comfort and Durability – Made with the India's finest yarns.\"<br/>→ At Bonjour, we use high-quality fabrics and innovative production techniques to deliver durable products that feel as good as they look, ensuring comfort with every wear.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QGqyJE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "A Legacy of Excellence Since 1988",
+            "icon": "eye",
+            "row_content": "<p>\"38 Years of Expertise – Trusted by Millions Across the Globe.\"<br/>→ With over three decades of experience, We have been at the forefront of designing and manufacturing premium socks and apparel, making us a trusted name in both India and international markets.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4PbYD6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Designed for Every Lifestyle",
+            "icon": "eye",
+            "row_content": "<p>We Manufactures from Everyday Essentials to Statement Pieces – <strong>We Have You Covered</strong>.\"<br/>→ Whether it's athletic wear, formal attire, or casual comfort, Bonjour offers a wide range of products designed to fit seamlessly into your lifestyle, for every occasion and season.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_B6cjRy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Sustainable & Ethical Choices",
+            "icon": "eye",
+            "row_content": "<p>At Bonjour, we are dedicated to sustainability by using eco-friendly materials and processes that prioritize both quality and the environment, making us your go-to brand for stylish yet responsible products.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_YfWaN7",
+        "collapsible_row_QGqyJE",
+        "collapsible_row_4PbYD6",
+        "collapsible_row_B6cjRy"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Why choose Us?",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_4Wjktx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fAmrQd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/men_men.jpg",
+            "image_link": "",
+            "title": "For Men",
+            "text": "<p><strong>Step into Comfort and Style</strong> – <a href=\"/collections/frontpage\" target=\"_blank\" title=\"Home page\">socks</a>, <a href=\"/collections/men-s-apparel\" target=\"_blank\" title=\"MEN'S APPAREL\">apparel</a>, <a href=\"/collections/mens-inner-wear\" target=\"_blank\" title=\"MEN'S INNERWEAR\">innerwear</a> and accessories are made just for men who want to feel great all day long. Soft, stylish, and built to last, we’ve got everything from <a href=\"/collections/men-sports-socks\" target=\"_blank\" title=\"MEN SPORTS SOCKS\"><strong>sporty</strong> socks</a> to <strong>dressy</strong> styles!</p>",
+            "link_label": "Explore",
+            "link": "https://www.bonjourretail.com/collections/for-men"
+          }
+        },
+        "column_9NCDdM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Women_socks_Pinterest_OctArtboard_1_copy_2.jpg",
+            "image_link": "",
+            "title": "Women",
+            "text": "<p><strong>Comfort and Style for Every Moment</strong> – <a href=\"/collections/socks-for-women\" target=\"_blank\" title=\"WOMEN'S SOCKS\">women socks</a>, <a href=\"/collections/women-tights\" target=\"_blank\" title=\"WOMEN TIGHTS\">tights</a>, and <a href=\"/collections/buy-womens-apparel-online\" target=\"_blank\" title=\"WOMEN'S APPAREL\">apparel</a> are designed to keep women feeling amazing. Whether you're dressing up or staying cozy.</p>",
+            "link_label": "Explore",
+            "link": "https://www.bonjourretail.com/collections/women-socks-and-apparel"
+          }
+        },
+        "column_Jxbrp4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/kids_427x_61e288d7-4489-431b-bf51-62ec96195ff7.jpg",
+            "image_link": "",
+            "title": "Kids",
+            "text": "<p><strong>Fun, Soft, and Comfy </strong>– Bonjour has the coolest socks and clothes for kids! Soft, colorful, and comfy, our socks and clothes keep you feeling awesome every day!</p>",
+            "link_label": "Explore",
+            "link": "https://www.bonjourretail.com/collections/kids-socks-and-apparel"
+          }
+        }
+      },
+      "block_order": [
+        "column_fAmrQd",
+        "column_9NCDdM",
+        "column_Jxbrp4"
+      ],
+      "settings": {
+        "title": "Explore Categories",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Related Products",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "heading": "Recently Viewed"
+      }
+    },
+    "custom_liquid_LfzmEy": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<body>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><div style=\"font-family: 'Poppins', sans-serif;\">\n  <h2 style=\"font-weight: bold; color: black;\">\n<style>\nbody\n{\n    @media (max-width: 600px) {\n      h2 {\n        font-size: 22px;\n      }\n\n}</style>\n<strong>Popular Searches</strong></h2>\n  <p>\n    <a href=\"https://www.bonjourretail.com/collections/men-tshirts\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men T-Shirts</a> |\n    <a href=\"https://www.bonjourretail.com/collections/men-short-kurta\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men Short Kurta</a> |\n    <a href=\"https://www.bonjourretail.com/collections/buy-men-jackets\" style=\"text-decoration:  underline; font-size: 15; color: black;\">Men Jackets</a> |\n    <a href=\"https://www.bonjourretail.com/collections/buy-men-sweatshirts\" style=\"text-decoration: underline;  font-size: 15; color: black;\">Men Sweatshirts</a> |\n    <a href=\"https://www.bonjourretail.com/collections/men-lowers\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men Lowers</a> |\n    <a href=\"https://www.bonjourretail.com/collections/men-shorts\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men Shorts</a> |\n    <a href=\"https://www.bonjourretail.com/collections/mens-lounge-wear\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men's Lounge Wear</a></p>\n</div>\n  <div style=\"font-family: 'Poppins', sans-serif;\">\n    <p><a href=\"https://www.bonjourretail.com/collections/mens-inner-wear\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men's Inner Wear</a> |\n    <a href=\"https://www.bonjourretail.com/collections/men-sports-cap\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men Sports Cap</a> |\n    <a href=\"https://www.bonjourretail.com/collections/arm-shield/Arm-Sleeves\" style=\"text-decoration: underline; font-size: 15; color: black;\">Arm Sleeves</a> |\n    <a href=\"https://www.bonjourretail.com/products/baked-apple-round-neck-half-seleeve-t-shirt-for-men\" style=\"text-decoration: underline; font-size: 15; color: black;\">Baked Apple T-Shirt</a> |\n    <a href=\"https://www.bonjourretail.com/pages/belts\" style=\"text-decoration: underline; font-size: 15; color: black;\">Belts</a> |\n    <a href=\"https://www.bonjourretail.com/collections/sling-bag/Cross-Body-Sling-Bag\" style=\"text-decoration: underline; font-size: 15; color: black;\">Cross Body Sling Bag</a> |\n    <a href=\"https://www.bonjourretail.com/collections/foldable-travel-bags\" style=\"text-decoration: underline; font-size: 15; color: black;\">Foldable Travel Bags</a> |\n    <a href=\"https://www.bonjourretail.com/collections/bamboo-socks\" style=\"text-decoration: underline; font-size: 15; color: black;\">Bamboo Socks</a></p>\n  </div>\n  <div style=\"font-family: 'Poppins', sans-serif;\">\n    <p><a href=\"https://www.bonjourretail.com/collections/elite\" style=\"text-decoration: underline; font-size: 15; color: black;\">Elite Collection</a> |\n    <a href=\"https://www.bonjourretail.com/collections/formal-socks-for-men\" style=\"text-decoration: underline; font-size: 15; color: black;\">Formal Socks for Men</a> |\n    <a href=\"https://www.bonjourretail.com/collections/men-sports-socks\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men Sports Socks</a> |\n    <a href=\"https://www.bonjourretail.com/collections/men-loafer-socks\" style=\"text-decoration: underline; font-size: 15; color: black;\">Men Loafer Socks</a> |\n    <a href=\"https://www.bonjourretail.com/collections/ankle-men-socks\" style=\"text-decoration: underline; font-size: 15; color: black;\">Ankle Socks for Men</a> |\n    <a href=\"https://www.bonjourretail.com/collections/socks-for-men\" style=\"text-decoration: underline; font-size: 15; color: black;\">Socks for Men</a>\n  </p>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_EKyERV": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_tWEGcy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Bonjour?",
+            "icon": "none",
+            "row_content": "<p>Bonjour is a leading brand specializing in <strong>premium socks, apparel, and accessories</strong> for men, women, and kids. With over <strong>38 years of experience</strong>, we are known for our <strong>high-quality products, innovative designs, and unmatched comfort</strong>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qXbDaM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What makes Bonjour socks different from others?",
+            "icon": "none",
+            "row_content": "<p>Bonjour socks are made with <strong>premium fabrics such as mercerised cotton, modal, natural bamboo, and marino wool </strong>to ensure <strong>softness, durability, and all day comfort</strong>. <br/>-Distinct features like <strong>seamless toe closures</strong>, <strong>snug fit</strong>, and <strong>breathability in products</strong> make them a perfect choice for daily wear.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7VQaLF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer socks for different occasions?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! We have a variety of socks, including <strong>formal socks, sports socks, casual socks, invisible socks</strong>, and more to match every need.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wF8cxM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What other products does Bonjour offer?",
+            "icon": "none",
+            "row_content": "<p>Apart from socks, Bonjour offers <strong>handkerchiefs, tights, leggings, arm shields, gloves, beanies, caps, and other accessories</strong> for men, women, and kids.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FXKaYe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the delivery charges?",
+            "icon": "none",
+            "row_content": "<p>We offer free shipping on orders above 399.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CFtpFX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I contact Bonjour for any queries?",
+            "icon": "none",
+            "row_content": "<p>ou can reach us via:<br/>📧 <strong>Email:</strong> brcc@bonjourgroup.net<br/>📞 <strong>Call/WhatsApp:</strong> +91 9711611690<br/>💬 <strong>Live Chat:</strong> Available on our website</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qzhYy3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to deliver my order?",
+            "icon": "none",
+            "row_content": "<p>Orders are usually delivered within <strong>3-7 business days</strong>, depending on your location.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6PTcrn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should I wash and care for my socks?",
+            "icon": "none",
+            "row_content": "<p>For <strong>longer-lasting</strong> socks:</p><ul><li>Wash in <strong>cold water</strong></li><li>Avoid <strong>harsh detergents and bleach</strong></li><li>Air dry instead of using a dryer</li></ul>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_tWEGcy",
+        "collapsible_row_qXbDaM",
+        "collapsible_row_7VQaLF",
+        "collapsible_row_wF8cxM",
+        "collapsible_row_FXKaYe",
+        "collapsible_row_CFtpFX",
+        "collapsible_row_qzhYy3",
+        "collapsible_row_6PTcrn"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-4",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_b7e6Dc",
+    "rich_text_NCcaw4",
+    "slideshow_Da8DXM",
+    "collapsible_content_7QdPrP",
+    "multicolumn_4Wjktx",
+    "related-products",
+    "recently-viewed",
+    "custom_liquid_LfzmEy",
+    "collapsible_content_EKyERV"
+  ]
+}

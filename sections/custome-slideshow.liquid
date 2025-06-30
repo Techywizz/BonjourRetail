@@ -1,0 +1,111 @@
+{% schema %}
+{
+  "name": "Custom Slideshow",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable auto-play",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "autoplay_speed",
+      "label": "Auto-play speed (ms)",
+      "default": 3000
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
+        },
+         {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slideshow",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+<div class="custom-slideshow">
+  <div class="slides-container">
+    {% for block in section.blocks %}
+      <div class="slide">
+        <picture>
+          <source media="(max-width: 767px)" srcset="{{ block.settings.mobile_image | img_url: 'master' }}">
+          <source media="(min-width: 768px)" srcset="{{ block.settings.desktop_image | img_url: 'master' }}">
+          <img src="{{ block.settings.desktop_image | img_url: 'master' }}" alt="Slide">
+        </picture>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .custom-slideshow {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .slide picture, .slide img {
+    width: 100%;
+    display: block;
+  }
+</style>
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    var autoplay = {{ section.settings.autoplay | json }};
+    var autoplaySpeed = {{ section.settings.autoplay_speed }};
+
+    $('.slides-container').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      autoplay: autoplay,
+      autoplaySpeed: autoplaySpeed,
+      prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+      nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+          }
+        }
+      ]
+    });
+  });
+</script>

@@ -1,0 +1,464 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "sku_8Tr9GA": {
+          "type": "sku",
+          "settings": {
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "rating_XaijYk": {
+          "type": "rating",
+          "settings": {}
+        },
+        "variant_picker_8n6gVQ": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "square"
+          }
+        },
+        "popup_K8cJzw": {
+          "type": "popup",
+          "settings": {
+            "text": "Size Chart",
+            "page": "free-size-chart-socks"
+          }
+        },
+        "popup_CeWKU4": {
+          "type": "popup",
+          "settings": {
+            "text": "Shipping",
+            "page": "shipping-policy"
+          }
+        },
+        "quantity_selector_fFH8qe": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "icon_with_text_HGH4f7": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "star",
+            "heading_1": "<a href=\"/collections/men-handkerchiefs\" target=\"_blank\" title=\"MEN'S HANDKERCHIEFS\">Handkerchiefs</a> | <a href=\"/collections/elite\" target=\"_blank\" title=\"Premium Socks collection\">Premium Socks</a>",
+            "icon_2": "eye",
+            "heading_2": "",
+            "icon_3": "truck",
+            "heading_3": ""
+          }
+        },
+        "buy_buttons_EJnWiH": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "icon_with_text_ERXc6F": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "stopwatch",
+            "image_1": "shopify://shop_images/finest_yarn.png",
+            "heading_1": "Finest Yarn",
+            "icon_2": "leaf",
+            "image_2": "shopify://shop_images/soft_top_welt_2.png",
+            "heading_2": "Soft Top Welt",
+            "icon_3": "truck",
+            "image_3": "shopify://shop_images/Untitled_design_2.png",
+            "heading_3": "Made in India"
+          }
+        },
+        "keep_on_hold_product_wishlist_b8MQYz": {
+          "type": "shopify://apps/keep-on-hold/blocks/product_wishlist/eebd66b0-e055-4422-ba94-59c15cd250db",
+          "settings": {
+            "caption": "Add to Wishlist",
+            "icon": "icon_heart.svg",
+            "color": "#262626",
+            "size": 24
+          }
+        },
+        "text_aXCWCh": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "🔶 EXCLUSIVE OFFERS 🔶",
+            "text_style": "subtitle"
+          }
+        },
+        "icon_with_text_DRtidB": {
+          "type": "icon-with-text",
+          "disabled": true,
+          "settings": {
+            "layout": "vertical",
+            "icon_1": "fire",
+            "heading_1": "<a href=\"/collections/buy-men-thermals\" target=\"_blank\" title=\"MEN THERMALS\"><strong>Buy 1 get 1 on Thermals</strong></a>",
+            "icon_2": "paw_print",
+            "heading_2": "",
+            "icon_3": "price_tag",
+            "heading_3": ""
+          }
+        },
+        "complementary_tQQkNY": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "portrait",
+            "enable_quick_add": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product features",
+            "icon": "clipboard",
+            "content": "<ul><li>Long and soft elastic to improve vascular flow and imprint free day-long comfort.</li><li>Cotton with modal to increase softness.</li><li>Extra padded sole to protect your feet from injury.</li><li>Soft Toe seam to reduce skin irritation.</li><li>Seamless design to prevent irritation and blisters.</li><li>Non-restrictive fit for improved blood circulation.</li><li>Anti-bacterial properties for hygiene and freshness.</li><li>Soft, breathable fabric for all-day comfort.</li><li>Durable and suitable for daily use.</li></ul>",
+            "page": "product-features"
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Washing Tips",
+            "icon": "washing",
+            "content": "<ul><li>Wash in cold water on a gentle cycle or hand wash.</li><li>Use a mild detergent; avoid bleach or harsh chemicals.</li><li>Air dry to maintain softness and elasticity.</li><li>Avoid wringing or tumble drying.</li><li>Wash separately to prevent lint from other fabrics.</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_nVj9Ur": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Additional Info",
+            "icon": "clipboard",
+            "content": "<p>ZONAC KNITTING MACHINES PVT. LTD.</p><p>Plot No. 18-19, Ecotech Extension 1, Kasna, Greater Noida, 201308<br/><strong>CIN :</strong>U74899DL1988PTC030908<br/><br/><strong>Marketed & Sold by:</strong> <br/>BONJOUR RETAIL</p><p>Plot No.D-1, Site B Block A , UPSIDC Site B, Surajpur, Surajpur Industrial Area, Dist., Greater Noida, 201307<br/><br/><strong>Country of Origin : </strong>India<br/><strong>Customer Care Number : </strong>+91-9711611690<br/><strong>& email </strong>: brcc@bonjourgroup.net</p>",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "sku_8Tr9GA",
+        "title",
+        "price",
+        "rating_XaijYk",
+        "variant_picker_8n6gVQ",
+        "popup_K8cJzw",
+        "popup_CeWKU4",
+        "quantity_selector_fFH8qe",
+        "icon_with_text_HGH4f7",
+        "buy_buttons_EJnWiH",
+        "icon_with_text_ERXc6F",
+        "keep_on_hold_product_wishlist_b8MQYz",
+        "text_aXCWCh",
+        "icon_with_text_DRtidB",
+        "complementary_tQQkNY",
+        "description",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "collapsible_tab_nVj9Ur",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 20,
+        "padding_bottom": 32
+      }
+    },
+    "rich_text_fGJbjV": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WGYXmr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Diabetic and Health Socks  – Ideal for Sensitive Feet",
+            "heading_size": "h2"
+          }
+        },
+        "text_BqAzED": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Take extra care of your feet with our scientifically designed <strong>diabetic and health socks</strong>. Made for maximum comfort and foot protection, these socks feature seamless construction to prevent irritation and reduce pressure on sensitive areas. They improve blood circulation with a non-restrictive fit and keep your feet fresh with anti-bacterial properties. Perfect for those with diabetes or anyone needing extra foot care, these socks are soft, breathable, and ideal for daily wear. Available in various sizes, they ensure a snug fit while prioritizing your health and comfort.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WGYXmr",
+        "text_BqAzED"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Related Products",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    },
+    "multirow_YMTEd7": {
+      "type": "multirow",
+      "blocks": {
+        "row_qMaR8G": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Men-diabetic-socks.png",
+            "caption": "Extra wide",
+            "heading": "Diabetic Socks",
+            "text": "<ul><li>Gentle, non-binding fit</li><li>Crafted from breathable fabrics</li><li>Apply little to no pressure to avoid restricted blood flow</li><li>Helps protect against blisters and infections</li><li>Can be worn over the foot cast</li></ul>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_MWtPKp": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/BRO220-D-PO3-Bonjoue-health-socks4.jpg",
+            "caption": "Breathable & Comfortable",
+            "heading": "Health Socks",
+            "text": "<p>These socks are produced with soft cotton materials that feel great on the skin. The ankle section and extra stretch soft top of the foot both have air ventilator construction designed. The heel and toe seams are carefully woven to not irritate the feet and the sole has added cushioning for optimal comfort.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_6MY9hi": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/BRO220-A-PO3-Bonjoue-health-socks.jpg",
+            "caption": "Ideal for below kind of issue",
+            "heading": "",
+            "text": "<ul><li>Diabetics </li><li>Neuropathy</li><li>Edema</li><li>Sensitive Feet</li><li>Circulatory issue</li><li>Wide Calves</li></ul>",
+            "button_label": "Explore Collection",
+            "button_link": "shopify://collections/men-health-and-diabetic-socks"
+          }
+        }
+      },
+      "block_order": [
+        "row_qMaR8G",
+        "row_MWtPKp",
+        "row_6MY9hi"
+      ],
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "scheme-5",
+        "row_color_scheme": "scheme-4",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "heading": "Recently Viewed"
+      }
+    },
+    "collection_tab_xytkXG": {
+      "type": "Collection_tab",
+      "blocks": {
+        "tab_K4Xiin": {
+          "type": "tab",
+          "settings": {
+            "collection": "bamboo-compression-socks",
+            "viewall": false
+          }
+        },
+        "tab_wXBbXL": {
+          "type": "tab",
+          "settings": {
+            "collection": "bamboo-performance-socks",
+            "viewall": false
+          }
+        }
+      },
+      "block_order": [
+        "tab_K4Xiin",
+        "tab_wXBbXL"
+      ],
+      "settings": {
+        "title": "Related Categories",
+        "useslider": true
+      }
+    },
+    "collapsible_content_EKyERV": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_wF8cxM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are diabetic and health socks?",
+            "icon": "none",
+            "row_content": "<p>These are specially designed socks that provide extra comfort, reduce pressure, and improve circulation for sensitive feet.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tWEGcy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who should wear these socks?",
+            "icon": "none",
+            "row_content": "<p>They are ideal for people with diabetes, sensitive feet, or those looking for enhanced foot care.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_jkkbTE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are these socks seamless?",
+            "icon": "none",
+            "row_content": "<p>Yes, they are designed with smooth or seamless construction to prevent irritation.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3KJJ8f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do they help with blood circulation?",
+            "icon": "none",
+            "row_content": "<p>Yes, these socks are made with non-restrictive designs to improve circulation.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_T7iQWQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are they anti-bacterial?",
+            "icon": "none",
+            "row_content": "<p>Yes, they feature anti-bacterial properties to keep feet clean and prevent infections.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_XYmkxG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are they suitable for all-day wear?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! They are made to provide comfort and support throughout the day.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_B4D4a9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do they come in different sizes?",
+            "icon": "none",
+            "row_content": "<p>These are available in only one size ( Free Size : UK 7-11 ) to ensure a comfortable fit for everyone.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kD3aRH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I use these socks daily?",
+            "icon": "none",
+            "row_content": "<p>Yes, they are durable and perfect for everyday wear, ensuring your feet stay healthy.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_wF8cxM",
+        "collapsible_row_tWEGcy",
+        "collapsible_row_jkkbTE",
+        "collapsible_row_3KJJ8f",
+        "collapsible_row_T7iQWQ",
+        "collapsible_row_XYmkxG",
+        "collapsible_row_B4D4a9",
+        "collapsible_row_kD3aRH"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-5",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_fGJbjV",
+    "related-products",
+    "multirow_YMTEd7",
+    "recently-viewed",
+    "collection_tab_xytkXG",
+    "collapsible_content_EKyERV"
+  ]
+}

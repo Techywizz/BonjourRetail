@@ -1,0 +1,408 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_MTCDww": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_wkzURN": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h1"
+          }
+        },
+        "text_8YKAne": {
+          "type": "text",
+          "settings": {
+            "text": "<em>Manufacturing socks,</em> Since 1988",
+            "text_style": "body"
+          }
+        },
+        "buttons_c66MaH": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Men Socks",
+            "button_link_1": "shopify://collections/socks-for-men",
+            "button_style_secondary_1": true,
+            "button_label_2": "Women Socks",
+            "button_link_2": "shopify://collections/women-socks-and-apparel",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_wkzURN",
+        "text_8YKAne",
+        "buttons_c66MaH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_8302_755dc031-0132-4efc-9dde-ddd8a30d8925.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "image_with_text_ffGF7G": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YWHxcm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Proud to be the first Indian multinational socks brand",
+            "heading_size": "h2"
+          }
+        },
+        "text_aFjkng": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>History</strong><br/> Bonjour was founded in 1988, with a goal of establishing itself as a one-stop solution for socks, tights, and handkerchiefs, catering to a wide clientele with 100% customer satisfaction.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_GR46P6": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YWHxcm",
+        "text_aFjkng",
+        "button_GR46P6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/2_cb6d383b-7f28-4755-af01-b87e51faeac0.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "rich_text_ehzUwH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nxNmJa": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Bonjour",
+            "heading_size": "h1"
+          }
+        },
+        "text_6H34aE": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>\"Bonjour is a trusted brand name for men’s socks, handkerchiefs, tights, stockings, undergarments, underskirt shorts for school kids. With a mission to spread its services to the b2b segment, bonjour manufactures socks for various renowned brands and enjoys over a decade long business association with our business partners.\"</em></p>"
+          }
+        },
+        "button_iRMDnc": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nxNmJa",
+        "text_6H34aE",
+        "button_iRMDnc"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_WF8xQw": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kiDAKL": {
+          "type": "heading",
+          "settings": {
+            "heading": "BONJOUR - <em>Since 1988</em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_TC97zK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bonjour’s reputation is based on its quality and services, with a vision of making it a socks brand that is recognition-worthy. A team of qualified and well-trained marketing executives cater to every dealer to provide customized services.<br/></p><h2>Global Presence</h2><p>The popularity of the organization has been to such a great extent that their reach has touched the <strong>United States, Gulf countries, and other European markets</strong>, thereby, recognizing the brand.<br/></p><h2>Network</h2><p>Bonjour, today serves more than 16+,000 retailers and over 180+ distributors PAN India and is known as the most versatile and the largest socks manufacturer.<br/></p><h2> Technologies & Capabilities</h2><p><br/>Bonjour is the only brand which uses imported patented technologies to provide the most durable products to its consumers. <strong>Anti-microbial treatment </strong>is used which provides long lasting freshness, anti-odor and bacteria free products. </p><ul><li>500+ Computerized Knitting Machines </li><li> 20 ROSSO Linking Machines & and 25 Hand Linked Machines  </li><li> Own Silicon Printing Machines </li><li>N9 SILVER TECHNOLOGY<br/><br/>Products manufactured under highly integrated process with 400 state-of-the-art, fully computerized socks knitting machines providing capacities of <strong>100,000 pairs/day</strong></li></ul><h2>Quality Assurance</h2><p>Committed to be innovative and maintaining consistent quality.</p><p>Our staff stays abreast of all technical changes with continuous training through bi-annual visits from our technical partners to our plants.</p><p>Our products have been tested in various laboratories by our esteemed buyers as per international standards across accredited labs</p><h2>Stores</h2><p>Bonjour has expanded to 16 Exclusive Brand Outlets, spread over Delhi-NCR, Dehradun, and Ambala.</p>"
+          }
+        },
+        "button_DLVBB7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Store Locator",
+            "button_link": "shopify://pages/store-locator",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kiDAKL",
+        "text_TC97zK",
+        "button_DLVBB7"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 32
+      }
+    },
+    "image_banner_XbWQR8": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_x3k9Ld": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_BGzmhG": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_GBUdy7": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_x3k9Ld",
+        "text_BGzmhG",
+        "buttons_GBUdy7"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/brand_story.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "multicolumn_mGiBLq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_kTUXx3": {
+          "type": "column",
+          "settings": {
+            "title": "Vision",
+            "text": "<p>“To be a global leader in fashion-knit and fashion wear by empowering innovation, technology, and design to provide complete customer satisfaction.”</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7mGrre": {
+          "type": "column",
+          "settings": {
+            "title": "Mission",
+            "text": "<p>“To enhance the quality of life for our business partners, customers, employees, and overall society.”</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_kTUXx3",
+        "column_7mGrre"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_kpTVVn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_TNpFLP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-13_2_1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YHPgxg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-11_1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_TNpFLP",
+        "column_YHPgxg"
+      ],
+      "settings": {
+        "title": "Dreamers",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 16,
+        "padding_bottom": 32
+      }
+    },
+    "multicolumn_AmJpXC": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3aNjVr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/imarat.jpg",
+            "title": "Facility I",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_L7NaHf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Bontact-Brochure-final-2.png",
+            "title": "Facility II",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6yVK9E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bontact_catalog_final_x7_1e618c62-8d90-4e72-b747-e4ae52f76443.jpg",
+            "title": "Facility III",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3aNjVr",
+        "column_L7NaHf",
+        "column_6yVK9E"
+      ],
+      "settings": {
+        "title": "Production Facilities (Greater Noida)",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_MTCDww",
+    "image_with_text_ffGF7G",
+    "rich_text_ehzUwH",
+    "rich_text_WF8xQw",
+    "image_banner_XbWQR8",
+    "multicolumn_mGiBLq",
+    "multicolumn_kpTVVn",
+    "multicolumn_AmJpXC"
+  ]
+}

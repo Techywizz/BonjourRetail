@@ -1,0 +1,564 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "sku_8Tr9GA": {
+          "type": "sku",
+          "settings": {
+            "text_style": "uppercase"
+          }
+        },
+        "text_GckF3m": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<em>500+ sold in last 20 days</em>",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "rating_XaijYk": {
+          "type": "rating",
+          "settings": {}
+        },
+        "variant_picker_8n6gVQ": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "square"
+          }
+        },
+        "popup_K8cJzw": {
+          "type": "popup",
+          "settings": {
+            "text": "Size Chart",
+            "page": "free-size-chart-socks"
+          }
+        },
+        "popup_CeWKU4": {
+          "type": "popup",
+          "settings": {
+            "text": "Shipping",
+            "page": "shipping-policy"
+          }
+        },
+        "quantity_selector_fFH8qe": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "collapsible_tab_8wbQ43": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Offer",
+            "icon": "none",
+            "content": "<p>Get 250 off on all Order Above 1299 </p>{{ block.settings.page.content }}<p></p>",
+            "page": "offers-term-and-conditions"
+          }
+        },
+        "buy_buttons_EJnWiH": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "icon_with_text_EDy34q": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "leaf",
+            "heading_1": "Natural Bamboo Yarn",
+            "icon_2": "snowflake",
+            "heading_2": "Thermoregulatory",
+            "icon_3": "plant",
+            "heading_3": "Sustainable"
+          }
+        },
+        "complementary_tQQkNY": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Product features",
+            "icon": "check_mark",
+            "content": "<p><strong>Fabric Composition: </strong>80% Bamboo (100% Natural Fibers), 17% Polyester, 3% Elastane</p><ul><li>Smooth Toe Seams</li><li>Honeycomb Knit cuffs</li><li>Skin Friendly; Anti-bacterial; Moisture absorbing; </li><li>Thickness: Regular and Cushioned</li></ul><p></p>",
+            "page": "product-features"
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Benefits of Bamboo",
+            "icon": "box",
+            "content": "<ul><li>x5 more absorbent than cotton</li><li>Silky soft bamboo fibre</li><li>Hypoallergenic and non-irritating</li><li>Breathable and thermoregulating</li><li>Naturally antibacterial</li><li>Moisture wicking</li><li>Colour stays sharper</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Washing Tips",
+            "icon": "check_mark",
+            "content": "<h5>Machine washable at 40°C</h5><ul><li>Wash in cold or lukewarm water on a gentle cycle.</li><li>Use a mild detergent; avoid bleach or harsh chemicals.</li><li>Air dry to maintain softness and durability.</li><li>Turn socks inside out before washing to reduce pilling.</li><li>Avoid tumble drying or ironing to prevent damage.</li></ul>",
+            "page": "merchandising-tips"
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "sku_8Tr9GA",
+        "text_GckF3m",
+        "title",
+        "price",
+        "rating_XaijYk",
+        "variant_picker_8n6gVQ",
+        "popup_K8cJzw",
+        "popup_CeWKU4",
+        "quantity_selector_fFH8qe",
+        "collapsible_tab_8wbQ43",
+        "buy_buttons_EJnWiH",
+        "icon_with_text_EDy34q",
+        "complementary_tQQkNY",
+        "description",
+        "collapsible-row-1",
+        "collapsible-row-0",
+        "collapsible-row-2",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "small",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quick-order-list": {
+      "type": "quick-order-list",
+      "disabled": true,
+      "settings": {
+        "show_image": true,
+        "show_sku": true,
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 16
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Related Products",
+        "heading_size": "h1",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    },
+        "recently-viewed": {
+        "type": "recently-viewed",
+        "settings": {
+        }
+      },
+    "slideshow_Da8DXM": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_NV37HD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Amazon-bamboo-socks-banner-1a.jpg",
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_brcje7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Amazon-bamboo-socks-banner-2.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_c6cL7n": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Amazon-bamboo-socks-banner-3.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_8rpaRk": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Amazon-bamboo-socks-banner-4.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_NV37HD",
+        "slide_brcje7",
+        "slide_c6cL7n",
+        "slide_8rpaRk"
+      ],
+      "settings": {
+        "layout": "grid",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "multicolumn_4Wjktx": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fAmrQd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9NCDdM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-5.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Jxbrp4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-4.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qfGW3U": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/BJ-Bamboo-socks-card-3.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fAmrQd",
+        "column_9NCDdM",
+        "column_Jxbrp4",
+        "column_qfGW3U"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_eAkmRe": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_EE7NEx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bamboo-compression-socks"
+          }
+        },
+        "featured_collection_wmtmwy": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "men-health-and-diabetic-socks"
+          }
+        },
+        "featured_collection_NdMt3n": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "socks-for-men"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_EE7NEx",
+        "featured_collection_wmtmwy",
+        "featured_collection_NdMt3n"
+      ],
+      "settings": {
+        "title": "Related Categories",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-3",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17374428984fe02970": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_etFKBR": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "judge_me_reviews_featured_carousel_GdC3kL": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        },
+        "judge_me_reviews_verified_badge_mif3mP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "judge_me_reviews_ugc_media_grid_DrFyFM": {
+          "type": "shopify://apps/judge-me-reviews/blocks/ugc_media_grid/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_etFKBR",
+        "judge_me_reviews_featured_carousel_GdC3kL",
+        "judge_me_reviews_verified_badge_mif3mP",
+        "judge_me_reviews_ugc_media_grid_DrFyFM"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "collapsible_content_EKyERV": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_tWEGcy": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are bamboo socks?",
+            "icon": "none",
+            "row_content": "<p><a href=\"/collections/bamboo-socks\" target=\"_blank\" title=\"BAMBOO SOCKS\">Bamboo socks</a> are made from bamboo fibers, offering a soft, eco-friendly, and breathable option for your feet.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QTDhfF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Why should I choose bamboo socks?",
+            "icon": "none",
+            "row_content": "<p>Bamboo socks are odor-resistant, moisture-wicking, and super comfortable for all-day wear.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ctE96K": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are bamboo socks good for sweaty feet?",
+            "icon": "none",
+            "row_content": "<p>Yes, they absorb moisture and keep feet dry, making them ideal for sweaty feet.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hxLA7p": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are bamboo socks durable?",
+            "icon": "none",
+            "row_content": "<p>Absolutely! Bamboo fibers are strong and long-lasting.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kHnxC3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do bamboo socks help with odor?",
+            "icon": "none",
+            "row_content": "<p>Yes, bamboo's natural antibacterial properties reduce odor effectively.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_M6gDbG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are they suitable for sensitive skin?",
+            "icon": "none",
+            "row_content": "<p>Yes, bamboo socks are hypoallergenic and gentle on sensitive skin.</p><p></p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Q9cXLX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can bamboo socks be worn year-round?",
+            "icon": "none",
+            "row_content": "<p>Yes, they keep feet cool in summer and warm in winter because of it's thermoregulatory property.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_t6fYxM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I care for bamboo socks?",
+            "icon": "none",
+            "row_content": "<p>Wash in cold water and air dry to maintain their quality.</p><p></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_tWEGcy",
+        "collapsible_row_QTDhfF",
+        "collapsible_row_ctE96K",
+        "collapsible_row_hxLA7p",
+        "collapsible_row_kHnxC3",
+        "collapsible_row_M6gDbG",
+        "collapsible_row_Q9cXLX",
+        "collapsible_row_t6fYxM"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "scheme-5",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "quick-order-list",
+    "related-products",
+    "recently-viewed",
+    "slideshow_Da8DXM",
+    "multicolumn_4Wjktx",
+    "collection_list_eAkmRe",
+    "17374428984fe02970",
+    "collapsible_content_EKyERV"
+  ]
+}

@@ -1,0 +1,25 @@
+<style>
+  .tag {
+    height: 20px;
+    width: 100px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff9902;
+    color: #fff;
+    border-radius: 0px;
+    font-size: 15px;
+    flex-direction: row;
+  }
+  .tag span {
+    font-size: 16px;
+  }
+</style>
+
+{% if tags contains 'best-seller' %}
+  <div class="tag">
+    <span class="material-symbols-outlined"> </span>
+    <p>Best Seller</p>
+  </div>
+{% endif %}

@@ -1,0 +1,527 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_9Ux9Dy": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_N6m4L3": {
+          "type": "heading",
+          "settings": {
+            "heading": "STORE LOCATOR",
+            "heading_size": "h1"
+          }
+        },
+        "text_6PQXAj": {
+          "type": "text",
+          "settings": {
+            "text": "LOCATE YOUR NEARBY BONJOUR STORE NOW!",
+            "text_style": "body"
+          }
+        },
+        "buttons_TF6bVU": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_N6m4L3",
+        "text_6PQXAj",
+        "buttons_TF6bVU"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/inner_store.jpg",
+        "image_2": "shopify://shop_images/Brand_USPS_Mobile_store.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "multicolumn_9UJabq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_3BxexP": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "DELHI",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hY7CER": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "GREATER NOIDA",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DXQ6fk": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "GHAZIABAD",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GqNC3f": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "NOIDA",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ahPVet": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "AMBALA",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_h9PH8h": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "DEHRADUN",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_McVALA": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "LUCKNOW",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_3BxexP",
+        "column_hY7CER",
+        "column_DXQ6fk",
+        "column_GqNC3f",
+        "column_ahPVet",
+        "column_h9PH8h",
+        "column_McVALA"
+      ],
+      "settings": {
+        "title": "OUR STORES LOCATE AT",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_pVpx3k": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xrYGHP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gopinath-outlet.jpg",
+            "image_link": "",
+            "title": "<strong>GOPINATH BAZAR</strong>",
+            "text": "<p>Shop No- III/2/5, Ground Floor,  Delhi Cantt. New Delhi</p><p><strong>9013297391</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://maps.app.goo.gl/RfFajJLcYC4phrgZA"
+          }
+        },
+        "column_Qp3AKJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/store_3_cf3fe5cf-f59e-40bf-b813-6d26d6f118c4.webp",
+            "image_link": "",
+            "title": "<strong>SHAHEEN BAGH</strong>",
+            "text": "<p>Shop G-11 & 12 A, Lower GF, Abul Fazal Enclave-2</p><p><strong>9708946701</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+no+G-11+%26+12+A+Lower+Ground+Floor,+Shaheen+Bagh,+Abul+Fazal+Enclave+Part+2,+Delhi+110025/@28.5424656,77.298897,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390ce580a9424af7:0x96e7818e5f0202b3!2m2!1d77.3010857!2d28.5424656!3e0?hl=en"
+          }
+        },
+        "column_4PHEQV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/IMG_6597.jpg",
+            "image_link": "",
+            "title": "<strong>KAMLA NAGAR</strong>",
+            "text": "<p>Ground floor, Block E-174 Main Bazar, Malka Ganj, </p><p><strong>9773528779</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+no+G-11+%26+12+A+Lower+Ground+Floor,+Shaheen+Bagh,+Abul+Fazal+Enclave+Part+2,+Delhi+110025/@28.5424656,77.298897,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390ce580a9424af7:0x96e7818e5f0202b3!2m2!1d77.3010857!2d28.5424656!3e0?hl=en"
+          }
+        }
+      },
+      "block_order": [
+        "column_xrYGHP",
+        "column_Qp3AKJ",
+        "column_4PHEQV"
+      ],
+      "settings": {
+        "title": "DELHI",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_ELwe7N": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yz6fPw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/STORE_OPENED.webp",
+            "image_link": "",
+            "title": "<strong>GAUR CITY MALL</strong>",
+            "text": "<p>Shop No. SF/S/25, Second Floor</p><p><strong>9643660340</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Shop+No.+SF%2FS%2F25,Second+Floor+Gaur+City+Mall,+Sector+4,+Greater+Noida,+Uttar+Pradesh+201308/data=!4m4!4m3!1m1!4e2!1m0?sa=X&hl=en&ved=2ahUKEwjCwPOUid36AhX7cGwGHexUBiwQ9Rd6BQi1ARAF"
+          }
+        },
+        "column_a3EhpE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/IMG20191022165912.webp",
+            "image_link": "",
+            "title": "<strong>OMAXE MALL</strong>",
+            "text": "<p>Shop No. UGF-33, Connaught Place</p><p><strong>8439348239</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+No.+UGF-33+Omaxe,+Mall,+Connaught+Place,+Greater+Noida,+Uttar+Pradesh+201306/@28.489704,77.5102357,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cebd7d4a44445:0x8d8e15dcca26bc38!2m2!1d77.5146506!2d28.4897182!3e0?hl=en"
+          }
+        },
+        "column_gfpAXa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/jagat_farm.webp",
+            "image_link": "",
+            "title": "<strong>JAGAT FARM</strong>",
+            "text": "<p>Shop no. – 16-17, GF, Jagat Plaza, Gamma-I</p><p><strong> 8650264476</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//BONJOUR,+Shop+No.+16-17,+Ground+Floor,+Jagat+Plaza,+Gamma+1,+Greater+Noida,+Uttar+Pradesh+201310/@28.4859284,77.4943491,16z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cea6e98bff9bf:0x432d30459fe38243!2m2!1d77.500309!2d28.4848958!3e0?hl=en"
+          }
+        },
+        "column_6yjW7W": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/jagat_farm.webp",
+            "image_link": "",
+            "title": "<strong>ANSAL PLAZA</strong>",
+            "text": "<p>Shop-No.- AG-04, Atrium Ground Floor, </p><p><strong> 9654175736</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir/28.4365075,77.5504667/Ansal+Plaza/@28.4641151,77.5028437,15z/data=!4m15!4m14!1m6!3m4!1m2!1d77.5141765!2d28.4711774!3s0x390cea7efd228f27:0x8ccf6d63ebe7d4c2!4e1!1m5!1m1!1s0x390cc1f2de995b2b:0x6a1446a9fa8eaf6f!2m2!1d77.5081322!2d28.4643795!3e0"
+          }
+        }
+      },
+      "block_order": [
+        "column_yz6fPw",
+        "column_a3EhpE",
+        "column_gfpAXa",
+        "column_6yjW7W"
+      ],
+      "settings": {
+        "title": "GREATER NOIDA",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_7jxinH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_ndHGXJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/store_3_new_open.webp",
+            "image_link": "",
+            "title": "<strong>GAUR CENTRAL</strong>",
+            "text": "<p>Shop No. FF/S/13, First Floor, RDC, Rajnagar</p><p><strong>9650594591</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+No.+FF%2FS%2F13,+First+Floor,+Near+Shoppers+Stop,+Gaur+Central+Mall,+opposite+HDFC+Bank,+near+Hapur+Chungi,+RDC,+Raj+Nagar,+Ghaziabad,+Uttar+Pradesh+201002/@28.6738093,77.4404459,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390cf1a6ac3678af:0xf1175fd6f84ebaa1!2m2!1d77.440521!2d28.6735881"
+          }
+        },
+        "column_HVnBKb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/store_3_cf3fe5cf-f59e-40bf-b813-6d26d6f118c4.webp",
+            "image_link": "",
+            "title": "<strong>ADITYA MALL</strong>",
+            "text": "<p>Shop-No.-AG15 A, Vaibhav Khand, Indirapuram</p><p><strong>8383842275</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//BONJOUR,+Shop+No.AG15A,+Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.64371,77.3704922,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfab35ed1ce75:0x71a3f45bf91e19e8!2m2!1d77.3726809!2d28.64371!3e0?hl=en"
+          }
+        },
+        "column_hMUFYE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/store_3_cf3fe5cf-f59e-40bf-b813-6d26d6f118c4.webp",
+            "image_link": "",
+            "title": "WSM",
+            "text": "<p>Shop-No.-04, Ground Floor, Mohan Nagar, Ghaziabad</p><p><strong> 9911434363</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//BONJOUR,+Shop-No.-04,+Groud+Floor+World+Square+Mall,+Uttar+Pradesh+201007/@28.6805533,77.3726023,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfb2e4bf7e935:0xca5445662c9a452f!2m2!1d77.374791!2d28.6805533!3e0?hl=en"
+          }
+        },
+        "column_HY8HAx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/store_3_cf3fe5cf-f59e-40bf-b813-6d26d6f118c4.webp",
+            "image_link": "",
+            "title": "<strong>MM MALL</strong>",
+            "text": "<p>Shop No. LGF-04, Mahagun Metro Mall, Vaishali</p><p><strong>9654917423</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+No.+LGF-10,+Mahagun+Metro+Mall,+Vaishali,+Ghaziabad,+Uttar+Pradesh+201010/@28.6449021,77.3325383,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfbc2d2d0ada5:0x92f7e6d83cd26269!2m2!1d77.334727!2d28.6449021!3e0?hl=en"
+          }
+        }
+      },
+      "block_order": [
+        "column_ndHGXJ",
+        "column_HVnBKb",
+        "column_hMUFYE",
+        "column_HY8HAx"
+      ],
+      "settings": {
+        "title": "GHAZIABAD",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_84yNwe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_qiGqaN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2023-06-09_at_12.56.26_PM.jpg",
+            "image_link": "",
+            "title": "NOIDA WORLD ONE",
+            "text": "<p>Shop no.G3, Tower C, Plot no-1, Sector-90, (Opp. Sector 137),</p><p><strong>+91 </strong>xxxxxxxxxxx</p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://goo.gl/maps/D8arQHTskwwxyjeAA"
+          }
+        },
+        "column_tDnGtB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Store_imafe_sec75_1.jpg",
+            "image_link": "",
+            "title": "SPECTRUM METRO MALL",
+            "text": "<p>Shop No 29 A, Ground floor Tower C, Sector 75</p><p><strong>+91 9354029488</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://maps.app.goo.gl/LyF3fWrgMKpbfSdW8"
+          }
+        },
+        "column_RQMtq9": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/lucknow_store.jpg",
+            "image_link": "",
+            "title": "<strong>SAHARA PLAZA</strong>",
+            "text": "<p>Bonjour, D-215, Patrakarpuram Crossing Rd, Vikas Khand 1, Gomti Nagar, Lucknow,</p><p><strong>+91 9911434363</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x399be33da8721023:0x4379daf5548c62c6?sa=X&ved=1t:3061&hl=en-GB&ictx=111"
+          }
+        },
+        "column_VQGaXh": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/store_3_cf3fe5cf-f59e-40bf-b813-6d26d6f118c4.webp",
+            "image_link": "",
+            "title": "<strong>MM MALL</strong>",
+            "text": "<p>Shop No. LGF-10, Mahagun Metro Mall, Vaishali</p><p><strong> 9654917423</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+No.+LGF-10,+Mahagun+Metro+Mall,+Vaishali,+Ghaziabad,+Uttar+Pradesh+201010/@28.6449021,77.3325383,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfbc2d2d0ada5:0x92f7e6d83cd26269!2m2!1d77.334727!2d28.6449021!3e0?hl=en"
+          }
+        }
+      },
+      "block_order": [
+        "column_qiGqaN",
+        "column_tDnGtB",
+        "column_RQMtq9",
+        "column_VQGaXh"
+      ],
+      "settings": {
+        "title": "NOIDA",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_hg8Abe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_cfgRjc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/anbala_store.jpg",
+            "image_link": "",
+            "title": "AMBALA CANTT.",
+            "text": "<p>Shop No. – 10, N.H.-1 G.T. Road, Kuldeep Nagar, Ambala Cantt.</p><p><strong>+91 7015211029</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//BONJOUR,+Shop+No.+%E2%80%93+10,+N.H.-1,+Kuldeep+Nagar,+Ambala+Cantt,+Haryana+133004/@30.3172313,76.8436105,14z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390fb59aaaaaaa91:0x34ec0b3252fb8d77!2m2!1d76.8418134!2d30.312781!3e0?hl=en"
+          }
+        },
+        "column_ALMFY8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/dehradun_store_1.jpg",
+            "image_link": "",
+            "title": "PALTAN BAZAAR",
+            "text": "<p>Shop No.2, Dhamawala Bazar (Next to Gandhi Ashram) Paltan Bazar Road, Dehradun, UK</p><p><strong>01354502393</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://maps.app.goo.gl/D7s3fXfYarki5DzZ9"
+          }
+        },
+        "column_KtNEd7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/lucknow_store.jpg",
+            "image_link": "",
+            "title": "<strong>SAHARA PLAZA</strong>",
+            "text": "<p>Bonjour, D-215, Patrakarpuram Crossing Rd, Vikas Khand 1, Gomti Nagar, Lucknow</p><p><strong>+91 9911434363</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x399be33da8721023:0x4379daf5548c62c6?sa=X&ved=1t:3061&hl=en-GB&ictx=111"
+          }
+        },
+        "column_jgNY9E": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/store_3_cf3fe5cf-f59e-40bf-b813-6d26d6f118c4.webp",
+            "image_link": "",
+            "title": "<strong>MM MALL</strong>",
+            "text": "<p>Shop No. LGF-10, Mahagun Metro Mall, Vaishali</p><p><strong> 9654917423</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+No.+LGF-10,+Mahagun+Metro+Mall,+Vaishali,+Ghaziabad,+Uttar+Pradesh+201010/@28.6449021,77.3325383,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfbc2d2d0ada5:0x92f7e6d83cd26269!2m2!1d77.334727!2d28.6449021!3e0?hl=en"
+          }
+        }
+      },
+      "block_order": [
+        "column_cfgRjc",
+        "column_ALMFY8",
+        "column_KtNEd7",
+        "column_jgNY9E"
+      ],
+      "settings": {
+        "title": "HARYANA, DEHRADUN, & LUCKNOW",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_9Ux9Dy",
+    "multicolumn_9UJabq",
+    "multicolumn_pVpx3k",
+    "multicolumn_ELwe7N",
+    "multicolumn_7jxinH",
+    "multicolumn_84yNwe",
+    "multicolumn_hg8Abe"
+  ]
+}
