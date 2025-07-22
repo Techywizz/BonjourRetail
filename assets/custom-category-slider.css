@@ -1,0 +1,126 @@
+.custom-category-slider .tabs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.custom-category-slider .tab-link {
+  padding: 0 1rem 1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.custom-category-slider .tab-link.active {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+.custom-category-slider .slider-content {
+  display: none;
+}
+
+.custom-category-slider .slider-content.active {
+  display: block;
+}
+
+.custom-category-slider .product-slider .slick-slide {
+  padding: 0 10px;
+}
+
+.custom-category-slider .slider-product-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.custom-category-slider .card-top {
+  position: relative;
+}
+
+.custom-category-slider .product-image-link {
+  display: block;
+  background-color: #f8f9fa;
+}
+
+.custom-category-slider .product-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.custom-category-slider .badge-container {
+  position: absolute;
+  left: 10px;
+  width: calc(100% - 20px);
+  pointer-events: none;
+}
+
+.custom-category-slider .badge-container--top {
+  top: 10px;
+  text-align: left;
+}
+
+.custom-category-slider .badge-container--bottom {
+  bottom: 10px;
+  text-align: left;
+}
+
+.custom-category-slider .badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.custom-category-slider .card-bottom {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.custom-category-slider .product-title {
+  font-family: var(--heading-font);
+  font-size: var(--title-font-size);
+  margin: 0 0 0.5rem;
+  flex-grow: 1;
+}
+
+.custom-category-slider .product-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-category-slider .product-reviews {
+  margin-bottom: 0.5rem;
+  min-height: 20px; /* Placeholder height */
+}
+
+.custom-category-slider .price-container {
+  margin-bottom: 1rem;
+  min-height: 24px; /* Placeholder height */
+}
+
+.custom-category-slider .price--on-sale .price-item--regular {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.custom-category-slider .button {
+  width: 100%;
+} 

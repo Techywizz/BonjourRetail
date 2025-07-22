@@ -28,6 +28,8 @@
             "cs_desktop_image_2": "shopify://shop_images/banner_2_0d2d3897-6ea6-47a0-a3d0-85a343c07756.jpg",
             "cs_mobile_image_2": "shopify://shop_images/2_56e441d3-0a29-4c6c-b477-cf0e725a787c.jpg",
             "cs_image_link_2": "shopify://collections/women-gym-wear",
+            "cs_desktop_image_3": "shopify://shop_images/31589Black_20and_20White_20Modern_20Minimalist_20Brand_20Timeline_20Diagram_20Graph_20_282_291751345822.png",
+            "cs_mobile_image_3": "shopify://shop_images/31589Black_20and_20White_20Modern_20Minimalist_20Brand_20Timeline_20Diagram_20Graph_20_281_291751283236.png",
             "cs_image_link_3": "",
             "cs_image_link_4": "",
             "cs_image_link_5": "",
@@ -38,8 +40,115 @@
       "block_order": [
         "slidy_clickable_banner_slider_free_slider_block_RQH8Ea"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
+      }
+    },
+    "dynamic_slick_slider_YhHB6p": {
+      "type": "dynamic-slick-slider",
+      "blocks": {
+        "slide_fYzgGH": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "video_url": "",
+            "desktop_image": "shopify://shop_images/banner1_1b096208-b6cb-4a3f-8db6-7e48ee929ce7.jpg",
+            "mobile_image": "shopify://shop_images/1_09973414-12cb-4b51-a3b0-2eb2816d78b3.jpg",
+            "link": "shopify://collections/ankle-men-socks",
+            "heading": "Heading One",
+            "heading_color": "#1c2228",
+            "heading_margin": "0 0 0.5rem 0",
+            "heading_padding": "0",
+            "heading_font_size": "2.6rem",
+            "heading_font_weight": "bold",
+            "heading_text_shadow": "0 2px 12px rgba(0,0,0,0.30)",
+            "subheading": "Sub Heading One",
+            "subheading_color": "#ffffff",
+            "subheading_margin": "0 0 1rem 0",
+            "subheading_padding": "0",
+            "subheading_font_size": "1.2rem",
+            "subheading_font_weight": "normal",
+            "subheading_text_shadow": "0 2px 10px rgba(0,0,0,0.22)",
+            "button_label": "View All",
+            "button_link": "shopify://pages/bamboo-socks",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#111111",
+            "button_margin": "0",
+            "button_padding": "0.6em 2em",
+            "button_font_size": "1.1rem",
+            "button_font_weight": "bold",
+            "button_border_radius": "100px",
+            "button_box_shadow": "0 2px 8px rgba(0,0,0,0.08)",
+            "overlay_opacity": 70,
+            "overlay_color": "#000000",
+            "paragraph": "Check Content",
+            "paragraph_color": "#ffffff",
+            "paragraph_font_size": "1rem",
+            "paragraph_margin": "0 0 1rem 0",
+            "paragraph_padding": "0",
+            "video_autoplay": true,
+            "video_show_controls": false,
+            "video_height": "auto"
+          }
+        },
+        "slide_ei88tz": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "video_url": "",
+            "desktop_image": "shopify://shop_images/banner_2_0d2d3897-6ea6-47a0-a3d0-85a343c07756.jpg",
+            "mobile_image": "shopify://shop_images/2_56e441d3-0a29-4c6c-b477-cf0e725a787c.jpg",
+            "link": "shopify://collections/3-ply-face-mask",
+            "heading": "",
+            "heading_color": "#ffffff",
+            "heading_margin": "0 0 0.5rem 0",
+            "heading_padding": "0",
+            "heading_font_size": "2.6rem",
+            "heading_font_weight": "bold",
+            "heading_text_shadow": "0 2px 12px rgba(0,0,0,0.30)",
+            "subheading": "",
+            "subheading_color": "#ffffff",
+            "subheading_margin": "0 0 1rem 0",
+            "subheading_padding": "0",
+            "subheading_font_size": "1.2rem",
+            "subheading_font_weight": "normal",
+            "subheading_text_shadow": "0 2px 10px rgba(0,0,0,0.22)",
+            "button_label": "",
+            "button_link": "",
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#111111",
+            "button_margin": "0",
+            "button_padding": "0.6em 2em",
+            "button_font_size": "1.1rem",
+            "button_font_weight": "bold",
+            "button_border_radius": "100px",
+            "button_box_shadow": "0 2px 8px rgba(0,0,0,0.08)",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "paragraph": "",
+            "paragraph_color": "#ffffff",
+            "paragraph_font_size": "1rem",
+            "paragraph_margin": "0 0 1rem 0",
+            "paragraph_padding": "0",
+            "video_autoplay": true,
+            "video_show_controls": false,
+            "video_height": "auto"
+          }
+        }
+      },
+      "block_order": [
+        "slide_fYzgGH",
+        "slide_ei88tz"
+      ],
+      "name": "Dynamic Slick Slider",
+      "settings": {
+        "boxed_layout": false,
+        "auto_rotate": true,
+        "pagination_style": "arrow",
+        "arrow_dot_bg_color": "rgba(0,0,0,0)",
+        "arrow_dot_size": 30,
+        "change_slide_seconds": 5
       }
     },
     "slideshow_2_TbFpVE": {
@@ -158,7 +267,7 @@
         "column_eGVXMN"
       ],
       "settings": {
-        "title": "<em><strong>Discover</strong></em> Product Category",
+        "title": "<em><strong>Discover</strong></em> Product Categorys",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "circle",
@@ -1223,10 +1332,48 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "custom_category_slider_Q3XAhD": {
+      "type": "custom-category-slider",
+      "blocks": {
+        "category_tab_HgnXtr": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "New Products",
+            "collection": "best-selling-products"
+          }
+        },
+        "category_tab_aQ9LTa": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Bestsellers",
+            "collection": "baby-socks"
+          }
+        }
+      },
+      "block_order": [
+        "category_tab_HgnXtr",
+        "category_tab_aQ9LTa"
+      ],
+      "name": "Custom Category Slider",
+      "settings": {
+        "show_arrows": true,
+        "show_dots": false,
+        "top_badge_metafield": "{{ metaobjects.highlight_tags[\"best-sellers\"].special_tags.value }}",
+        "top_badge_bg_color": "#eabf7c",
+        "top_badge_text_color": "#ffffff",
+        "discount_badge_bg_color": "#4caf50",
+        "discount_badge_text_color": "#ffffff",
+        "button_bg_color": "#000000",
+        "button_text_color": "#ffffff",
+        "heading_font": "jost_n4",
+        "title_font_size": 16
+      }
     }
   },
   "order": [
     "1740398519bcd29a39",
+    "dynamic_slick_slider_YhHB6p",
     "slideshow_2_TbFpVE",
     "multicolumn",
     "featured_collection1",
@@ -1247,6 +1394,7 @@
     "174477728177c58f82",
     "ss_instafeed_2_8Mwc7c",
     "17392805844af3f031",
-    "featured_blog_DPGB7Q"
+    "featured_blog_DPGB7Q",
+    "custom_category_slider_Q3XAhD"
   ]
 }

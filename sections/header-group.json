@@ -17,14 +17,13 @@
         "essential_announcement_app_block_e4KHQY": {
           "type": "shopify://apps/essential-announcer/blocks/app-block/93b5429f-c8d6-4c33-ae14-250fd84f361b",
           "settings": {
-            "id": "675307e7-2929-4faf-9635-23103282413f"
+            "id": "Get₹250 off on your first order above ₹1499- use code FIRST250"
           }
         }
       },
       "block_order": [
         "essential_announcement_app_block_e4KHQY"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }

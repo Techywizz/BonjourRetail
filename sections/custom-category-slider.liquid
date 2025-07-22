@@ -1,0 +1,190 @@
+{% comment %}
+  Custom Category Slider Section
+  - Tabs to switch between different collections (categories).
+  - Slick.js slider to display products for the selected category.
+  - Fully customizable through theme editor settings.
+{% endcomment %}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="{{ 'custom-category-slider.css' | asset_url }}">
+
+<div class="custom-category-slider" data-section-id="{{ section.id }}" style="--heading-font: {{ section.settings.heading_font.family }}; --title-font-size: {{ section.settings.title_font_size }}px;">
+  <div class="page-width">
+    <div class="tabs-container">
+      {% for block in section.blocks %}
+        <div class="tab-link h2{% if forloop.first %} active{% endif %}" data-tab-id="{{ block.id }}">
+          {{ block.settings.tab_title | default: "Tab" }}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% for block in section.blocks %}
+      <div class="slider-content {% if forloop.first %}active{% endif %}" data-content-id="{{ block.id }}">
+        <div class="product-slider" data-show-arrows="{{ section.settings.show_arrows }}" data-show-dots="{{ section.settings.show_dots }}">
+          {%- assign collection = collections[block.settings.collection] -%}
+          {%- for product in collection.products limit: 10 -%}
+            <div class="slider-product-card">
+              <div class="card-top">
+                <a href="{{ product.url }}" class="product-image-link">
+                  <img src="{{ product.featured_image | image_url: width: 550 }}" alt="{{ product.featured_image.alt | escape }}" class="product-image">
+                </a>
+                
+                {%- assign badge_object = product.metafields.custom.special_tags.value -%}
+                {% if badge_object and badge_object.label != blank %}
+                  <div class="badge-container badge-container--top">
+                    <span class="badge badge--top" style="background-color: {{ section.settings.top_badge_bg_color }}; color: {{ section.settings.top_badge_text_color }};">{{ badge_object.label }}</span>
+                  </div>
+                {% endif %}
+                
+                {%- if product.compare_at_price > product.price -%}
+                  <div class="badge-container badge-container--bottom">
+                    <span class="badge badge--discount" style="background-color: {{ section.settings.discount_badge_bg_color }}; color: {{ section.settings.discount_badge_text_color }};">
+                      {{ product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | round }}% OFF
+                    </span>
+                  </div>
+                {%- endif -%}
+              </div>
+              <div class="card-bottom">
+                <h3 class="product-title">
+                  <a href="{{ product.url }}">{{ product.title }}</a>
+                </h3>
+                 <div class="product-reviews">
+                    <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+                 </div>
+                <div class="price-container">
+                  {% render 'price', product: product, use_variant: false, show_badges: false, price_class: '' %}
+                </div>
+                <div class="add-to-cart-container">
+                  <form method="post" action="/cart/add" accept-charset="UTF-8" class="product-form" enctype="multipart/form-data">
+                    <input type="hidden" name="form_type" value="product">
+                    <input type="hidden" name="utf8" value="✓">
+                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                    <button type="submit" name="add" class="button button--primary" style="background-color: {{ section.settings.button_bg_color }}; color: {{ section.settings.button_text_color }};">
+                      {{ 'products.product.add_to_cart' | t }}
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{ 'custom-category-slider.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Custom Category Slider",
+  "class": "custom-category-slider-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Slider Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show Slider Arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show Slider Dots",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Color & Font Settings"
+    },
+    {
+      "type": "text",
+      "id": "top_badge_metafield",
+      "label": "Top Badge Metafield",
+      "info": "E.g., custom.badge or my_fields.bestseller_tag",
+      "default": "custom.badge"
+    },
+    {
+      "type": "color",
+      "id": "top_badge_bg_color",
+      "label": "Top Badge Background",
+      "default": "#EABF7C"
+    },
+    {
+      "type": "color",
+      "id": "top_badge_text_color",
+      "label": "Top Badge Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "discount_badge_bg_color",
+      "label": "Discount Badge Background",
+      "default": "#4CAF50"
+    },
+    {
+      "type": "color",
+      "id": "discount_badge_text_color",
+      "label": "Discount Badge Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Product Title Font",
+      "default": "jost_n4"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Product Title Font Size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_tab",
+      "name": "Category Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "Bestsellers"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Category Slider"
+    }
+  ]
+}
+{% endschema %} 
