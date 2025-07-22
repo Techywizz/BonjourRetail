@@ -1359,7 +1359,7 @@
       "settings": {
         "show_arrows": true,
         "show_dots": false,
-        "top_badge_metafield": "{{ metaobjects.highlight_tags[\"best-sellers\"].special_tags.value }}",
+        "top_badge_metafield": "{{ metaobjects.highlight_tags[\"best-collection\"].special_tags.value }}{{ metaobjects.highlight_tags[\"new-products\"].special_tags.value }}",
         "top_badge_bg_color": "#eabf7c",
         "top_badge_text_color": "#ffffff",
         "discount_badge_bg_color": "#4caf50",
