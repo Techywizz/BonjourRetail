@@ -1,0 +1,292 @@
+{% comment %}
+  Featured Collection with Badges Section
+  - Supports top badges from MetaObjects and Metafields
+  - Matches the design from the image with tabs and product cards
+{% endcomment %}
+
+{%- liquid
+  assign section_id = 'featured-collection-badges-' | append: section.id
+  assign collection = section.settings.collection
+  assign products_to_show = section.settings.products_to_show | default: 4
+  assign columns_desktop = section.settings.columns_desktop | default: 4
+  assign show_rating = section.settings.show_rating
+  assign show_vendor = section.settings.show_vendor
+  assign show_secondary_image = section.settings.show_secondary_image
+  assign image_ratio = section.settings.image_ratio | default: 'adapt'
+  assign show_view_all = section.settings.show_view_all
+  assign view_all_style = section.settings.view_all_style
+-%}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+<link rel="stylesheet" href="{{ 'featured-collection-badges.css' | asset_url }}">
+
+<div class="featured-collection-badges" id="{{ section_id }}">
+  {% if collection != blank %}
+    <!-- Section Heading with Tabs -->
+    <div class="section-header">
+      <div class="tabs-container">
+        <button class="tab-link active" data-tab="new-products">
+          New Products
+        </button>
+        <button class="tab-link" data-tab="bestsellers">
+          Bestsellers
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Slider -->
+    <div class="product-slider-container">
+      <div class="product-slider" 
+           data-slides-to-show="{{ columns_desktop }}"
+           data-autoplay="{{ section.settings.autoplay }}"
+           data-autoplay-speed="{{ section.settings.autoplay_speed }}">
+        
+        {% for product in collection.products limit: products_to_show %}
+          <div class="product-card-wrapper">
+            <div class="product-card">
+              <!-- Product Image with Badges -->
+              <div class="card-top">
+                <a href="{{ product.url }}" class="product-image-link">
+                  {% if product.featured_image %}
+                    <img src="{{ product.featured_image | img_url: '400x400', crop: 'center' }}" 
+                         alt="{{ product.featured_image.alt | escape }}" 
+                         class="product-image"
+                         loading="lazy">
+                  {% else %}
+                    <div class="product-image-placeholder">
+                      {{ 'product-1' | placeholder_svg_tag: 'product-image' }}
+                    </div>
+                  {% endif %}
+                </a>
+                
+                <!-- Top Badge from MetaObject -->
+                {% if product.metafields.custom.special_tags != blank %}
+                  <div class="badge-container badge-container--top">
+                    <span class="badge badge--top" style="background-color: {{ section.settings.top_badge_bg_color | default: '#EABF7C' }}; color: {{ section.settings.top_badge_text_color | default: '#333333' }};">
+                      {{ product.metafields.custom.special_tags }}
+                    </span>
+                  </div>
+                {% endif %}
+                
+                <!-- Discount Badge -->
+                {% if product.compare_at_price > product.price %}
+                  {% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
+                  <div class="badge-container badge-container--bottom">
+                    <span class="badge badge--discount" style="background-color: {{ section.settings.discount_badge_bg_color | default: '#4CAF50' }}; color: {{ section.settings.discount_badge_text_color | default: '#FFFFFF' }};">
+                      {{ discount_percentage }}% OFF
+                    </span>
+                  </div>
+                {% endif %}
+              </div>
+              
+              <!-- Product Info -->
+              <div class="card-bottom">
+                <!-- Product Title -->
+                <h3 class="product-title">
+                  <a href="{{ product.url }}">{{ product.title }}</a>
+                </h3>
+                
+                <!-- Product Price -->
+                <div class="price-container">
+                  {% if product.compare_at_price > product.price %}
+                    <span class="price price--sale">
+                      <span class="price-item price-item--sale">{{ product.price | money }}</span>
+                      <span class="price-item price-item--regular">{{ product.compare_at_price | money }}</span>
+                    </span>
+                  {% else %}
+                    <span class="price">
+                      <span class="price-item price-item--regular">{{ product.price | money }}</span>
+                    </span>
+                  {% endif %}
+                </div>
+                
+                <!-- Add to Cart Button -->
+                <div class="add-to-cart-container">
+                  {% form 'product', product %}
+                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                    <button type="submit" 
+                            class="button" 
+                            style="background-color: {{ section.settings.button_bg_color | default: '#000000' }}; color: {{ section.settings.button_text_color | default: '#FFFFFF' }};"
+                            {% unless product.available %}disabled{% endunless %}>
+                      {% if product.available %}
+                        ADD TO CART
+                      {% else %}
+                        SOLD OUT
+                      {% endif %}
+                    </button>
+                  {% endform %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- View All Button -->
+    {% if show_view_all %}
+      <div class="view-all-container">
+        <a href="{{ collection.url }}" class="view-all-button">
+          VIEW ALL
+        </a>
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{ 'featured-collection-badges.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Collection Badges",
+  "class": "featured-collection-badges-section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Columns (Desktop)",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show product rating",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show product vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "label": "Show secondary image on hover",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Adapt to image"
+        },
+        {
+          "value": "square",
+          "label": "Square"
+        },
+        {
+          "value": "portrait",
+          "label": "Portrait"
+        }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Show 'View all' button",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "view_all_style",
+      "label": "View all button style",
+      "options": [
+        {
+          "value": "link",
+          "label": "Link"
+        },
+        {
+          "value": "button",
+          "label": "Button"
+        }
+      ],
+      "default": "button"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Autoplay speed (seconds)",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Badge Settings"
+    },
+    {
+      "type": "color",
+      "id": "top_badge_bg_color",
+      "label": "Top Badge Background",
+      "default": "#EABF7C"
+    },
+    {
+      "type": "color",
+      "id": "top_badge_text_color",
+      "label": "Top Badge Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "discount_badge_bg_color",
+      "label": "Discount Badge Background",
+      "default": "#4CAF50"
+    },
+    {
+      "type": "color",
+      "id": "discount_badge_text_color",
+      "label": "Discount Badge Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#FFFFFF"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Badges"
+    }
+  ]
+}
+{% endschema %} 

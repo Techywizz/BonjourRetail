@@ -1,0 +1,2 @@
+# Ignore the entire .shopify directory
+.DS_Store
