@@ -9,6 +9,10 @@
 <link rel="stylesheet" href="{{ 'custom-category-slider.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}">
 
+{% if settings.product_card_design == 'modern' %}
+  <link rel="stylesheet" href="{{ 'modern-product-card.css' | asset_url }}">
+{% endif %}
+
 <div class="custom-category-slider" data-section-id="{{ section.id }}" style="--heading-font: {{ section.settings.heading_font.family }}; --title-font-size: {{ section.settings.title_font_size }}px;">
   <div class="page-width">
     <div class="tabs-container">

@@ -200,17 +200,30 @@
                    <div class="slick-slider">
                     {%- for product in col.products limit: 8 -%}
                       <div>
-                        {% render 'card-product',
-                          card_product: product,
-                          media_aspect_ratio: 'adapt',
-                          image_shape: 'default',
-                          show_secondary_image: true,
-                          show_vendor: false,
-                          show_rating: false,
-                          skip_styles: true,
-                          section_id: section.id,
-                          quick_add: "none"
-                        %}
+                        {% if settings.product_card_design == 'modern' %}
+                          {% render 'card-product-modern',
+                            card_product: product,
+                            media_aspect_ratio: 'adapt',
+                            show_secondary_image: true,
+                            show_vendor: false,
+                            show_rating: false,
+                            skip_styles: true,
+                            section_id: section.id,
+                            quick_add: "none"
+                          %}
+                        {% else %}
+                          {% render 'card-product',
+                            card_product: product,
+                            media_aspect_ratio: 'adapt',
+                            image_shape: 'default',
+                            show_secondary_image: true,
+                            show_vendor: false,
+                            show_rating: false,
+                            skip_styles: true,
+                            section_id: section.id,
+                            quick_add: "none"
+                          %}
+                        {% endif %}
                       </div>
                      {%  endfor %}
                   </div>

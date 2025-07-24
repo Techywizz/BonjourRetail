@@ -507,6 +507,22 @@
     "settings": [
       {
         "type": "select",
+        "id": "product_card_design",
+        "options": [
+          {
+            "value": "default",
+            "label": "Default Product Card"
+          },
+          {
+            "value": "modern",
+            "label": "Modern Product Card"
+          }
+        ],
+        "default": "default",
+        "label": "Product Card Design"
+      },
+      {
+        "type": "select",
         "id": "card_style",
         "options": [
           {
@@ -634,6 +650,209 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Modern Product Card Settings"
+      },
+      {
+        "type": "text",
+        "id": "top_badge_metafield",
+        "label": "Top Badge Metafield",
+        "info": "E.g., custom.special_tags (Metaobject: Highlight Tags, Metafield: Special Tags)",
+        "default": "custom.special_tags"
+      },
+      {
+        "type": "color",
+        "id": "top_badge_bg_color",
+        "label": "Top Badge Background",
+        "default": "#EABF7C"
+      },
+      {
+        "type": "color",
+        "id": "top_badge_text_color",
+        "label": "Top Badge Text Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "discount_badge_bg_color",
+        "label": "Discount Badge Background",
+        "default": "#4CAF50"
+      },
+      {
+        "type": "color",
+        "id": "discount_badge_text_color",
+        "label": "Discount Badge Text Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "button_bg_color",
+        "label": "Button Background",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Product Title Font",
+        "default": "jost_n4"
+      },
+      {
+        "type": "range",
+        "id": "title_font_size",
+        "label": "Product Title Font Size",
+        "min": 12,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+      },
+      {
+        "type": "header",
+        "content": "Badge Spacing & Padding"
+      },
+      {
+        "type": "range",
+        "id": "top_badge_padding_horizontal",
+        "label": "Top Badge Horizontal Padding",
+        "min": 4,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "top_badge_padding_vertical",
+        "label": "Top Badge Vertical Padding",
+        "min": 2,
+        "max": 12,
+        "step": 1,
+        "unit": "px",
+        "default": 5
+      },
+      {
+        "type": "range",
+        "id": "top_badge_margin_top",
+        "label": "Top Badge Top Margin",
+        "min": 5,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "top_badge_margin_left",
+        "label": "Top Badge Left Margin",
+        "min": 5,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "discount_badge_padding_horizontal",
+        "label": "Discount Badge Horizontal Padding",
+        "min": 4,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "discount_badge_padding_vertical",
+        "label": "Discount Badge Vertical Padding",
+        "min": 2,
+        "max": 12,
+        "step": 1,
+        "unit": "px",
+        "default": 5
+      },
+      {
+        "type": "range",
+        "id": "discount_badge_margin_bottom",
+        "label": "Discount Badge Bottom Margin",
+        "min": 5,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "discount_badge_margin_left",
+        "label": "Discount Badge Left Margin",
+        "min": 5,
+        "max": 20,
+        "step": 1,
+        "unit": "px",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Badge Font Settings"
+      },
+      {
+        "type": "range",
+        "id": "top_badge_font_size",
+        "label": "Top Badge Font Size",
+        "min": 8,
+        "max": 16,
+        "step": 1,
+        "unit": "px",
+        "default": 11
+      },
+      {
+        "type": "range",
+        "id": "discount_badge_font_size",
+        "label": "Discount Badge Font Size",
+        "min": 8,
+        "max": 16,
+        "step": 1,
+        "unit": "px",
+        "default": 11
+      },
+      {
+        "type": "header",
+        "content": "Rating Display Settings"
+      },
+      {
+        "type": "select",
+        "id": "rating_display_type",
+        "label": "Rating Display Type",
+        "options": [
+          {
+            "value": "stars",
+            "label": "Star Rating"
+          },
+          {
+            "value": "number",
+            "label": "Number Rating"
+          }
+        ],
+        "default": "number"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_review_count",
+        "label": "Show Review Count",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_verified_badge",
+        "label": "Show Verified Badge",
+        "default": true
       }
     ]
   },

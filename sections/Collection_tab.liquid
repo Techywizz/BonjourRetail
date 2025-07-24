@@ -1,6 +1,10 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
+{% if settings.product_card_design == 'modern' %}
+  {{ 'modern-product-card.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {%  if section.blocks.size > 0 %}
@@ -37,16 +41,28 @@
               <ul class="grid product-grid grid--2-col-tablet-down  grid--4-col-desktop">
                {%- for product in block.settings.collection.products limit: 20 -%}
                <li class="grid__item scroll-trigger animate--slide-in">
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    image_shape: section.settings.image_shape,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    show_quick_add: section.settings.enable_quick_add,
-                    section_id: section.id
-                  %}
+                  {% if settings.product_card_design == 'modern' %}
+                    {% render 'card-product-modern',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      quick_add: section.settings.enable_quick_add,
+                      section_id: section.id
+                    %}
+                  {% else %}
+                    {% render 'card-product',
+                      card_product: product,
+                      media_aspect_ratio: section.settings.image_ratio,
+                      image_shape: section.settings.image_shape,
+                      show_secondary_image: section.settings.show_secondary_image,
+                      show_vendor: section.settings.show_vendor,
+                      show_rating: section.settings.show_rating,
+                      show_quick_add: section.settings.enable_quick_add,
+                      section_id: section.id
+                    %}
+                  {% endif %}
                </li>
               {%- endfor -%}
               </ul>
