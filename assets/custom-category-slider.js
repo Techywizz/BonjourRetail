@@ -4,11 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
   sliderSections.forEach(sliderSection => {
     const sectionId = sliderSection.dataset.sectionId;
     const sliderSettings = {
-      dots: sliderSection.querySelector('.product-slider').dataset.dots === 'true',
-      arrows: sliderSection.querySelector('.product-slider').dataset.arrows === 'true',
+      dots: true,
+      arrows: true,
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 3000,
       responsive: [
         { breakpoint: 1024, settings: { slidesToShow: 3 } },
         { breakpoint: 600, settings: { slidesToShow: 2 } },

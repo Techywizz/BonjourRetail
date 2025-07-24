@@ -277,6 +277,10 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-2",
+        "column_spacing": 8,
+        "image_spacing": 16,
+        "title_spacing": 4,
+        "content_spacing": 12,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 12,
@@ -417,6 +421,10 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
+        "column_spacing": 8,
+        "image_spacing": 16,
+        "title_spacing": 4,
+        "content_spacing": 12,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 24,
@@ -488,9 +496,9 @@
           "settings": {
             "image": "shopify://shop_images/Tshirt.png",
             "image_link": "https://www.bonjourretail.com/collections/men-tshirts",
-            "title": "",
-            "text": "",
-            "link_label": "T Shirt",
+            "title": "T Shirt",
+            "text": "<p>Buy 2 @ 999</p>",
+            "link_label": "Buy Now",
             "link": "https://www.bonjourretail.com/collections/men-tshirts"
           }
         },
@@ -562,6 +570,10 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
+        "column_spacing": 8,
+        "image_spacing": 8,
+        "title_spacing": 4,
+        "content_spacing": 4,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
@@ -718,6 +730,10 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "",
+        "column_spacing": 8,
+        "image_spacing": 16,
+        "title_spacing": 4,
+        "content_spacing": 12,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -834,6 +850,10 @@
         "button_label": "View All",
         "button_link": "",
         "color_scheme": "scheme-1",
+        "column_spacing": 8,
+        "image_spacing": 16,
+        "title_spacing": 4,
+        "content_spacing": 12,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -921,6 +941,10 @@
         "button_label": "View All",
         "button_link": "",
         "color_scheme": "scheme-1",
+        "column_spacing": 8,
+        "image_spacing": 16,
+        "title_spacing": 4,
+        "content_spacing": 12,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 36,
@@ -1336,30 +1360,44 @@
     "custom_category_slider_Q3XAhD": {
       "type": "custom-category-slider",
       "blocks": {
-        "category_tab_HgnXtr": {
+        "category_tab_BiDhw8": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Bestseller",
+            "collection": "best-selling-products",
+            "view_all_text": "View All Products",
+            "view_all_link": ""
+          }
+        },
+        "category_tab_ctqBAt": {
           "type": "category_tab",
           "settings": {
             "tab_title": "New Products",
-            "collection": "best-selling-products"
+            "collection": "baby-socks",
+            "view_all_text": "View All Products",
+            "view_all_link": ""
           }
         },
-        "category_tab_aQ9LTa": {
+        "category_tab_b7WgQL": {
           "type": "category_tab",
           "settings": {
-            "tab_title": "Bestsellers",
-            "collection": "baby-socks"
+            "tab_title": "New Collections",
+            "collection": "clearance-sale-kids",
+            "view_all_text": "View All Products",
+            "view_all_link": ""
           }
         }
       },
       "block_order": [
-        "category_tab_HgnXtr",
-        "category_tab_aQ9LTa"
+        "category_tab_BiDhw8",
+        "category_tab_ctqBAt",
+        "category_tab_b7WgQL"
       ],
       "name": "Custom Category Slider",
       "settings": {
         "show_arrows": true,
-        "show_dots": false,
-        "top_badge_metafield": "{{ metaobjects.highlight_tags[\"best-sellers\"].special_tags.value }}",
+        "show_dots": true,
+        "top_badge_metafield": "",
         "top_badge_bg_color": "#eabf7c",
         "top_badge_text_color": "#ffffff",
         "discount_badge_bg_color": "#4caf50",
@@ -1367,7 +1405,21 @@
         "button_bg_color": "#000000",
         "button_text_color": "#ffffff",
         "heading_font": "jost_n4",
-        "title_font_size": 16
+        "title_font_size": 16,
+        "top_badge_padding_horizontal": 10,
+        "top_badge_padding_vertical": 5,
+        "top_badge_margin_top": 10,
+        "top_badge_margin_left": 10,
+        "discount_badge_padding_horizontal": 10,
+        "discount_badge_padding_vertical": 5,
+        "discount_badge_margin_bottom": 10,
+        "discount_badge_margin_left": 10,
+        "top_badge_font_size": 11,
+        "discount_badge_font_size": 11,
+        "show_rating": true,
+        "rating_display_type": "number",
+        "show_review_count": true,
+        "show_verified_badge": true
       }
     }
   },

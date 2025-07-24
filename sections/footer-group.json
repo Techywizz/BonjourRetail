@@ -11,6 +11,150 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "news_slider_mNqRLr": {
+      "type": "news-slider",
+      "blocks": {
+        "news_item_yk3dHj": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/news_18_6c046729-e2d7-4752-8828-5ad285f58850.png",
+            "link": "shopify://blogs/news/what-is-the-socks-rule-for-formal-wear"
+          }
+        },
+        "news_item_nCMcPh": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/images_7be16cfc-7200-4d90-8c88-373745f96941.png",
+            "link": "shopify://collections/3-ply-face-mask"
+          }
+        },
+        "news_item_e8YpNb": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/images_2_d1f5f7e0-f5db-43a1-b3aa-1f56cb9e831f.png",
+            "link": ""
+          }
+        },
+        "news_item_XTp3Dk": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/business_of_fashion_bof_logo.jpg",
+            "link": ""
+          }
+        },
+        "news_item_xX9JHJ": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/styleworld_d548fc02-9a4f-4dde-8de9-48a2fd173a7a.png",
+            "link": ""
+          }
+        },
+        "news_item_iR796k": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/local_samosa_f7f60d25-cab1-4e72-819f-1854a3e8248c.jpg",
+            "link": ""
+          }
+        },
+        "news_item_xpUf9X": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/HZ_cc0bcfd7-444d-4e16-84d3-8d77781b03d1.png",
+            "link": ""
+          }
+        },
+        "news_item_gbEKHa": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/IG_ad06a78b-0b32-45f9-ade7-90b476c91446.png",
+            "link": ""
+          }
+        },
+        "news_item_iLjgPx": {
+          "type": "news_item",
+          "settings": {
+            "image": "shopify://shop_images/AR_3d4e79e7-f2c1-4fb3-ac42-db2f90900dd2.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "news_item_yk3dHj",
+        "news_item_nCMcPh",
+        "news_item_e8YpNb",
+        "news_item_XTp3Dk",
+        "news_item_xX9JHJ",
+        "news_item_iR796k",
+        "news_item_xpUf9X",
+        "news_item_gbEKHa",
+        "news_item_iLjgPx"
+      ],
+      "name": "News Slider",
+      "settings": {
+        "title": "Bonjour in News",
+        "full_width": true,
+        "content_width": 1200,
+        "card_width": 250,
+        "card_height": 200,
+        "card_padding": 10,
+        "image_max_width": 100,
+        "image_max_height": 100,
+        "slides_to_show": 5,
+        "slides_to_show_tablet": 3,
+        "slides_to_show_mobile": 1,
+        "show_arrows": true,
+        "title_font_size": 24,
+        "title_font_weight": "600",
+        "title_alignment": "center",
+        "title_spacing": 30,
+        "background_color": "#b7aca2",
+        "title_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "expandable_content_xGBFyJ": {
+      "type": "expandable-content",
+      "name": "Expandable Content",
+      "settings": {
+        "title": "BONJOUR India - Clothing Mankind Since 1876",
+        "description": "<p>Founded in 1876, BONJOUR pioneered innerwear, evolving and innovating not only the product, but also the way it has been marketed over the years. BONJOUR is a leading manufacturer and marketer of comfort apparel sold in more than 140 countries around the world. The company is committed to quality, comfort, fashion, innovation and value. As BONJOUR grows and sophistication, the simple commitment to serve its consumer's need for comfort continues to be the brand's hallmark.</p>",
+        "expanded_content": "<h3>BONJOUR.in - India's Official Online Store for BONJOUR Products</h3><p>BONJOUR was set up under Page Industries Ltd. in 1994 with the key objective of bringing the world-renowned brand BONJOUR to India. BONJOUR manufactures, distributes and markets products for the whole family – Men, Women and Kids.</p><h3>Page Industries Limited</h3><p>Page Industries Limited, located in Bangalore, India is the exclusive licensee of BONJOUR International Inc. (USA) for manufacture, distribution and marketing of the BONJOUR brand in India, Sri Lanka, Oman, Bangladesh, Nepal and UAE. Page Industries Ltd. became public limited in March 2007 and is listed on the BSE and the NSE of India.</p><p>The promoters of BONJOUR in India are the Genomal family, who have been associated with BONJOUR International Inc. for over 65 years as their sole licensee in Philippines.</p>",
+        "button_text": "KNOW MORE",
+        "button_text_expanded": "SEE LESS",
+        "full_width": false,
+        "content_width": 800,
+        "background_color": "#ffffff",
+        "title_color": "#000000",
+        "paragraph_color": "#000000",
+        "expanded_color": "#000000",
+        "button_text_color": "#000000",
+        "button_background_color": "#ffffff",
+        "button_border_color": "#000000",
+        "button_hover_text_color": "#ffffff",
+        "button_hover_background_color": "#000000",
+        "button_hover_border_color": "#000000",
+        "title_font_size": 32,
+        "title_font_weight": "700",
+        "paragraph_font_size": 16,
+        "paragraph_font_weight": "400",
+        "expanded_font_size": 16,
+        "expanded_font_weight": "400",
+        "button_font_size": 14,
+        "button_font_weight": "600",
+        "title_spacing": 20,
+        "paragraph_spacing": 25,
+        "button_padding_vertical": 12,
+        "button_padding_horizontal": 24,
+        "button_border_radius": 4,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -47,6 +191,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/logo-in-th-dimention-of-wt.png",
+            "image_link": "",
             "image_width": 400,
             "alignment": "center"
           }
@@ -69,6 +214,12 @@
         "enable_language_selector": true,
         "payment_enable": true,
         "show_policy": true,
+        "enable_expandable_content": false,
+        "expandable_title": "BONJOUR India - Clothing Mankind Since 1876",
+        "expandable_description": "<p>Founded in 1876, BONJOUR pioneered innerwear, evolving and innovating not only the product, but also the way it has been marketed over the years. BONJOUR is a leading manufacturer and marketer of comfort apparel sold in more than 140 countries around the world. The company is committed to quality, comfort, fashion, innovation and value. As BONJOUR grows and sophistication, the simple commitment to serve its consumer's need for comfort continues to be the brand's hallmark.</p>",
+        "expandable_expanded_content": "<h3>BONJOUR.in - India's Official Online Store for BONJOUR Products</h3><p>BONJOUR was set up under Page Industries Ltd. in 1994 with the key objective of bringing the world-renowned brand BONJOUR to India. BONJOUR manufactures, distributes and markets products for the whole family – Men, Women and Kids.</p><h3>Page Industries Limited</h3><p>Page Industries Limited, located in Bangalore, India is the exclusive licensee of BONJOUR International Inc. (USA) for manufacture, distribution and marketing of the BONJOUR brand in India, Sri Lanka, Oman, Bangladesh, Nepal and UAE. Page Industries Ltd. became public limited in March 2007 and is listed on the BSE and the NSE of India.</p><p>The promoters of BONJOUR in India are the Genomal family, who have been associated with BONJOUR International Inc. for over 65 years as their sole licensee in Philippines.</p>",
+        "expandable_button_text": "KNOW MORE",
+        "expandable_button_text_expanded": "SEE LESS",
         "margin_top": 0,
         "padding_top": 36,
         "padding_bottom": 36
@@ -113,6 +264,8 @@
     }
   },
   "order": [
+    "news_slider_mNqRLr",
+    "expandable_content_xGBFyJ",
     "footer",
     "ss_back_to_top_button_DBkBxj",
     "ss_wave_2_9pbCHA"

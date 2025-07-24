@@ -2,11 +2,11 @@
   Featured Collection with Badges Section
   - Supports top badges from MetaObjects and Metafields
   - Matches the design from the image with tabs and product cards
+  - Supports multiple tabs with different collections
 {% endcomment %}
 
 {%- liquid
   assign section_id = 'featured-collection-badges-' | append: section.id
-  assign collection = section.settings.collection
   assign products_to_show = section.settings.products_to_show | default: 4
   assign columns_desktop = section.settings.columns_desktop | default: 4
   assign show_rating = section.settings.show_rating
@@ -20,118 +20,221 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 <link rel="stylesheet" href="{{ 'featured-collection-badges.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}">
 
 <div class="featured-collection-badges" id="{{ section_id }}">
-  {% if collection != blank %}
+  {% if section.blocks.size > 0 %}
     <!-- Section Heading with Tabs -->
     <div class="section-header">
       <div class="tabs-container">
-        <button class="tab-link active" data-tab="new-products">
-          New Products
-        </button>
-        <button class="tab-link" data-tab="bestsellers">
-          Bestsellers
-        </button>
-      </div>
-    </div>
-
-    <!-- Product Slider -->
-    <div class="product-slider-container">
-      <div class="product-slider" 
-           data-slides-to-show="{{ columns_desktop }}"
-           data-autoplay="{{ section.settings.autoplay }}"
-           data-autoplay-speed="{{ section.settings.autoplay_speed }}">
-        
-        {% for product in collection.products limit: products_to_show %}
-          <div class="product-card-wrapper">
-            <div class="product-card">
-              <!-- Product Image with Badges -->
-              <div class="card-top">
-                <a href="{{ product.url }}" class="product-image-link">
-                  {% if product.featured_image %}
-                    <img src="{{ product.featured_image | img_url: '400x400', crop: 'center' }}" 
-                         alt="{{ product.featured_image.alt | escape }}" 
-                         class="product-image"
-                         loading="lazy">
-                  {% else %}
-                    <div class="product-image-placeholder">
-                      {{ 'product-1' | placeholder_svg_tag: 'product-image' }}
-                    </div>
-                  {% endif %}
-                </a>
-                
-                <!-- Top Badge from MetaObject -->
-                {% if product.metafields.custom.special_tags != blank %}
-                  <div class="badge-container badge-container--top">
-                    <span class="badge badge--top" style="background-color: {{ section.settings.top_badge_bg_color | default: '#EABF7C' }}; color: {{ section.settings.top_badge_text_color | default: '#333333' }};">
-                      {{ product.metafields.custom.special_tags }}
-                    </span>
-                  </div>
-                {% endif %}
-                
-                <!-- Discount Badge -->
-                {% if product.compare_at_price > product.price %}
-                  {% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
-                  <div class="badge-container badge-container--bottom">
-                    <span class="badge badge--discount" style="background-color: {{ section.settings.discount_badge_bg_color | default: '#4CAF50' }}; color: {{ section.settings.discount_badge_text_color | default: '#FFFFFF' }};">
-                      {{ discount_percentage }}% OFF
-                    </span>
-                  </div>
-                {% endif %}
-              </div>
-              
-              <!-- Product Info -->
-              <div class="card-bottom">
-                <!-- Product Title -->
-                <h3 class="product-title">
-                  <a href="{{ product.url }}">{{ product.title }}</a>
-                </h3>
-                
-                <!-- Product Price -->
-                <div class="price-container">
-                  {% if product.compare_at_price > product.price %}
-                    <span class="price price--sale">
-                      <span class="price-item price-item--sale">{{ product.price | money }}</span>
-                      <span class="price-item price-item--regular">{{ product.compare_at_price | money }}</span>
-                    </span>
-                  {% else %}
-                    <span class="price">
-                      <span class="price-item price-item--regular">{{ product.price | money }}</span>
-                    </span>
-                  {% endif %}
-                </div>
-                
-                <!-- Add to Cart Button -->
-                <div class="add-to-cart-container">
-                  {% form 'product', product %}
-                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                    <button type="submit" 
-                            class="button" 
-                            style="background-color: {{ section.settings.button_bg_color | default: '#000000' }}; color: {{ section.settings.button_text_color | default: '#FFFFFF' }};"
-                            {% unless product.available %}disabled{% endunless %}>
-                      {% if product.available %}
-                        ADD TO CART
-                      {% else %}
-                        SOLD OUT
-                      {% endif %}
-                    </button>
-                  {% endform %}
-                </div>
-              </div>
-            </div>
-          </div>
+        {% for block in section.blocks %}
+          <button class="tab-link{% if forloop.first %} active{% endif %}" data-tab="{{ block.id }}">
+            {{ block.settings.tab_title | default: "Tab" }}
+          </button>
         {% endfor %}
       </div>
     </div>
 
-    <!-- View All Button -->
-    {% if show_view_all %}
-      <div class="view-all-container">
-        <a href="{{ collection.url }}" class="view-all-button">
-          VIEW ALL
-        </a>
-      </div>
-    {% endif %}
+    <!-- Product Sliders for each tab -->
+    {% for block in section.blocks %}
+      {%- assign collection = collections[block.settings.collection] -%}
+      {% if collection != blank %}
+        <div class="product-slider-container{% if forloop.first %} active{% endif %}" data-tab="{{ block.id }}">
+          <div class="product-slider" 
+               data-slides-to-show="{{ columns_desktop }}"
+               data-autoplay="{{ section.settings.autoplay }}"
+               data-autoplay-speed="{{ section.settings.autoplay_speed }}">
+            
+            {% for product in collection.products limit: products_to_show %}
+              <div class="product-card-wrapper">
+                <div class="product-card">
+                  <!-- Product Image with Badges -->
+                  <div class="card-top">
+                    <a href="{{ product.url }}" class="product-image-link">
+                      {% if product.featured_image %}
+                        <img src="{{ product.featured_image | img_url: '400x400', crop: 'center' }}" 
+                             alt="{{ product.featured_image.alt | escape }}" 
+                             class="product-image"
+                             loading="lazy">
+                      {% else %}
+                        <div class="product-image-placeholder">
+                          {{ 'product-1' | placeholder_svg_tag: 'product-image' }}
+                        </div>
+                      {% endif %}
+                    </a>
+                    
+                    <!-- Top Badge for first product in first tab -->
+                    {% if forloop.first and forloop.parentloop.first %}
+                      <div class="badge-container badge-container--top" style="top: {{ section.settings.top_badge_margin_top | default: 10 }}px; left: {{ section.settings.top_badge_margin_left | default: 10 }}px;">
+                        <span class="badge badge--top" style="background-color: {{ section.settings.top_badge_bg_color | default: '#EABF7C' }}; color: {{ section.settings.top_badge_text_color | default: '#333333' }}; padding: {{ section.settings.top_badge_padding_vertical | default: 5 }}px {{ section.settings.top_badge_padding_horizontal | default: 10 }}px; font-size: {{ section.settings.top_badge_font_size | default: 11 }}px;">BESTSELLER</span>
+                      </div>
+                    {% else %}
+                      <!-- Top Badge from MetaObject and Metafield -->
+                      {%- assign badge_metaobject = product.metafields.custom.special_tags.value -%}
+                      {% if badge_metaobject != blank %}
+                        {%- assign badge_text = badge_metaobject.special_tags.value -%}
+                        {% if badge_text != blank %}
+                          <div class="badge-container badge-container--top" style="top: {{ section.settings.top_badge_margin_top | default: 10 }}px; left: {{ section.settings.top_badge_margin_left | default: 10 }}px;">
+                            <span class="badge badge--top" style="background-color: {{ section.settings.top_badge_bg_color | default: '#EABF7C' }}; color: {{ section.settings.top_badge_text_color | default: '#333333' }}; padding: {{ section.settings.top_badge_padding_vertical | default: 5 }}px {{ section.settings.top_badge_padding_horizontal | default: 10 }}px; font-size: {{ section.settings.top_badge_font_size | default: 11 }}px;">
+                              {{ badge_text }}
+                            </span>
+                          </div>
+                        {% endif %}
+                      {% endif %}
+                    {% endif %}
+                    
+                    <!-- Discount Badge -->
+                    {% if product.compare_at_price > product.price %}
+                      {% assign discount_percentage = product.compare_at_price | minus: product.price | times: 100.0 | divided_by: product.compare_at_price | round %}
+                      <div class="badge-container badge-container--bottom" style="bottom: {{ section.settings.discount_badge_margin_bottom | default: 10 }}px; left: {{ section.settings.discount_badge_margin_left | default: 10 }}px;">
+                        <span class="badge badge--discount" style="background-color: {{ section.settings.discount_badge_bg_color | default: '#4CAF50' }}; color: {{ section.settings.discount_badge_text_color | default: '#FFFFFF' }}; padding: {{ section.settings.discount_badge_padding_vertical | default: 5 }}px {{ section.settings.discount_badge_padding_horizontal | default: 10 }}px; font-size: {{ section.settings.discount_badge_font_size | default: 11 }}px;">
+                          {{ discount_percentage }}% OFF
+                        </span>
+                      </div>
+                    {% endif %}
+                  </div>
+                  
+                  <!-- Product Info -->
+                  <div class="card-bottom">
+                    <!-- Product Category/Sub-title -->
+                    {% if product.vendor != blank %}
+                      <div class="product-category">
+                        {{ product.vendor | upcase }}
+                      </div>
+                    {% endif %}
+                    
+                    <!-- Product Title -->
+                    <h3 class="product-title">
+                      <a href="{{ product.url }}">{{ product.title }}</a>
+                    </h3>
+                    
+                    <!-- Product Rating and Reviews -->
+                    {% if section.settings.enable_rating_display %}
+                      {% liquid
+                        assign has_rating = false
+                        assign rating_value = 0
+                        assign rating_count = 0
+                        
+                        if product.metafields.reviews.rating.value != blank
+                          assign has_rating = true
+                          assign rating_value = product.metafields.reviews.rating.value.rating | plus: 0
+                          assign rating_count = product.metafields.reviews.rating_count | plus: 0
+                        elsif product.metafields.yotpo.reviews_average != blank
+                          assign has_rating = true
+                          assign rating_value = product.metafields.yotpo.reviews_average | plus: 0
+                          assign rating_count = product.metafields.yotpo.reviews_count | plus: 0
+                        elsif product.metafields.spr.reviews != blank
+                          assign has_rating = true
+                          assign rating_value = product.metafields.spr.reviews | plus: 0
+                          assign rating_count = product.metafields.spr.reviews_count | plus: 0
+                        endif
+                      %}
+                      
+                      {% if has_rating and rating_value > 0 %}
+                        <div class="product-rating">
+                          <div class="rating-stars">
+                            {% if section.settings.rating_display_type == 'stars' %}
+                              {% if product.metafields.reviews.rating.value != blank %}
+                                {% liquid
+                                  assign rating_decimal = 0
+                                  assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+                                  if decimal >= 0.3 and decimal <= 0.7
+                                    assign rating_decimal = 0.5
+                                  elsif decimal > 0.7
+                                    assign rating_decimal = 1
+                                  endif
+                                %}
+                                <div class="rating" role="img" aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value.rating, rating_max: product.metafields.reviews.rating.value.scale_max }}">
+                                  <span class="rating-star" style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }}; --color-rating-star: #ffc107;"></span>
+                                </div>
+                              {% endif %}
+                            {% else %}
+                              <span class="star-icon">★</span>
+                              <span class="rating-value">
+                                {{ rating_value | round: 1 }}
+                              </span>
+                            {% endif %}
+                          </div>
+                          <span class="rating-separator">|</span>
+                          {% if section.settings.show_verified_badge %}
+                            <div class="verified-badge">
+                              <span class="checkmark-icon">✓</span>
+                            </div>
+                          {% endif %}
+                          {% if section.settings.show_review_count and rating_count > 0 %}
+                            <span class="reviews-count">
+                              ({{ rating_count }} Reviews)
+                            </span>
+                          {% endif %}
+                        </div>
+                      {% else %}
+                        <div class="product-rating">
+                          <span class="no-review-text">No Review</span>
+                        </div>
+                      {% endif %}
+                    {% else %}
+                      <!-- Empty div for spacing when rating is disabled -->
+                      <div class="rating-spacer"></div>
+                    {% endif %}
+                    
+                    <!-- Product Price -->
+                    <div class="price-container">
+                      {% if product.compare_at_price > product.price %}
+                        <div class="price-wrapper">
+                          <span class="current-price">{{ product.price | money }}</span>
+                          <span class="original-price">{{ product.compare_at_price | money }}</span>
+                        </div>
+                      {% else %}
+                        <div class="price-wrapper">
+                          <span class="current-price">{{ product.price | money }}</span>
+                        </div>
+                      {% endif %}
+                    </div>
+                    
+                    <!-- Add to Cart Button -->
+                    <div class="add-to-cart-container">
+                      {% form 'product', product %}
+                        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                        <button type="submit" 
+                                class="button" 
+                                style="background-color: {{ section.settings.button_bg_color | default: '#000000' }}; color: {{ section.settings.button_text_color | default: '#FFFFFF' }};"
+                                {% unless product.available %}disabled{% endunless %}>
+                          {% if product.available %}
+                            ADD TO CART
+                          {% else %}
+                            SOLD OUT
+                          {% endif %}
+                        </button>
+                      {% endform %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <!-- View All Buttons for each tab -->
+    <div class="view-all-buttons-container">
+      {% for block in section.blocks %}
+        <div class="view-all-button-group{% if forloop.first %} active{% endif %}" data-tab="{{ block.id }}">
+          {%- assign collection = collections[block.settings.collection] -%}
+          {% assign view_all_link = collection.url %}
+          {% if block.settings.view_all_link != blank %}
+            {% assign view_all_link = block.settings.view_all_link %}
+          {% endif %}
+          {% assign view_all_text = "View All" %}
+          {% if block.settings.view_all_text != blank %}
+            {% assign view_all_text = block.settings.view_all_text %}
+          {% endif %}
+          <a href="{{ view_all_link }}" class="view-all-button">
+            {{ view_all_text }}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
   {% endif %}
 </div>
 
@@ -144,11 +247,6 @@
   "name": "Collection Badges",
   "class": "featured-collection-badges-section",
   "settings": [
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Collection"
-    },
     {
       "type": "range",
       "id": "products_to_show",
@@ -259,6 +357,42 @@
       "default": "#333333"
     },
     {
+      "type": "range",
+      "id": "top_badge_margin_top",
+      "label": "Top Badge Margin Top",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "top_badge_margin_left",
+      "label": "Top Badge Margin Left",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "top_badge_padding_vertical",
+      "label": "Top Badge Padding Vertical",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "top_badge_padding_horizontal",
+      "label": "Top Badge Padding Horizontal",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+    {
       "type": "color",
       "id": "discount_badge_bg_color",
       "label": "Discount Badge Background",
@@ -271,6 +405,94 @@
       "default": "#FFFFFF"
     },
     {
+      "type": "range",
+      "id": "discount_badge_margin_bottom",
+      "label": "Discount Badge Margin Bottom",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "discount_badge_margin_left",
+      "label": "Discount Badge Margin Left",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "discount_badge_padding_vertical",
+      "label": "Discount Badge Padding Vertical",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "discount_badge_padding_horizontal",
+      "label": "Discount Badge Padding Horizontal",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Badge Font Settings"
+    },
+    {
+      "type": "range",
+      "id": "top_badge_font_size",
+      "label": "Top Badge Font Size",
+      "min": 8,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "range",
+      "id": "discount_badge_font_size",
+      "label": "Discount Badge Font Size",
+      "min": 8,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "header",
+      "content": "View All Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "new_products_view_all_text",
+      "label": "New Products View All Text",
+      "default": "View All New Products"
+    },
+    {
+      "type": "url",
+      "id": "new_products_view_all_link",
+      "label": "New Products View All Link",
+      "info": "Leave blank to use collection URL"
+    },
+    {
+      "type": "text",
+      "id": "bestsellers_view_all_text",
+      "label": "Bestsellers View All Text",
+      "default": "View All Bestsellers"
+    },
+    {
+      "type": "url",
+      "id": "bestsellers_view_all_link",
+      "label": "Bestsellers View All Link",
+      "info": "Leave blank to use collection URL"
+    },
+    {
       "type": "color",
       "id": "button_bg_color",
       "label": "Button Background",
@@ -281,6 +503,75 @@
       "id": "button_text_color",
       "label": "Button Text Color",
       "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Rating Display Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_rating_display",
+      "label": "Show Product Rating",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "rating_display_type",
+      "label": "Rating Display Type",
+      "options": [
+        {
+          "value": "stars",
+          "label": "Star Rating"
+        },
+        {
+          "value": "number",
+          "label": "Number Rating"
+        }
+      ],
+      "default": "number"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_review_count",
+      "label": "Show Review Count",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_verified_badge",
+      "label": "Show Verified Badge",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_tab",
+      "name": "Collection Tab",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Title",
+          "default": "Tab"
+        },
+        {
+          "type": "text",
+          "id": "view_all_text",
+          "label": "View All Text",
+          "default": "View All"
+        },
+        {
+          "type": "url",
+          "id": "view_all_link",
+          "label": "View All Link",
+          "info": "Leave blank to use collection URL"
+        }
+      ]
     }
   ],
   "presets": [

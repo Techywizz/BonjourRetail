@@ -1,0 +1,505 @@
+{{ 'section-news-slider.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .news-slider {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .news-slider__container {
+    {% if section.settings.full_width %}
+      width: 100%;
+    {% else %}
+      max-width: {{ section.settings.content_width }}px;
+      margin: 0 auto;
+    {% endif %}
+  }
+
+  .news-slider__title {
+    font-size: {{ section.settings.title_font_size }}px;
+    font-weight: {{ section.settings.title_font_weight }};
+    color: {{ section.settings.title_color }};
+    text-align: {{ section.settings.title_alignment }};
+    margin-bottom: {{ section.settings.title_spacing }}px;
+  }
+
+  .news-slider__card {
+    max-width: {{ section.settings.card_width }}px;
+    min-height: {{ section.settings.card_height }}px;
+    padding: {{ section.settings.card_padding }}px;
+  }
+
+  .news-slider__image {
+    max-width: {{ section.settings.image_max_width }}%;
+    max-height: {{ section.settings.image_max_height }}%;
+  }
+
+  @media screen and (min-width: 750px) {
+    .news-slider {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="news-slider section-{{ section.id }}-padding" style="background-color: {{ section.settings.background_color }};">
+  <div class="news-slider__container page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="news-slider__title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="news-slider__wrapper">
+        <div class="news-slider__slider" data-slider="{{ section.id }}">
+          {%- for block in section.blocks -%}
+            <div class="news-slider__item" {{ block.shopify_attributes }}>
+              <div class="news-slider__card">
+                {%- if block.settings.image != blank -%}
+                  <div class="news-slider__image-wrapper">
+                    <img
+                      srcset="{{ block.settings.image | image_url: width: 400 }}, {{ block.settings.image | image_url: width: 800 }} 2x"
+                      src="{{ block.settings.image | image_url: width: 400 }}"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      loading="lazy"
+                      width="{{ block.settings.image.width }}"
+                      height="{{ block.settings.image.height }}"
+                      class="news-slider__image"
+                    >
+                  </div>
+                {%- endif -%}
+                
+                {%- if block.settings.link != blank -%}
+                  <a href="{{ block.settings.link }}" class="news-slider__link" target="_blank" rel="noopener noreferrer">
+                    <span class="visually-hidden">View link</span>
+                  </a>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        
+        {%- if section.settings.show_arrows and section.blocks.size > 1 -%}
+          <button class="news-slider__arrow news-slider__prev" onclick="newsSliderPrev('{{ section.id }}')" aria-label="Previous slide">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="news-slider__arrow news-slider__next" onclick="newsSliderNext('{{ section.id }}')" aria-label="Next slide">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+// Store slider states
+const newsSliderStates = {};
+
+// Initialize slider for this section
+function initNewsSlider(sectionId) {
+  const slider = document.querySelector(`[data-slider="${sectionId}"]`);
+  if (!slider) return;
+  
+  const slidesToShow = {{ section.settings.slides_to_show }};
+  const slidesToShowTablet = {{ section.settings.slides_to_show_tablet }};
+  const slidesToShowMobile = {{ section.settings.slides_to_show_mobile }};
+  const totalSlides = {{ section.blocks.size }};
+  
+  newsSliderStates[sectionId] = {
+    currentSlide: 0,
+    slidesToShow: slidesToShow,
+    slidesToShowTablet: slidesToShowTablet,
+    slidesToShowMobile: slidesToShowMobile,
+    totalSlides: totalSlides
+  };
+  
+  updateNewsSlider(sectionId);
+}
+
+function getNewsSlidesToShow(sectionId) {
+  const state = newsSliderStates[sectionId];
+  if (!state) return 5;
+  
+  if (window.innerWidth <= 768) return state.slidesToShowMobile;
+  if (window.innerWidth <= 1024) return state.slidesToShowTablet;
+  return state.slidesToShow;
+}
+
+function updateNewsSlider(sectionId) {
+  const slider = document.querySelector(`[data-slider="${sectionId}"]`);
+  if (!slider) return;
+  
+  const state = newsSliderStates[sectionId];
+  if (!state) return;
+  
+  const slidesToShow = getNewsSlidesToShow(sectionId);
+  const maxSlide = Math.max(0, state.totalSlides - slidesToShow);
+  state.currentSlide = Math.min(state.currentSlide, maxSlide);
+  
+  const translateX = -(state.currentSlide * (100 / slidesToShow));
+  slider.style.transform = `translateX(${translateX}%)`;
+  
+  // Update arrow states
+  const prevBtn = slider.closest('.news-slider__wrapper').querySelector('.news-slider__prev');
+  const nextBtn = slider.closest('.news-slider__wrapper').querySelector('.news-slider__next');
+  
+  if (prevBtn) prevBtn.disabled = state.currentSlide === 0;
+  if (nextBtn) nextBtn.disabled = state.currentSlide >= maxSlide;
+}
+
+function newsSliderNext(sectionId) {
+  const state = newsSliderStates[sectionId];
+  if (!state) return;
+  
+  const slidesToShow = getNewsSlidesToShow(sectionId);
+  const maxSlide = Math.max(0, state.totalSlides - slidesToShow);
+  if (state.currentSlide < maxSlide) {
+    state.currentSlide++;
+    updateNewsSlider(sectionId);
+  }
+}
+
+function newsSliderPrev(sectionId) {
+  const state = newsSliderStates[sectionId];
+  if (!state) return;
+  
+  if (state.currentSlide > 0) {
+    state.currentSlide--;
+    updateNewsSlider(sectionId);
+  }
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', function() {
+  initNewsSlider('{{ section.id }}');
+});
+
+// Handle resize
+window.addEventListener('resize', function() {
+  updateNewsSlider('{{ section.id }}');
+});
+</script>
+
+{% schema %}
+{
+  "name": "News Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Bonjour in News"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "label": "Content width (boxed)",
+      "default": 1200
+    },
+    {
+      "type": "header",
+      "content": "Card Settings"
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "min": 150,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Card width",
+      "default": 250
+    },
+    {
+      "type": "range",
+      "id": "card_height",
+      "min": 150,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Card height",
+      "default": 200
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Card padding",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Image Settings"
+    },
+    {
+      "type": "range",
+      "id": "image_max_width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Image max width",
+      "default": 90
+    },
+    {
+      "type": "range",
+      "id": "image_max_height",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Image max height",
+      "default": 90
+    },
+    {
+      "type": "header",
+      "content": "Slider Settings"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Slides to show (Desktop)",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_tablet",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Slides to show (Tablet)",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Slides to show (Mobile)",
+      "default": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show arrows",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Title font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "800",
+          "label": "Extra Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Title alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Title bottom spacing",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "news_item",
+      "name": "News Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "URL for the news item"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "News Slider",
+      "blocks": [
+        {
+          "type": "news_item"
+        },
+        {
+          "type": "news_item"
+        },
+        {
+          "type": "news_item"
+        },
+        {
+          "type": "news_item"
+        },
+        {
+          "type": "news_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

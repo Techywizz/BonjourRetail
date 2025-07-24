@@ -1,0 +1,135 @@
+.expandable-content {
+  width: 100%;
+}
+
+.expandable-content__container {
+  position: relative;
+}
+
+.expandable-content__wrapper {
+  text-align: left;
+}
+
+.expandable-content__title {
+  margin: 0;
+  padding: 0;
+}
+
+.expandable-content__description {
+  margin: 0;
+  padding: 0;
+}
+
+.expandable-content__description p {
+  margin: 0 0 1rem 0;
+}
+
+.expandable-content__description p:last-child {
+  margin-bottom: 0;
+}
+
+.expandable-content__button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  margin-top: 1rem;
+}
+
+.expandable-content__button--know-more {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.expandable-content__button--see-less {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.expandable-content__button:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.expandable-content__expanded-content {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: 0;
+  opacity: 0;
+}
+
+.expandable-content__expanded-content.expanded {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+.expandable-content__expanded-content h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.expandable-content__expanded-content p {
+  margin: 0 0 1rem 0;
+}
+
+.expandable-content__expanded-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 749px) {
+  .expandable-content__wrapper {
+    text-align: center;
+  }
+  
+  .expandable-content__button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .expandable-content__expanded-content {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+  }
+}
+
+/* Animation for smooth transitions */
+.expandable-content__expanded-content {
+  transition: all 0.3s ease;
+}
+
+/* Accessibility improvements */
+.expandable-content__button[aria-expanded="true"] {
+  /* Add any specific styles for expanded state */
+}
+
+.expandable-content__button[aria-expanded="false"] {
+  /* Add any specific styles for collapsed state */
+}
+
+/* Focus styles for better accessibility */
+.expandable-content__button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .expandable-content__button {
+    display: none;
+  }
+  
+  .expandable-content__expanded-content {
+    display: block !important;
+    border-top: none;
+    margin-top: 1rem;
+    padding-top: 0;
+  }
+} 

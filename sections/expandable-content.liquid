@@ -1,0 +1,539 @@
+{{ 'section-expandable-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .expandable-content {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .expandable-content__container {
+    {% if section.settings.full_width %}
+      width: 100%;
+    {% else %}
+      max-width: {{ section.settings.content_width }}px;
+      margin: 0 auto;
+    {% endif %}
+  }
+
+  .expandable-content__title {
+    font-size: {{ section.settings.title_font_size }}px;
+    font-weight: {{ section.settings.title_font_weight }};
+    color: {{ section.settings.title_color }};
+    line-height: 1.2;
+    margin-bottom: {{ section.settings.title_spacing }}px;
+  }
+
+  .expandable-content__description {
+    font-size: {{ section.settings.paragraph_font_size }}px;
+    font-weight: {{ section.settings.paragraph_font_weight }};
+    color: {{ section.settings.paragraph_color }};
+    line-height: 1.6;
+    margin-bottom: {{ section.settings.paragraph_spacing }}px;
+  }
+
+  .expandable-content__expanded-content {
+    font-size: {{ section.settings.expanded_font_size }}px;
+    font-weight: {{ section.settings.expanded_font_weight }};
+    color: {{ section.settings.expanded_color }};
+    line-height: 1.6;
+  }
+
+  .expandable-content__button {
+    font-size: {{ section.settings.button_font_size }}px;
+    font-weight: {{ section.settings.button_font_weight }};
+    color: {{ section.settings.button_text_color }};
+    background-color: {{ section.settings.button_background_color }};
+    border: 1px solid {{ section.settings.button_border_color }};
+    padding: {{ section.settings.button_padding_vertical }}px {{ section.settings.button_padding_horizontal }}px;
+    border-radius: {{ section.settings.button_border_radius }}px;
+    transition: all 0.3s ease;
+  }
+
+  .expandable-content__button:hover {
+    background-color: {{ section.settings.button_hover_background_color }};
+    color: {{ section.settings.button_hover_text_color }};
+    border-color: {{ section.settings.button_hover_border_color }};
+  }
+
+  @media screen and (min-width: 750px) {
+    .expandable-content {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="expandable-content section-{{ section.id }}-padding" style="background-color: {{ section.settings.background_color }};">
+  <div class="expandable-content__container page-width">
+    <div class="expandable-content__wrapper">
+      {%- if section.settings.title != blank -%}
+        <h2 class="expandable-content__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <div class="expandable-content__description">
+          {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+
+      <button 
+        class="expandable-content__button expandable-content__button--know-more" 
+        type="button" 
+        aria-expanded="false"
+        aria-controls="expandable-content-{{ section.id }}"
+      >
+        {{ section.settings.button_text }}
+      </button>
+
+      <div 
+        id="expandable-content-{{ section.id }}" 
+        class="expandable-content__expanded-content"
+        style="display: none;"
+      >
+        {%- if section.settings.expanded_content != blank -%}
+          {{ section.settings.expanded_content }}
+        {%- endif -%}
+        
+        <button 
+          class="expandable-content__button expandable-content__button--see-less" 
+          type="button" 
+          aria-expanded="false"
+          aria-controls="expandable-content-{{ section.id }}"
+        >
+          {{ section.settings.button_text_expanded }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const knowMoreButton = document.querySelector('.expandable-content__button--know-more');
+  const seeLessButton = document.querySelector('.expandable-content__button--see-less');
+  const expandedContent = document.querySelector('.expandable-content__expanded-content');
+
+  if (knowMoreButton && seeLessButton && expandedContent) {
+    // Handle KNOW MORE button click
+    knowMoreButton.addEventListener('click', function() {
+      expandedContent.style.display = 'block';
+      // Trigger reflow to ensure display: block is applied
+      expandedContent.offsetHeight;
+      expandedContent.classList.add('expanded');
+      knowMoreButton.style.display = 'none';
+      knowMoreButton.setAttribute('aria-expanded', 'true');
+      seeLessButton.setAttribute('aria-expanded', 'true');
+    });
+
+    // Handle SEE LESS button click
+    seeLessButton.addEventListener('click', function() {
+      expandedContent.classList.remove('expanded');
+      knowMoreButton.style.display = 'inline-block';
+      knowMoreButton.setAttribute('aria-expanded', 'false');
+      seeLessButton.setAttribute('aria-expanded', 'false');
+      
+      // Hide the content after animation completes
+      setTimeout(() => {
+        if (!expandedContent.classList.contains('expanded')) {
+          expandedContent.style.display = 'none';
+        }
+      }, 800);
+    });
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Expandable Content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "BONJOUR India - Clothing Mankind Since 1876"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Founded in 1876, BONJOUR pioneered innerwear, evolving and innovating not only the product, but also the way it has been marketed over the years. BONJOUR is a leading manufacturer and marketer of comfort apparel sold in more than 140 countries around the world. The company is committed to quality, comfort, fashion, innovation and value. As BONJOUR grows and sophistication, the simple commitment to serve its consumer's need for comfort continues to be the brand's hallmark.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "expanded_content",
+      "label": "Expanded Content",
+      "default": "<h3>BONJOUR.in - India's Official Online Store for BONJOUR Products</h3><p>BONJOUR was set up under Page Industries Ltd. in 1994 with the key objective of bringing the world-renowned brand BONJOUR to India. BONJOUR manufactures, distributes and markets products for the whole family – Men, Women and Kids.</p><h3>Page Industries Limited</h3><p>Page Industries Limited, located in Bangalore, India is the exclusive licensee of BONJOUR International Inc. (USA) for manufacture, distribution and marketing of the BONJOUR brand in India, Sri Lanka, Oman, Bangladesh, Nepal and UAE. Page Industries Ltd. became public limited in March 2007 and is listed on the BSE and the NSE of India.</p><p>The promoters of BONJOUR in India are the Genomal family, who have been associated with BONJOUR International Inc. for over 65 years as their sole licensee in Philippines.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "KNOW MORE"
+    },
+    {
+      "type": "text",
+      "id": "button_text_expanded",
+      "label": "Button Text (Expanded)",
+      "default": "SEE LESS"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 600,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Content width (boxed)",
+      "default": 800
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "paragraph_color",
+      "label": "Paragraph color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "expanded_color",
+      "label": "Expanded content color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button border color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "Button hover background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Button hover border color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "title_font_weight",
+      "label": "Title font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "800",
+          "label": "Extra Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "paragraph_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Paragraph font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "paragraph_font_weight",
+      "label": "Paragraph font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "expanded_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Expanded content font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "expanded_font_weight",
+      "label": "Expanded content font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Button font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Title bottom spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "paragraph_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Paragraph bottom spacing",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 8,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button vertical padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button horizontal padding",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin bottom",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Expandable Content"
+    }
+  ]
+}
+{% endschema %} 

@@ -47,6 +47,7 @@
     or section.settings.show_social
     and has_social_icons == true
     or section.settings.enable_follow_on_shop
+    or section.settings.enable_expandable_content
   -%}
     {%- unless only_empty_brand -%}
       <div class="footer__content-top page-width">
@@ -140,6 +141,7 @@
                           class="footer-block__image-wrapper"
                           style="max-width: min(100%, {{ block.settings.image_width }}px);"
                         >
+                          <a href="{{ block.settings.image_link | default: routes.root_url }}" class="footer-block__image-link">
                           <img
                             srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
                             src="{{ block.settings.image | image_url: width: 760 }}"
@@ -148,6 +150,7 @@
                             width="{{ block.settings.image.width }}"
                             height="{{ block.settings.image.height }}"
                           >
+                          </a>
                         </div>
                       {%- else -%}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
@@ -247,6 +250,50 @@
           {%- endif -%}
         </div>
       </div>
+
+      {%- if section.settings.enable_expandable_content -%}
+        <div class="footer__expandable-content">
+          <div class="footer__expandable-content-container">
+            {%- if section.settings.expandable_title != blank -%}
+              <h2 class="footer__expandable-title">{{ section.settings.expandable_title }}</h2>
+            {%- endif -%}
+
+            {%- if section.settings.expandable_description != blank -%}
+              <div class="footer__expandable-description">
+                {{ section.settings.expandable_description }}
+              </div>
+            {%- endif -%}
+
+            <button 
+              class="footer__expandable-button footer__expandable-button--know-more" 
+              type="button" 
+              aria-expanded="false"
+              aria-controls="footer-expandable-content-{{ section.id }}"
+            >
+              {{ section.settings.expandable_button_text }}
+            </button>
+
+            <div 
+              id="footer-expandable-content-{{ section.id }}" 
+              class="footer__expandable-expanded-content"
+              style="display: none;"
+            >
+              {%- if section.settings.expandable_expanded_content != blank -%}
+                {{ section.settings.expandable_expanded_content }}
+              {%- endif -%}
+              
+              <button 
+                class="footer__expandable-button footer__expandable-button--see-less" 
+                type="button" 
+                aria-expanded="false"
+                aria-controls="footer-expandable-content-{{ section.id }}"
+              >
+                {{ section.settings.expandable_button_text_expanded }}
+              </button>
+            </div>
+          </div>
+        </div>
+      {%- endif -%}
     {%- endunless -%}
   {%- endif -%}
 
@@ -396,6 +443,12 @@
           "label": "Image"
         },
         {
+          "type": "url",
+          "id": "image_link",
+          "label": "Image link",
+          "info": "Optional: Add a custom link to the image. If left empty, it will link to the homepage."
+        },
+        {
           "type": "range",
           "id": "image_width",
           "min": 50,
@@ -516,6 +569,46 @@
       "id": "show_policy",
       "default": true,
       "label": "t:sections.footer.settings.show_policy.label"
+    },
+    {
+      "type": "header",
+      "content": "Expandable Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_expandable_content",
+      "default": false,
+      "label": "Enable expandable content"
+    },
+    {
+      "type": "text",
+      "id": "expandable_title",
+      "label": "Title",
+      "default": "BONJOUR India - Clothing Mankind Since 1876"
+    },
+    {
+      "type": "richtext",
+      "id": "expandable_description",
+      "label": "Description",
+      "default": "<p>Founded in 1876, BONJOUR pioneered innerwear, evolving and innovating not only the product, but also the way it has been marketed over the years. BONJOUR is a leading manufacturer and marketer of comfort apparel sold in more than 140 countries around the world. The company is committed to quality, comfort, fashion, innovation and value. As BONJOUR grows and sophistication, the simple commitment to serve its consumer's need for comfort continues to be the brand's hallmark.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "expandable_expanded_content",
+      "label": "Expanded Content",
+      "default": "<h3>BONJOUR.in - India's Official Online Store for BONJOUR Products</h3><p>BONJOUR was set up under Page Industries Ltd. in 1994 with the key objective of bringing the world-renowned brand BONJOUR to India. BONJOUR manufactures, distributes and markets products for the whole family – Men, Women and Kids.</p><h3>Page Industries Limited</h3><p>Page Industries Limited, located in Bangalore, India is the exclusive licensee of BONJOUR International Inc. (USA) for manufacture, distribution and marketing of the BONJOUR brand in India, Sri Lanka, Oman, Bangladesh, Nepal and UAE. Page Industries Ltd. became public limited in March 2007 and is listed on the BSE and the NSE of India.</p><p>The promoters of BONJOUR in India are the Genomal family, who have been associated with BONJOUR International Inc. for over 65 years as their sole licensee in Philippines.</p>"
+    },
+    {
+      "type": "text",
+      "id": "expandable_button_text",
+      "label": "Button Text",
+      "default": "KNOW MORE"
+    },
+    {
+      "type": "text",
+      "id": "expandable_button_text_expanded",
+      "label": "Button Text (Expanded)",
+      "default": "SEE LESS"
     },
     {
       "type": "header",
@@ -651,5 +744,38 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Footer expandable content functionality
+  const footerKnowMoreButton = document.querySelector('.footer__expandable-button--know-more');
+  const footerSeeLessButton = document.querySelector('.footer__expandable-button--see-less');
+  const footerExpandedContent = document.querySelector('.footer__expandable-expanded-content');
+
+  if (footerKnowMoreButton && footerSeeLessButton && footerExpandedContent) {
+    // Handle KNOW MORE button click
+    footerKnowMoreButton.addEventListener('click', function() {
+      footerExpandedContent.style.display = 'block';
+      // Trigger reflow to ensure display: block is applied
+      footerExpandedContent.offsetHeight;
+      footerExpandedContent.classList.add('expanded');
+      footerKnowMoreButton.style.display = 'none';
+      footerKnowMoreButton.setAttribute('aria-expanded', 'true');
+      footerSeeLessButton.setAttribute('aria-expanded', 'true');
+    });
+
+    // Handle SEE LESS button click
+    footerSeeLessButton.addEventListener('click', function() {
+      footerExpandedContent.classList.remove('expanded');
+      footerKnowMoreButton.style.display = 'inline-block';
+      footerKnowMoreButton.setAttribute('aria-expanded', 'false');
+      footerSeeLessButton.setAttribute('aria-expanded', 'false');
+      
+      // Hide the content after animation completes
+      setTimeout(() => {
+        if (!footerExpandedContent.classList.contains('expanded')) {
+          footerExpandedContent.style.display = 'none';
+        }
+      }, 800);
+    });
+  }
 });
 </script>
