@@ -1377,24 +1377,15 @@
             "view_all_text": "View All Products",
             "view_all_link": ""
           }
-        },
-        "category_tab_b7WgQL": {
-          "type": "category_tab",
-          "settings": {
-            "tab_title": "New Collections",
-            "collection": "clearance-sale-kids",
-            "view_all_text": "View All Products",
-            "view_all_link": ""
-          }
         }
       },
       "block_order": [
         "category_tab_BiDhw8",
-        "category_tab_ctqBAt",
-        "category_tab_b7WgQL"
+        "category_tab_ctqBAt"
       ],
       "name": "Custom Category Slider",
       "settings": {
+        "layout": "full_width",
         "show_arrows": true,
         "show_dots": true,
         "top_badge_metafield": "",

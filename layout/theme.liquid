@@ -36,6 +36,7 @@
     <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
+    <link rel="stylesheet" href="{{ 'component-breadcrumb.css' | asset_url }}" media="print" onload="this.media='all'">
     <style>
       body .price-item {
       font-size: 0.80em !important;
@@ -275,6 +276,9 @@
       {{ 'component-totals.css' | asset_url | stylesheet_tag }}
       {{ 'component-price.css' | asset_url | stylesheet_tag }}
       {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+      {%- if settings.cart_drawer_style == 'modern' -%}
+        {{ 'component-cart-drawer-modern.css' | asset_url | stylesheet_tag }}
+      {%- endif -%}
     {%- endif -%}
 
     {%- unless settings.type_body_font.system? -%}
@@ -315,7 +319,7 @@
     </a>
 
     {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
+      {%- render 'cart-drawer-modern' -%}
     {%- endif -%}
 
     {% sections 'header-group' %}
@@ -381,6 +385,8 @@
     {%- endif -%}
 
     {%- if settings.cart_type == 'drawer' -%}
+      <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {% if request.page_type == 'product' %}
