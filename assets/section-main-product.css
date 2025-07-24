@@ -193,6 +193,41 @@ product-info {
   margin-bottom: 1rem;
 }
 
+/* Force consistent product form layout */
+.product-form__quantity-and-cart {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.product-form__quantity-and-cart .product-form__quantity {
+  flex: 0 0 auto !important;
+  margin-bottom: 0 !important;
+}
+
+.product-form__quantity-and-cart .product-form__cart-button {
+  flex: 1 !important;
+  margin-bottom: 0 !important;
+  position: relative !important;
+  top: 10px !important;
+}
+
+.product-form__submit {
+  background: #000000 !important;
+  color: #ffffff !important;
+  width: 100% !important;
+  height: 4.4rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0.4rem !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
 .product-form__submit[aria-disabled='true'] + .shopify-payment-button .shopify-payment-button__button[disabled],
 .product-form__submit[disabled] + .shopify-payment-button .shopify-payment-button__button[disabled] {
   cursor: not-allowed;
@@ -213,6 +248,29 @@ product-info {
 .shopify-payment-button__button {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
+}
+
+/* Consistent Buy It Now button styling */
+.product-form__buy-now-button .shopify-payment-button__button {
+  width: 100% !important;
+  height: 4.4rem !important;
+  background: #8B7355 !important;
+  color: #333333 !important;
+  border: 1px solid #6B5B47 !important;
+  border-radius: 0.4rem !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.product-form__buy-now-button .shopify-payment-button__button:hover {
+  background: #7A6B4A !important;
+  border-color: #5A4B37 !important;
 }
 
 /* Product info */
@@ -1281,6 +1339,37 @@ a.product__text {
   margin-bottom: var(--icon-size);
 }
 
+/* Mobile responsive adjustments for icon-with-text */
+@media screen and (max-width: 749px) {
+  .icon-with-text {
+    --icon-size: calc(var(--font-heading-scale) * 1.5rem);
+    --icon-spacing: calc(var(--font-heading-scale) * 0.25rem);
+  }
+  
+  .icon-with-text--horizontal {
+    column-gap: 1rem;
+  }
+  
+  .icon-with-text--horizontal .svg-wrapper,
+  .icon-with-text--horizontal img {
+    margin-bottom: calc(var(--icon-spacing) * 0.25);
+  }
+  
+  .icon-with-text--horizontal .h4 {
+    padding-top: calc(var(--icon-size) + calc(var(--icon-spacing) * 0.25));
+    font-size: 0.75rem;
+    line-height: 1.1;
+  }
+  
+  .icon-with-text--vertical .icon-with-text__item {
+    margin-bottom: calc(var(--icon-size) * 0.25);
+  }
+  
+  .icon-with-text__item {
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* SKU block */
 
 .product__sku.visibility-hidden::after {
@@ -1491,4 +1580,26 @@ a.product__text {
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
   }
+}
+
+/* Product Badge Styles */
+.product-media-container .badge-container {
+  position: absolute;
+  z-index: 2;
+}
+
+.product-media-container .badge-container--top {
+  top: 10px;
+  right: 10px;
+}
+
+.product-media-container .badge {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #EABF7C;
 }

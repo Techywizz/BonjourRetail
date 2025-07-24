@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="{{ 'custom-category-slider.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}">
 
-<div class="custom-category-slider" data-section-id="{{ section.id }}" style="--heading-font: {{ section.settings.heading_font.family }}; --title-font-size: {{ section.settings.title_font_size }}px;">
-  <div class="page-width">
+<div class="custom-category-slider{% if section.settings.layout == 'full_width' %} custom-category-slider--full-width{% else %} custom-category-slider--boxed{% endif %}" data-section-id="{{ section.id }}" style="--heading-font: {{ section.settings.heading_font.family }}; --title-font-size: {{ section.settings.title_font_size }}px;">
+  <div class="{% if section.settings.layout == 'full_width' %}page-width-full{% else %}page-width{% endif %}">
     <div class="tabs-container">
       {% for block in section.blocks %}
         <div class="tab-link h2{% if forloop.first %} active{% endif %}" data-tab-id="{{ block.id }}">
@@ -30,21 +30,14 @@
                   <img src="{{ product.featured_image | image_url: width: 550 }}" alt="{{ product.featured_image.alt | escape }}" class="product-image">
                 </a>
                 
-                <!-- Top Badge for first product in first tab -->
-                {% if forloop.first and forloop.parentloop.first %}
-                  <div class="badge-container badge-container--top" style="top: {{ section.settings.top_badge_margin_top }}px; left: {{ section.settings.top_badge_margin_left }}px;">
-                    <span class="badge badge--top" style="background-color: {{ section.settings.top_badge_bg_color }}; color: {{ section.settings.top_badge_text_color }}; padding: {{ section.settings.top_badge_padding_vertical }}px {{ section.settings.top_badge_padding_horizontal }}px; font-size: {{ section.settings.top_badge_font_size }}px;">BESTSELLER</span>
-                  </div>
-                {% else %}
-                  <!-- Top Badge from MetaObject and Metafield -->
-                  {%- assign badge_metaobject = product.metafields.custom.special_tags.value -%}
-                  {% if badge_metaobject != blank %}
-                    {%- assign badge_text = badge_metaobject.special_tags.value -%}
-                    {% if badge_text != blank %}
-                      <div class="badge-container badge-container--top" style="top: {{ section.settings.top_badge_margin_top }}px; left: {{ section.settings.top_badge_margin_left }}px;">
-                        <span class="badge badge--top" style="background-color: {{ section.settings.top_badge_bg_color }}; color: {{ section.settings.top_badge_text_color }}; padding: {{ section.settings.top_badge_padding_vertical }}px {{ section.settings.top_badge_padding_horizontal }}px; font-size: {{ section.settings.top_badge_font_size }}px;">{{ badge_text }}</span>
-                      </div>
-                    {% endif %}
+                <!-- Top Badge from MetaObject and Metafield -->
+                {%- assign badge_metaobject = product.metafields.custom.special_tags.value -%}
+                {% if badge_metaobject != blank %}
+                  {%- assign badge_text = badge_metaobject.special_tags.value -%}
+                  {% if badge_text != blank %}
+                    <div class="badge-container badge-container--top" style="top: {{ section.settings.top_badge_margin_top }}px; left: {{ section.settings.top_badge_margin_left }}px;">
+                      <span class="badge badge--top" style="background-color: {{ section.settings.top_badge_bg_color }}; color: {{ section.settings.top_badge_text_color }}; padding: {{ section.settings.top_badge_padding_vertical }}px {{ section.settings.top_badge_padding_horizontal }}px; font-size: {{ section.settings.top_badge_font_size }}px;">{{ badge_text }}</span>
+                    </div>
                   {% endif %}
                 {% endif %}
                 
@@ -190,6 +183,26 @@
   "name": "Custom Category Slider",
   "class": "custom-category-slider-section",
   "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout Style",
+      "options": [
+        {
+          "value": "boxed",
+          "label": "Boxed"
+        },
+        {
+          "value": "full_width",
+          "label": "Full Width"
+        }
+      ],
+      "default": "boxed"
+    },
     {
       "type": "header",
       "content": "Slider Settings"

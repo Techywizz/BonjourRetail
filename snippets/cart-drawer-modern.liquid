@@ -1,0 +1,369 @@
+{% comment %}
+  Modern Cart Drawer - Matches the design in the image
+  Usage:
+  {% render 'cart-drawer-modern' %}
+{% endcomment %}
+
+{{ 'component-cart-drawer-modern.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .drawer {
+    visibility: hidden;
+  }
+</style>
+
+
+<cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
+  <div id="CartDrawer" class="cart-drawer cart-drawer--modern">
+    <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
+    <div
+      class="drawer__inner gradient color-{{ settings.cart_color_scheme }}"
+      role="dialog"
+      aria-modal="true"
+      aria-label="{{ 'sections.cart.title' | t }}"
+      tabindex="-1"
+    >
+      {%- if cart == empty -%}
+        <div class="drawer__inner-empty">
+          <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
+            <div class="cart-drawer__empty-content">
+              <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
+              <button
+                class="drawer__close"
+                type="button"
+                onclick="this.closest('cart-drawer').close()"
+                aria-label="{{ 'accessibility.close' | t }}"
+              >
+                <span class="svg-wrapper">
+                  {{- 'icon-close.svg' | inline_asset_content -}}
+                </span>
+              </button>
+              <a href="{{ routes.all_products_collection_url }}" class="button">
+                {{ 'general.continue_shopping' | t }}
+              </a>
+
+              {%- if shop.customer_accounts_enabled and customer == null -%}
+                <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
+                <p class="cart__login-paragraph">
+                  {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+                </p>
+              {%- endif -%}
+            </div>
+          </div>
+          {%- if settings.cart_drawer_collection != blank -%}
+            <div class="cart-drawer__collection">
+              {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      
+      <!-- Modern Cart Header -->
+      <div class="drawer__header drawer__header--modern">
+        <div class="drawer__header-content">
+          <div class="drawer__header-left">
+            <h2 class="drawer__heading">{{ 'sections.cart.title' | t }} ({{ cart.item_count }}) :</h2>
+            <!-- Sale Timer -->
+            {%- if settings.show_sale_timer -%}
+              <div class="cart-drawer__sale-timer">
+                <div class="sale-timer__banner" style="background-color: {{ settings.sale_timer_bg_color }};">
+                  <span class="sale-timer__text" style="color: {{ settings.sale_timer_text_color }};">{{ settings.sale_timer_text }}</span>
+                  <span class="sale-timer__countdown" id="sale-timer" style="color: {{ settings.sale_timer_text_color }};">
+                    <span class="timer__hours">{{ settings.sale_timer_hours | prepend: '0' | slice: -2, 2 }}</span>h : 
+                    <span class="timer__minutes">{{ settings.sale_timer_minutes | prepend: '0' | slice: -2, 2 }}</span>m : 
+                    <span class="timer__seconds">{{ settings.sale_timer_seconds | prepend: '0' | slice: -2, 2 }}</span>s
+                  </span>
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+          <button
+            class="drawer__close drawer__close--modern"
+            type="button"
+            onclick="this.closest('cart-drawer').close()"
+            aria-label="{{ 'accessibility.close' | t }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-close.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        </div>
+      </div>
+      
+      <cart-drawer-items
+        {% if cart == empty %}
+          class=" is-empty"
+        {% endif %}
+      >
+        <form
+          action="{{ routes.cart_url }}"
+          id="CartDrawer-Form"
+          class="cart__contents cart-drawer__form"
+          method="post"
+        >
+          <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
+            {%- if cart != empty -%}
+              <div class="drawer__cart-items-wrapper">
+                <div class="cart-items-modern">
+                  {%- for item in cart.items -%}
+                    <div class="cart-item-modern" id="CartDrawer-Item-{{ item.index | plus: 1 }}">
+                      <div class="cart-item__media-modern">
+                        {% if item.image %}
+                          <div class="cart-item__image-container">
+                            <img
+                              class="cart-item__image"
+                              src="{{ item.image | image_url: width: 300 }}"
+                              alt="{{ item.image.alt | escape }}"
+                              loading="lazy"
+                              width="150"
+                              height="{{ 150 | divided_by: item.image.aspect_ratio | ceil }}"
+                            >
+                            <!-- Product Badge -->
+                            {%- assign badge_metaobject = item.product.metafields.custom.special_tags.value -%}
+                            {% if badge_metaobject != blank %}
+                              {%- assign badge_text = badge_metaobject.special_tags.value -%}
+                              {% if badge_text != blank %}
+                                <div class="cart-item__badge">
+                                  <span class="badge-text">{{ badge_text }}</span>
+                                </div>
+                              {% endif %}
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                      </div>
+
+                      <div class="cart-item__details-modern">
+                        <div class="cart-item__info">
+                          <h3 class="cart-item__name">{{ item.product.title | escape }}</h3>
+                          
+                          <!-- Size Information -->
+                          {%- if item.product.has_only_default_variant == false -%}
+                            {%- for option in item.options_with_values -%}
+                              {%- if option.name == 'Size' or option.name == 'Title' -%}
+                                <p class="cart-item__size">Size: {{ option.value }}</p>
+                              {%- endif -%}
+                            {%- endfor -%}
+                          {%- endif -%}
+                          
+                          <!-- Price Information -->
+                          <div class="cart-item__price-info">
+                            {%- if item.original_price != item.final_price -%}
+                              <div class="cart-item__discounted-prices">
+                                <s class="cart-item__old-price">{{ item.original_price | money }}</s>
+                                <span class="cart-item__final-price">{{ item.final_price | money }}</span>
+                                <span class="cart-item__price-note">Lowest price in last 30 days</span>
+                              </div>
+                            {%- else -%}
+                              <span class="cart-item__price">{{ item.original_price | money }}</span>
+                              <span class="cart-item__price-note">Lowest price in last 30 days</span>
+                            {%- endif -%}
+                          </div>
+                        </div>
+
+                        <div class="cart-item__actions">
+                          <!-- Quantity Selector -->
+                          <div class="cart-item__quantity-modern">
+                            <quantity-input class="quantity cart-quantity">
+                              <button class="quantity__button" name="minus" type="button">
+                                <span class="visually-hidden">
+                                  {{- 'products.product.quantity.decrease' | t: product: item.product.title | escape -}}
+                                </span>
+                                <span class="svg-wrapper">
+                                  {{- 'icon-minus.svg' | inline_asset_content -}}
+                                </span>
+                              </button>
+                              <input
+                                class="quantity__input"
+                                type="number"
+                                data-quantity-variant-id="{{ item.variant.id }}"
+                                name="updates[]"
+                                value="{{ item.quantity }}"
+                                data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
+                                min="0"
+                                data-min="{{ item.variant.quantity_rule.min }}"
+                                {% if item.variant.quantity_rule.max != null %}
+                                  max="{{ item.variant.quantity_rule.max }}"
+                                {% endif %}
+                                step="{{ item.variant.quantity_rule.increment }}"
+                                aria-label="{{ 'products.product.quantity.input_label' | t: product: item.product.title | escape }}"
+                                id="Drawer-quantity-{{ item.index | plus: 1 }}"
+                                data-index="{{ item.index | plus: 1 }}"
+                              >
+                              <button class="quantity__button" name="plus" type="button">
+                                <span class="visually-hidden">
+                                  {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
+                                </span>
+                                <span class="svg-wrapper">
+                                  {{- 'icon-plus.svg' | inline_asset_content -}}
+                                </span>
+                              </button>
+                            </quantity-input>
+                          </div>
+
+                          <!-- Remove Button -->
+                          <cart-remove-button
+                            id="CartDrawer-Remove-{{ item.index | plus: 1 }}"
+                            data-index="{{ item.index | plus: 1 }}"
+                          >
+                            <button
+                              type="button"
+                              class="cart-remove-button-modern"
+                              aria-label="{{ 'sections.cart.remove_title' | t: title: item.title | escape }}"
+                              data-variant-id="{{ item.variant.id }}"
+                            >
+                              Remove
+                            </button>
+                          </cart-remove-button>
+                        </div>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endif -%}
+            <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
+            <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">
+              {{ 'accessibility.loading' | t }}
+            </p>
+          </div>
+          <div id="CartDrawer-CartErrors" role="alert"></div>
+        </form>
+      </cart-drawer-items>
+      
+            <!-- Modern Cart Footer -->
+      <div class="drawer__footer drawer__footer--modern">
+        <!-- Order Summary -->
+        <div class="cart-drawer__summary">
+          <div class="summary__header">
+            <h3 class="summary__title">Order Summary</h3>
+          </div>
+          
+          <div class="summary__breakdown">
+            <div class="summary__row">
+              <span class="summary__label">Total MRP:</span>
+              <span class="summary__value">{{ cart.original_total_price | money }}</span>
+            </div>
+            {%- if cart.total_discount > 0 -%}
+              <div class="summary__row summary__row--discount">
+                <span class="summary__label">Bag Discount:</span>
+                <span class="summary__value">-{{ cart.total_discount | money }}</span>
+              </div>
+            {%- endif -%}
+            <div class="summary__row">
+              <span class="summary__label">Coupon Discount:</span>
+              <span class="summary__value">₹ 0.00</span>
+            </div>
+            <div class="summary__row summary__row--shipping">
+              <span class="summary__label">Shipping Charge:</span>
+              <span class="summary__value">Free</span>
+            </div>
+          </div>
+          
+          <div class="summary__total">
+            <div class="summary__row summary__row--total">
+              <span class="summary__label">Total Payable:</span>
+              <span class="summary__value">{{ cart.total_price | money }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart Actions -->
+        <div class="cart-drawer__actions">
+          <a
+            href="{{ routes.cart_url }}"
+            class="cart__view-cart-button-modern"
+            {% if cart == empty %}
+              style="pointer-events: none; opacity: 0.5;"
+            {% endif %}
+          >
+            View Cart
+          </a>
+          <button
+            type="submit"
+            id="CartDrawer-Checkout"
+            class="cart__checkout-button-modern"
+            name="checkout"
+            form="CartDrawer-Form"
+            {% if cart == empty %}
+              disabled
+            {% endif %}
+          >
+            {{ 'sections.cart.checkout' | t }}
+          </button>
+        </div>
+
+        <!-- Security Section -->
+        {%- if settings.show_security_section -%}
+          <div class="cart-drawer__security">
+            <div class="security__header">
+              <span class="security__icon">🛡️</span>
+              <span class="security__text">{{ settings.security_text }}</span>
+            </div>
+            {%- if settings.payment_methods_image != blank -%}
+              <div class="payment-methods">
+                <img
+                  src="{{ settings.payment_methods_image | image_url: width: 500 }}"
+                  alt="Payment Methods"
+                  loading="lazy"
+                  class="payment-methods__image"
+                >
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</cart-drawer>
+
+<script>
+  // Sale Timer Countdown
+  function updateSaleTimer() {
+    {%- if settings.show_sale_timer -%}
+      const now = new Date();
+      const hours = {{ settings.sale_timer_hours }};
+      const minutes = {{ settings.sale_timer_minutes }};
+      const seconds = {{ settings.sale_timer_seconds }};
+      
+      const endTime = new Date(now.getTime() + (hours * 60 * 60 * 1000) + (minutes * 60 * 1000) + (seconds * 1000));
+      
+      const timer = setInterval(function() {
+        const currentTime = new Date();
+        const timeLeft = endTime - currentTime;
+        
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          const saleTimer = document.getElementById('sale-timer');
+          if (saleTimer) {
+            saleTimer.innerHTML = 'Sale Ended';
+          }
+          return;
+        }
+        
+        const hoursLeft = Math.floor(timeLeft / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+        const hoursElement = document.querySelector('.timer__hours');
+        const minutesElement = document.querySelector('.timer__minutes');
+        const secondsElement = document.querySelector('.timer__seconds');
+        
+        if (hoursElement && minutesElement && secondsElement) {
+          hoursElement.textContent = hoursLeft.toString().padStart(2, '0');
+          minutesElement.textContent = minutesLeft.toString().padStart(2, '0');
+          secondsElement.textContent = secondsLeft.toString().padStart(2, '0');
+        }
+      }, 1000);
+    {%- endif -%}
+  }
+  
+  // Initialize when cart drawer opens
+  document.addEventListener('DOMContentLoaded', function() {
+    updateSaleTimer();
+  });
+  
+  // Reinitialize timer when cart drawer opens
+  document.addEventListener('cart-drawer:open', function() {
+    updateSaleTimer();
+  });
+</script> 

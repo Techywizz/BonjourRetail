@@ -1,0 +1,56 @@
+{%- liquid
+  assign breadcrumb_separator = '›'
+  assign breadcrumb_items = ''
+  
+  if template == 'index'
+    assign breadcrumb_items = ''
+  elsif template == 'product'
+    if product.collections.first
+      assign breadcrumb_items = 'Home › ' | append: product.collections.first.title | append: ' › ' | append: product.title
+    else
+      assign breadcrumb_items = 'Home › ' | append: product.title
+    endif
+  elsif template == 'collection'
+    assign breadcrumb_items = 'Home › ' | append: collection.title
+  elsif template == 'page'
+    assign breadcrumb_items = 'Home › ' | append: page.title
+  elsif template == 'blog'
+    assign breadcrumb_items = 'Home › ' | append: blog.title
+  elsif template == 'article'
+    assign breadcrumb_items = 'Home › ' | append: blog.title | append: ' › ' | append: article.title
+  elsif template == 'cart'
+    assign breadcrumb_items = 'Home › Cart'
+  elsif template == 'search'
+    assign breadcrumb_items = 'Home › Search Results'
+  elsif template == '404'
+    assign breadcrumb_items = 'Home › Page Not Found'
+  else
+    assign breadcrumb_items = 'Home'
+  endif
+-%}
+
+{%- if breadcrumb_items != blank -%}
+  <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+    <div class="page-width">
+      <ol class="breadcrumb__list">
+        {%- assign items = breadcrumb_items | split: ' › ' -%}
+        {%- for item in items -%}
+          <li class="breadcrumb__item">
+            {%- if forloop.last -%}
+              <span class="breadcrumb__current" aria-current="page">{{ item }}</span>
+            {%- else -%}
+              {%- if forloop.first -%}
+                <a href="{{ routes.root_url }}" class="breadcrumb__link">
+                  {{ item }}
+                </a>
+              {%- else -%}
+                <a href="#" class="breadcrumb__link">{{ item }}</a>
+              {%- endif -%}
+              <span class="breadcrumb__separator">{{ breadcrumb_separator }}</span>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ol>
+    </div>
+  </nav>
+{%- endif -%} 
