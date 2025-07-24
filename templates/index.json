@@ -1385,7 +1385,6 @@
       ],
       "name": "Custom Category Slider",
       "settings": {
-        "layout": "full_width",
         "show_arrows": true,
         "show_dots": true,
         "top_badge_metafield": "",
