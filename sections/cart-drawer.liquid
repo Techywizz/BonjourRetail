@@ -1,1 +1,12 @@
-{%- render 'cart-drawer' -%}
+{%- if settings.cart_drawer_style == 'modern' -%}
+  {%- render 'cart-drawer-modern' -%}
+{%- else -%}
+  {%- render 'cart-drawer' -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Cart Drawer",
+  "settings": []
+}
+{% endschema %}

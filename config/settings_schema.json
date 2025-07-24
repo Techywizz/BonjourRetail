@@ -1469,6 +1469,98 @@
         "content": "t:settings_schema.cart.settings.cart_drawer.header"
       },
       {
+        "type": "select",
+        "id": "cart_drawer_style",
+        "options": [
+          {
+            "value": "default",
+            "label": "Default Cart Drawer"
+          },
+          {
+            "value": "modern",
+            "label": "Modern Cart Drawer"
+          }
+        ],
+        "default": "default",
+        "label": "Cart Drawer Style"
+      },
+      {
+        "type": "header",
+        "content": "Sale Timer Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_sale_timer",
+        "default": true,
+        "label": "Show Sale Timer"
+      },
+      {
+        "type": "text",
+        "id": "sale_timer_text",
+        "default": "Sale ends in :",
+        "label": "Sale Timer Text"
+      },
+      {
+        "type": "range",
+        "id": "sale_timer_hours",
+        "min": 0,
+        "max": 24,
+        "step": 1,
+        "default": 8,
+        "label": "Sale Timer Hours"
+      },
+      {
+        "type": "range",
+        "id": "sale_timer_minutes",
+        "min": 0,
+        "max": 59,
+        "step": 1,
+        "default": 18,
+        "label": "Sale Timer Minutes"
+      },
+      {
+        "type": "range",
+        "id": "sale_timer_seconds",
+        "min": 0,
+        "max": 59,
+        "step": 1,
+        "default": 55,
+        "label": "Sale Timer Seconds"
+      },
+      {
+        "type": "color",
+        "id": "sale_timer_bg_color",
+        "default": "#90EE90",
+        "label": "Sale Timer Background Color"
+      },
+      {
+        "type": "color",
+        "id": "sale_timer_text_color",
+        "default": "#333333",
+        "label": "Sale Timer Text Color"
+      },
+      {
+        "type": "header",
+        "content": "Security Section Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_security_section",
+        "default": true,
+        "label": "Show Security Section"
+      },
+      {
+        "type": "text",
+        "id": "security_text",
+        "default": "100% secure transaction",
+        "label": "Security Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "payment_methods_image",
+        "label": "Payment Methods Image"
+      },
+      {
         "type": "collection",
         "id": "cart_drawer_collection",
         "label": "t:settings_schema.cart.settings.cart_drawer.collection.label",

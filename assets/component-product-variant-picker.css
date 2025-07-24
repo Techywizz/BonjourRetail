@@ -161,3 +161,174 @@ variant-selects {
     letter-spacing: 0.02rem;
   }
 }
+
+/* Hide the original quantity selector */
+.product-form__quantity--hidden {
+  display: none !important;
+}
+
+/* Custom layout for quantity and add to cart on same line */
+.product-form__quantity-and-cart {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.product-form__quantity-and-cart .product-form__quantity {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.product-form__quantity-and-cart .product-form__cart-button {
+  flex: 1;
+  margin-bottom: 0;
+  position: relative;
+  top: 10px;
+}
+
+.product-form__quantity-and-cart .product-form__submit {
+  width: 100%;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+}
+
+/* Ensure consistent styling for all product forms */
+.product-form .product-form__submit {
+  background: #000000 !important;
+  color: #ffffff !important;
+  width: 100%;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Override any conflicting styles from base.css */
+.product-form__submit {
+  background: #000000 !important;
+  color: #ffffff !important;
+  width: 100% !important;
+  height: 4.4rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0.4rem !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+}
+
+/* Force layout consistency */
+.product-form__quantity-and-cart {
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.product-form__quantity-and-cart .product-form__quantity {
+  flex: 0 0 auto !important;
+  margin-bottom: 0 !important;
+}
+
+.product-form__quantity-and-cart .product-form__cart-button {
+  flex: 1 !important;
+  margin-bottom: 0 !important;
+  position: relative !important;
+  top: 10px !important;
+}
+
+/* Align quantity input height with button */
+.product-form__quantity-and-cart .quantity {
+  height: 4.4rem;
+  border-radius: 0.4rem;
+}
+
+.product-form__quantity-and-cart .quantity__input {
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Ensure proper spacing and alignment */
+.product-form__quantity-and-cart .quantity__label {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+/* Buy It Now button on separate line */
+.product-form__buy-now-button {
+  margin-bottom: 1rem;
+}
+
+.product-form__buy-now-button .shopify-payment-button {
+  width: 100%;
+}
+
+.product-form__buy-now-button .shopify-payment-button__button {
+  width: 100% !important;
+  height: 4.4rem !important;
+  background: #8B7355 !important;
+  color: #333333 !important;
+  border: 1px solid #6B5B47 !important;
+  border-radius: 0.4rem !important;
+  font-size: 1.4rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.product-form__buy-now-button .shopify-payment-button__button:hover {
+  background: #7A6B4A !important;
+  border-color: #5A4B37 !important;
+}
+
+@media screen and (max-width: 749px) {
+  .product-form__quantity-and-cart {
+    flex-direction: row;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-form__quantity-and-cart .product-form__quantity {
+    flex: 0 0 auto;
+  }
+  
+  .product-form__quantity-and-cart .product-form__cart-button {
+    flex: 1;
+  }
+  
+  .product-form__quantity-and-cart .product-form__submit {
+    height: 4rem;
+    font-size: 1.4rem;
+  }
+  
+  .product-form__quantity-and-cart .quantity {
+    height: 4rem;
+  }
+  
+  .product-form__buy-now-button {
+    margin-bottom: 0.8rem;
+  }
+  
+  .product-form__buy-now-button .shopify-payment-button__button {
+    height: 4rem;
+  }
+}

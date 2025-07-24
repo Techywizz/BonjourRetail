@@ -53,6 +53,16 @@
   class="product-media-container media-type-{{ media.media_type }} media-fit-{{ media_fit }} global-media-settings gradient{% if constrain_to_viewport %} constrain-height{% endif %}"
   style="--ratio: {{ media.aspect_ratio | default: 1.0 }}; --preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};"
 >
+  <!-- Best Seller Badge from MetaObject and Metafield -->
+  {%- assign badge_metaobject = product.metafields.custom.special_tags.value -%}
+  {% if badge_metaobject != blank %}
+    {%- assign badge_text = badge_metaobject.special_tags.value -%}
+    {% if badge_text != blank %}
+      <div class="badge-container badge-container--top" style="top: 10px; right: 10px;">
+        <span class="badge badge--top" style="background-color: #EABF7C; color: #FFFFFF; padding: 5px 10px; font-size: 11px;">{{ badge_text }}</span>
+      </div>
+    {% endif %}
+  {% endif %}
   <modal-opener
     class="product__modal-opener product__modal-opener--{{ media.media_type }}"
     data-modal="#ProductModal-{{ modal_id }}"
