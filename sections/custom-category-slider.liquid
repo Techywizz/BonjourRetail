@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="{{ 'custom-category-slider.css' | asset_url }}">
 <link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}">
 
-<div class="custom-category-slider{% if section.settings.layout == 'full_width' %} custom-category-slider--full-width{% else %} custom-category-slider--boxed{% endif %}" data-section-id="{{ section.id }}" style="--heading-font: {{ section.settings.heading_font.family }}; --title-font-size: {{ section.settings.title_font_size }}px;">
-  <div class="{% if section.settings.layout == 'full_width' %}page-width-full{% else %}page-width{% endif %}">
+<div class="custom-category-slider" data-section-id="{{ section.id }}" style="--heading-font: {{ section.settings.heading_font.family }}; --title-font-size: {{ section.settings.title_font_size }}px;">
+  <div class="page-width">
     <div class="tabs-container">
       {% for block in section.blocks %}
         <div class="tab-link h2{% if forloop.first %} active{% endif %}" data-tab-id="{{ block.id }}">

@@ -4,6 +4,10 @@
 {{ 'component-modal-video.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
+{% if settings.product_card_design == 'modern' %}
+  {{ 'modern-product-card.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -93,14 +97,24 @@
               </div>
             {%- when 'product' -%}
               {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
-              {% render 'card-product',
-                card_product: block.settings.product,
-                media_aspect_ratio: 'adapt',
-                show_secondary_image: block.settings.second_image,
-                extend_height: true,
-                placeholder_image: placeholder_image,
-                skip_styles: skip_card_product_styles
-              %}
+              {% if settings.product_card_design == 'modern' %}
+                {% render 'card-product-modern',
+                  card_product: block.settings.product,
+                  media_aspect_ratio: 'adapt',
+                  show_secondary_image: block.settings.second_image,
+                  placeholder_image: placeholder_image,
+                  skip_styles: skip_card_product_styles
+                %}
+              {% else %}
+                {% render 'card-product',
+                  card_product: block.settings.product,
+                  media_aspect_ratio: 'adapt',
+                  show_secondary_image: block.settings.second_image,
+                  extend_height: true,
+                  placeholder_image: placeholder_image,
+                  skip_styles: skip_card_product_styles
+                %}
+              {% endif %}
               {% assign skip_card_product_styles = true %}
             {%- when 'collection' -%}
               {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
