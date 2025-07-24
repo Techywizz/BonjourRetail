@@ -3,10 +3,54 @@
   background-color: #fff;
 }
 
-.custom-category-slider .page-width {
+/* Boxed Layout (Default) */
+.custom-category-slider--boxed {
+  padding: 40px 0;
+}
+
+.custom-category-slider--boxed .page-width {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Full Width Layout */
+.custom-category-slider--full-width {
+  padding: 40px 0;
+  width: 100%;
+}
+
+.custom-category-slider--full-width .page-width-full {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Responsive adjustments for full width */
+@media screen and (min-width: 768px) {
+  .custom-category-slider--full-width .page-width-full {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .custom-category-slider--full-width .page-width-full {
+    padding: 0 60px;
+  }
+}
+
+/* Mobile responsiveness for full width layout */
+@media screen and (max-width: 767px) {
+  .custom-category-slider--full-width .page-width-full {
+    padding: 0 15px;
+  }
+  
+  .custom-category-slider--full-width .product-slider .slick-prev {
+    left: -15px;
+  }
+  
+  .custom-category-slider--full-width .product-slider .slick-next {
+    right: -15px;
+  }
 }
 
 .custom-category-slider .tabs-container {
@@ -15,6 +59,12 @@
   align-items: center;
   margin-bottom: 40px;
   gap: 0;
+}
+
+/* Full width layout adjustments for tabs */
+.custom-category-slider--full-width .tabs-container {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
 }
 
 .custom-category-slider .tab-link {
@@ -97,6 +147,35 @@
 
 .custom-category-slider .product-slider .slick-next {
   right: -20px;
+}
+
+/* Full width layout arrow positioning */
+.custom-category-slider--full-width .product-slider .slick-prev {
+  left: -30px;
+}
+
+.custom-category-slider--full-width .product-slider .slick-next {
+  right: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .custom-category-slider--full-width .product-slider .slick-prev {
+    left: -40px;
+  }
+  
+  .custom-category-slider--full-width .product-slider .slick-next {
+    right: -40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .custom-category-slider--full-width .product-slider .slick-prev {
+    left: -50px;
+  }
+  
+  .custom-category-slider--full-width .product-slider .slick-next {
+    right: -50px;
+  }
 }
 
 .custom-category-slider .product-slider .slick-arrow::before {
@@ -397,6 +476,12 @@
 .custom-category-slider .view-all-container {
   text-align: center;
   margin-top: 40px;
+}
+
+/* Full width layout view all button container */
+.custom-category-slider--full-width .view-all-container {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
 }
 
 .custom-category-slider .view-all-button {
