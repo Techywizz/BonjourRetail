@@ -3735,7 +3735,7 @@ modal-opener.product-popup-modal__opener.quick-add-hidden {
 }
 .product-popup-modal__button { min-height: auto !important;}
 
-ul.icon-with-text.icon-with-text--vertical.list-unstyled.icon-with-text--text-only {
+ul.icon-with-text.icon-with-text--vertical.list-unstyled li:before {
     display: none!important;
 }
 h2.footer-block__heading.inline-richtext.block-collapsed {
