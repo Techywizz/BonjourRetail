@@ -156,6 +156,93 @@
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                       {%- endif -%}
                     </div>
+                  {%- when 'shipping_feature_banner' -%}
+                    <div class="footer-block__details-content footer-block-shipping-banner">
+                      {%- if block.settings.main_heading != blank -%}
+                        <h2 class="shipping-feature-banner__heading {{ block.settings.main_heading_alignment }}" 
+                            style="font-size: {{ block.settings.main_heading_size }}px; font-weight: {{ block.settings.main_heading_weight }};">
+                          {{ block.settings.main_heading }}
+                        </h2>
+                      {%- endif -%}
+                      
+                      <div class="shipping-feature-banner__content">
+                        <!-- Free Shipping -->
+                        <div class="shipping-feature-banner__feature">
+                          <div class="shipping-feature-banner__icon">
+                            {%- if block.settings.free_shipping_icon != blank -%}
+                              <img src="{{ block.settings.free_shipping_icon | image_url: width: 40 }}" 
+                                   alt="{{ block.settings.free_shipping_title }}" 
+                                   width="40" height="40" loading="lazy">
+                            {%- else -%}
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                              </svg>
+                            {%- endif -%}
+                          </div>
+                          <div class="shipping-feature-banner__text">
+                            <h3 class="shipping-feature-banner__title">{{ block.settings.free_shipping_title | default: 'Free Shipping' }}</h3>
+                            <p class="shipping-feature-banner__description">{{ block.settings.free_shipping_description | default: 'On orders over $50' }}</p>
+                          </div>
+                        </div>
+
+                        <!-- Fast Delivery -->
+                        <div class="shipping-feature-banner__feature">
+                          <div class="shipping-feature-banner__icon">
+                            {%- if block.settings.fast_delivery_icon != blank -%}
+                              <img src="{{ block.settings.fast_delivery_icon | image_url: width: 40 }}" 
+                                   alt="{{ block.settings.fast_delivery_title }}" 
+                                   width="40" height="40" loading="lazy">
+                            {%- else -%}
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                              </svg>
+                            {%- endif -%}
+                          </div>
+                          <div class="shipping-feature-banner__text">
+                            <h3 class="shipping-feature-banner__title">{{ block.settings.fast_delivery_title | default: 'Fast Delivery' }}</h3>
+                            <p class="shipping-feature-banner__description">{{ block.settings.fast_delivery_description | default: '2-3 business days' }}</p>
+                          </div>
+                        </div>
+
+                        <!-- Easy Returns -->
+                        <div class="shipping-feature-banner__feature">
+                          <div class="shipping-feature-banner__icon">
+                            {%- if block.settings.easy_returns_icon != blank -%}
+                              <img src="{{ block.settings.easy_returns_icon | image_url: width: 40 }}" 
+                                   alt="{{ block.settings.easy_returns_title }}" 
+                                   width="40" height="40" loading="lazy">
+                            {%- else -%}
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                              </svg>
+                            {%- endif -%}
+                          </div>
+                          <div class="shipping-feature-banner__text">
+                            <h3 class="shipping-feature-banner__title">{{ block.settings.easy_returns_title | default: 'Easy Returns' }}</h3>
+                            <p class="shipping-feature-banner__description">{{ block.settings.easy_returns_description | default: '30-day return policy' }}</p>
+                          </div>
+                        </div>
+
+                        <!-- Secure Payment -->
+                        <div class="shipping-feature-banner__feature">
+                          <div class="shipping-feature-banner__icon">
+                            {%- if block.settings.secure_payment_icon != blank -%}
+                              <img src="{{ block.settings.secure_payment_icon | image_url: width: 40 }}" 
+                                   alt="{{ block.settings.secure_payment_title }}" 
+                                   width="40" height="40" loading="lazy">
+                            {%- else -%}
+                              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                              </svg>
+                            {%- endif -%}
+                          </div>
+                          <div class="shipping-feature-banner__text">
+                            <h3 class="shipping-feature-banner__title">{{ block.settings.secure_payment_title | default: 'Secure Payment' }}</h3>
+                            <p class="shipping-feature-banner__description">{{ block.settings.secure_payment_description | default: 'SSL encrypted checkout' }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
                 {%- endcase -%}
               </div>
@@ -481,6 +568,134 @@
         }
       ]
     },
+    {
+      "type": "shipping_feature_banner",
+      "name": "Shipping Feature Banner",
+      "settings": [
+        {
+          "type": "text",
+          "id": "main_heading",
+          "label": "Main Heading",
+          "default": "Why Shop With Us"
+        },
+        {
+          "type": "select",
+          "id": "main_heading_alignment",
+          "label": "Heading Alignment",
+          "options": [
+            { "value": "text-left", "label": "Left" },
+            { "value": "text-center", "label": "Center" },
+            { "value": "text-right", "label": "Right" }
+          ],
+          "default": "text-center"
+        },
+        {
+          "type": "range",
+          "id": "main_heading_size",
+          "min": 16,
+          "max": 48,
+          "step": 2,
+          "unit": "px",
+          "label": "Heading Size",
+          "default": 24
+        },
+        {
+          "type": "select",
+          "id": "main_heading_weight",
+          "label": "Heading Weight",
+          "options": [
+            { "value": "400", "label": "Normal" },
+            { "value": "600", "label": "Semi Bold" },
+            { "value": "700", "label": "Bold" }
+          ],
+          "default": "700"
+        },
+        {
+          "type": "header",
+          "content": "Free Shipping Feature"
+        },
+        {
+          "type": "image_picker",
+          "id": "free_shipping_icon",
+          "label": "Free Shipping Icon"
+        },
+        {
+          "type": "text",
+          "id": "free_shipping_title",
+          "label": "Free Shipping Title",
+          "default": "Free Shipping"
+        },
+        {
+          "type": "text",
+          "id": "free_shipping_description",
+          "label": "Free Shipping Description",
+          "default": "On orders over $50"
+        },
+        {
+          "type": "header",
+          "content": "Fast Delivery Feature"
+        },
+        {
+          "type": "image_picker",
+          "id": "fast_delivery_icon",
+          "label": "Fast Delivery Icon"
+        },
+        {
+          "type": "text",
+          "id": "fast_delivery_title",
+          "label": "Fast Delivery Title",
+          "default": "Fast Delivery"
+        },
+        {
+          "type": "text",
+          "id": "fast_delivery_description",
+          "label": "Fast Delivery Description",
+          "default": "2-3 business days"
+        },
+        {
+          "type": "header",
+          "content": "Easy Returns Feature"
+        },
+        {
+          "type": "image_picker",
+          "id": "easy_returns_icon",
+          "label": "Easy Returns Icon"
+        },
+        {
+          "type": "text",
+          "id": "easy_returns_title",
+          "label": "Easy Returns Title",
+          "default": "Easy Returns"
+        },
+        {
+          "type": "text",
+          "id": "easy_returns_description",
+          "label": "Easy Returns Description",
+          "default": "30-day return policy"
+        },
+        {
+          "type": "header",
+          "content": "Secure Payment Feature"
+        },
+        {
+          "type": "image_picker",
+          "id": "secure_payment_icon",
+          "label": "Secure Payment Icon"
+        },
+        {
+          "type": "text",
+          "id": "secure_payment_title",
+          "label": "Secure Payment Title",
+          "default": "Secure Payment"
+        },
+        {
+          "type": "text",
+          "id": "secure_payment_description",
+          "label": "Secure Payment Description",
+          "default": "SSL encrypted checkout"
+        }
+      ]
+    },
 
   ],
   "settings": [
@@ -705,6 +920,126 @@
       margin-bottom: 3rem;
     }
 
+  }
+
+  /* Shipping Feature Banner Styles */
+  .footer-block-shipping-banner {
+    width: 100%;
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__heading {
+    margin-bottom: 1.5rem;
+    color: inherit;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: var(--color-background);
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__feature:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent);
+    border-radius: 50%;
+    color: var(--color-background);
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__icon img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__title {
+    margin: 0 0 0.25rem 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: inherit;
+    line-height: 1.3;
+  }
+
+  .footer-block-shipping-banner .shipping-feature-banner__description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    line-height: 1.4;
+  }
+
+  @media (max-width: 749px) {
+    .footer-block-shipping-banner .shipping-feature-banner__content {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .footer-block-shipping-banner .shipping-feature-banner__feature {
+      padding: 0.5rem;
+      gap: 0.5rem;
+    }
+
+    .footer-block-shipping-banner .shipping-feature-banner__icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .footer-block-shipping-banner .shipping-feature-banner__icon svg,
+    .footer-block-shipping-banner .shipping-feature-banner__icon img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .footer-block-shipping-banner .shipping-feature-banner__title {
+      font-size: 0.85rem;
+    }
+
+    .footer-block-shipping-banner .shipping-feature-banner__description {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-block-shipping-banner .shipping-feature-banner__content {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .footer-block-shipping-banner .shipping-feature-banner__feature {
+      padding: 0.75rem;
+      gap: 0.75rem;
+    }
   }
 </style>
 
