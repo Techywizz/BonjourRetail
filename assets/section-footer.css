@@ -628,3 +628,215 @@
     font-size: 1.5rem;
   }
 }
+
+/* Footer Popular Searches Styles */
+.footer-popular-searches {
+  width: 100%;
+}
+
+.footer-popular-searches__main-heading {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.footer-popular-searches__content {
+  width: 100%;
+}
+
+.footer-popular-searches__category {
+  margin-bottom: 1.5rem;
+}
+
+.footer-popular-searches__category:last-child {
+  margin-bottom: 0;
+}
+
+.footer-popular-searches__category-heading {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  color: inherit;
+  line-height: 1.3;
+}
+
+.footer-popular-searches__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.6;
+}
+
+.footer-popular-searches__link {
+  display: inline-block;
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+.footer-popular-searches__link:hover {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.footer-popular-searches__separator {
+  display: inline-block;
+  font-weight: normal;
+}
+
+/* Responsive design for footer popular searches */
+@media screen and (max-width: 749px) {
+  .footer-popular-searches__links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .footer-popular-searches__separator {
+    display: none;
+  }
+  
+  .footer-popular-searches__link {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-popular-searches__main-heading {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-popular-searches__category {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-popular-searches__category-heading {
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .footer-popular-searches__content {
+    max-width: 100%;
+  }
+  
+  .footer-popular-searches__category {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Ensure proper spacing and typography */
+.footer-popular-searches * {
+  overflow-wrap: break-word;
+}
+
+.footer-popular-searches__links * {
+  word-break: break-word;
+}
+
+/* Full Width Popular Searches Styles */
+.footer-popular-searches-full-width {
+  width: 100%;
+  border-top: 1px solid rgba(var(--color-foreground), 0.08);
+  padding: 3rem 0;
+}
+
+.footer-popular-searches-full-width__heading {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.footer-popular-searches-full-width__content {
+  width: 100%;
+}
+
+.footer-popular-searches-full-width__category {
+  margin-bottom: 2rem;
+}
+
+.footer-popular-searches-full-width__category:last-child {
+  margin-bottom: 0;
+}
+
+.footer-popular-searches-full-width__category-heading {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  color: inherit;
+  line-height: 1.3;
+}
+
+.footer-popular-searches-full-width__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.6;
+}
+
+.footer-popular-searches-full-width__link {
+  display: inline-block;
+  text-decoration: inherit;
+  transition: color 0.3s ease;
+}
+
+.footer-popular-searches-full-width__link:hover {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.footer-popular-searches-full-width__separator {
+  display: inline-block;
+  font-weight: normal;
+}
+
+/* Responsive design for full width popular searches */
+@media screen and (max-width: 749px) {
+  .footer-popular-searches-full-width {
+    padding: 2rem 0;
+  }
+  
+  .footer-popular-searches-full-width__links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .footer-popular-searches-full-width__separator {
+    display: none;
+  }
+  
+  .footer-popular-searches-full-width__link {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-popular-searches-full-width__heading {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-popular-searches-full-width__category {
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-popular-searches-full-width__category-heading {
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .footer-popular-searches-full-width__content {
+    max-width: 100%;
+  }
+  
+  .footer-popular-searches-full-width__category {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Ensure proper spacing and typography for full width */
+.footer-popular-searches-full-width * {
+  overflow-wrap: break-word;
+}
+
+.footer-popular-searches-full-width__links * {
+  word-break: break-word;
+}

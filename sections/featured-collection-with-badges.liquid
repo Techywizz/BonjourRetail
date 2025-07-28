@@ -179,10 +179,11 @@
                     
                     <!-- Product Price -->
                     <div class="price-container">
+                      <span class="price__mrp">MRP</span>
                       {% if product.compare_at_price > product.price %}
                         <div class="price-wrapper">
-                          <span class="current-price">{{ product.price | money }}</span>
                           <span class="original-price">{{ product.compare_at_price | money }}</span>
+                          <span class="current-price">{{ product.price | money }}</span>
                         </div>
                       {% else %}
                         <div class="price-wrapper">

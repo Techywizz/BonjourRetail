@@ -147,6 +147,7 @@
                           
                           <!-- Price Information -->
                           <div class="cart-item__price-info">
+                            <span class="price__mrp">MRP</span>
                             {%- if item.original_price != item.final_price -%}
                               <div class="cart-item__discounted-prices">
                                 <s class="cart-item__old-price">{{ item.original_price | money }}</s>

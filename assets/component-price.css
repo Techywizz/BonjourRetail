@@ -31,6 +31,72 @@
   margin: 0;
 }
 
+/* MRP Styling */
+.price__mrp {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(var(--color-foreground), 0.6);
+  margin-right: 0.5rem;
+  display: inline;
+  vertical-align: baseline;
+  line-height: inherit;
+}
+
+.price__regular,
+.price__sale {
+  display: inline;
+}
+
+.price__regular .price-item,
+.price__sale .price-item {
+  display: inline;
+  margin: 0 0.5rem 0 0;
+}
+
+.price__sale .price-item--regular {
+  text-decoration: line-through;
+  color: rgba(var(--color-foreground), 0.6);
+  font-weight: 400;
+}
+
+.price__sale .price-item--sale {
+  font-weight: 700;
+  color: rgb(var(--color-foreground));
+}
+
+/* Cart item MRP styling */
+.cart-item__details .price__mrp,
+.cart-item__price-info .price__mrp {
+  display: inline;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(var(--color-foreground), 0.6);
+  margin-right: 0.5rem;
+  vertical-align: baseline;
+}
+
+.cart-item__discounted-prices {
+  display: inline;
+}
+
+.cart-item__old-price,
+.cart-item__final-price,
+.cart-item__price {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.cart-item__old-price {
+  text-decoration: line-through;
+  color: rgba(var(--color-foreground), 0.6);
+  font-weight: 400;
+}
+
+.cart-item__final-price {
+  font-weight: 700;
+  color: rgb(var(--color-foreground));
+}
+
 @media screen and (min-width: 750px) {
   .price {
     margin-bottom: 0;

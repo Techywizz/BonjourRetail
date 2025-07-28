@@ -1,0 +1,204 @@
+.feature-banner {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.feature-banner__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem 0;
+}
+
+/* Full width layout adjustments */
+.feature-banner:not(.page-width) .feature-banner__container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .feature-banner:not(.page-width) .feature-banner__container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .feature-banner:not(.page-width) .feature-banner__container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.feature-banner__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+.feature-banner__icon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-banner__icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0);
+}
+
+.feature-banner__icon--preset {
+  color: #000000;
+  filter: none;
+}
+
+.feature-banner__icon--preset svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.feature-banner__icon--preset .icon {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.feature-banner__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.feature-banner__heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.feature-banner__text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 989px) {
+  .feature-banner__container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .feature-banner__item {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .feature-banner__heading {
+    font-size: 14px;
+  }
+  
+  .feature-banner__text {
+    font-size: 13px;
+  }
+  
+  .feature-banner__icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .feature-banner__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .feature-banner__item {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .feature-banner__heading {
+    font-size: 13px;
+    margin-bottom: 0.25rem;
+  }
+  
+  .feature-banner__text {
+    font-size: 12px;
+  }
+  
+  .feature-banner__icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .feature-banner__container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .feature-banner__item {
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+  
+  .feature-banner__heading {
+    font-size: 18px;
+  }
+  
+  .feature-banner__text {
+    font-size: 15px;
+  }
+  
+  .feature-banner__icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Animation for better UX */
+.feature-banner__item {
+  transition: transform 0.2s ease-in-out;
+}
+
+.feature-banner__item:hover {
+  transform: translateY(-2px);
+}
+
+/* Ensure proper spacing on very small screens */
+@media screen and (max-width: 480px) {
+  .feature-banner__container {
+    padding: 1rem 0;
+  }
+  
+  .feature-banner__item {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .feature-banner__heading {
+    font-size: 12px;
+  }
+  
+  .feature-banner__text {
+    font-size: 11px;
+  }
+  
+  .feature-banner__icon {
+    width: 24px;
+    height: 24px;
+  }
+} 
