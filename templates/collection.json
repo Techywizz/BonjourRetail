@@ -20,7 +20,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [
-        ".product-form__sumbit {background: Red; color: Blue;}"
+        ".product-form__submit {background: #000000 !important; color: #ffffff !important;}"
       ],
       "settings": {
         "products_per_page": 20,

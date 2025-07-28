@@ -60,7 +60,7 @@
       {%- endcomment -%}
 
       <div class="price__regular">
-        MRP
+        <span class="price__mrp">MRP</span>
         {%- if product.quantity_price_breaks_configured? -%}
           {%- if show_compare_at_price and compare_at_price -%}
             {%- unless product.price_varies == false and product.compare_at_price_varies %}
@@ -93,7 +93,7 @@
         {%- endif -%}
       </div>
       <div class="price__sale">
-        MRP
+        <span class="price__mrp">MRP</span>
         {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>

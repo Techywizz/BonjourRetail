@@ -1,0 +1,505 @@
+{{ 'section-feature-banner.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* Custom styles for this section */
+  #shopify-section-{{ section.id }} .feature-banner {
+    background-color: {{ section.settings.background_color }};
+  }
+
+  #shopify-section-{{ section.id }} .feature-banner__item {
+    gap: {{ section.settings.item_spacing }}px;
+  }
+
+  #shopify-section-{{ section.id }} .feature-banner__icon {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+  }
+
+  #shopify-section-{{ section.id }} .feature-banner__heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: {{ section.settings.heading_weight }};
+    color: {{ section.settings.heading_color }};
+    line-height: 1.2;
+  }
+
+  #shopify-section-{{ section.id }} .feature-banner__text {
+    font-size: {{ section.settings.text_size }}px;
+    font-weight: {{ section.settings.text_weight }};
+    color: {{ section.settings.text_color }};
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .feature-banner__heading {
+      font-size: {{ section.settings.heading_size | times: 0.8 | round: 0 }}px;
+    }
+
+    #shopify-section-{{ section.id }} .feature-banner__text {
+      font-size: {{ section.settings.text_size | times: 0.9 | round: 0 }}px;
+    }
+
+    #shopify-section-{{ section.id }} .feature-banner__icon {
+      width: {{ section.settings.icon_size | times: 0.8 | round: 0 }}px;
+      height: {{ section.settings.icon_size | times: 0.8 | round: 0 }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="feature-banner section-{{ section.id }}-padding{% unless section.settings.full_width %} page-width{% endunless %}">
+  {%- if section.settings.full_width -%}
+    <div class="feature-banner__container">
+  {%- else -%}
+    <div class="page-width">
+      <div class="feature-banner__container">
+  {%- endif -%}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'feature_item' -%}
+            <div class="feature-banner__item" {{ block.shopify_attributes }}>
+              <div class="feature-banner__icon-wrapper">
+                {%- if block.settings.icon_type == 'custom' and block.settings.icon != blank -%}
+                  <img 
+                    src="{{ block.settings.icon | image_url: width: 100 }}"
+                    alt="{{ block.settings.heading | escape }}"
+                    class="feature-banner__icon"
+                    loading="lazy"
+                    width="{{ section.settings.icon_size }}"
+                    height="{{ section.settings.icon_size }}"
+                  >
+                {%- elsif block.settings.icon_type == 'preset' and block.settings.preset_icon != blank -%}
+                  <div class="feature-banner__icon feature-banner__icon--preset">
+                    {%- case block.settings.preset_icon -%}
+                      {%- when 'box' -%}
+                        {{- 'icon-box.svg' | inline_asset_content -}}
+                      {%- when 'truck' -%}
+                        {{- 'icon-truck.svg' | inline_asset_content -}}
+                      {%- when 'star' -%}
+                        {{- 'icon-star.svg' | inline_asset_content -}}
+                      {%- when 'checkmark' -%}
+                        {{- 'icon-checkmark.svg' | inline_asset_content -}}
+                      {%- when 'heart' -%}
+                        {{- 'icon-heart.svg' | inline_asset_content -}}
+                      {%- when 'shield' -%}
+                        {{- 'icon-shield.svg' | inline_asset_content -}}
+                      {%- when 'gift' -%}
+                        {{- 'icon-gift.svg' | inline_asset_content -}}
+                      {%- when 'stopwatch' -%}
+                        {{- 'icon-stopwatch.svg' | inline_asset_content -}}
+                      {%- when 'phone' -%}
+                        {{- 'icon-phone.svg' | inline_asset_content -}}
+                      {%- when 'email' -%}
+                        {{- 'icon-email.svg' | inline_asset_content -}}
+                      {%- when 'location' -%}
+                        {{- 'icon-location.svg' | inline_asset_content -}}
+                      {%- when 'support' -%}
+                        {{- 'icon-support.svg' | inline_asset_content -}}
+                      {%- when 'quality' -%}
+                        {{- 'icon-quality.svg' | inline_asset_content -}}
+                      {%- when 'delivery' -%}
+                        {{- 'icon-delivery.svg' | inline_asset_content -}}
+                      {%- when 'payment' -%}
+                        {{- 'icon-payment.svg' | inline_asset_content -}}
+                      {%- when 'security' -%}
+                        {{- 'icon-security.svg' | inline_asset_content -}}
+                      {%- when 'warranty' -%}
+                        {{- 'icon-warranty.svg' | inline_asset_content -}}
+                      {%- when 'cart' -%}
+                        {{- 'icon-cart.svg' | inline_asset_content -}}
+                      {%- when 'account' -%}
+                        {{- 'icon-account.svg' | inline_asset_content -}}
+                      {%- when 'search' -%}
+                        {{- 'icon-search.svg' | inline_asset_content -}}
+                      {%- when 'chat-bubble' -%}
+                        {{- 'icon-chat-bubble.svg' | inline_asset_content -}}
+                      {%- when 'none' -%}
+                        <!-- No icon -->
+                      {%- endcase -%}
+                    </div>
+                {%- endif -%}
+              </div>
+              
+              <div class="feature-banner__content">
+                {%- if block.settings.heading != blank -%}
+                  <h3 class="feature-banner__heading">
+                    {{ block.settings.heading }}
+                  </h3>
+                {%- endif -%}
+                
+                {%- if block.settings.text != blank -%}
+                  <p class="feature-banner__text">
+                    {{ block.settings.text }}
+                  </p>
+                {%- endif -%}
+              </div>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  {%- unless section.settings.full_width -%}
+    </div>
+  {%- endunless -%}
+</div>
+
+{% schema %}
+{
+  "name": "Shipping Feature Banner",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": false,
+      "label": "Full width",
+      "info": "Enable to make the banner span the full width of the page"
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Item spacing",
+      "default": 20,
+      "info": "Space between icon and content"
+    },
+    {
+      "type": "header",
+      "content": "Typography Settings"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "800",
+          "label": "Extra bold"
+        }
+      ],
+      "default": "700",
+      "label": "Heading font weight"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        }
+      ],
+      "default": "400",
+      "label": "Text font weight"
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Icon Settings"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Padding Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_item",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Icon Settings"
+        },
+        {
+          "type": "select",
+          "id": "icon_type",
+          "options": [
+            {
+              "value": "preset",
+              "label": "Preset Icons"
+            },
+            {
+              "value": "custom",
+              "label": "Custom Image"
+            }
+          ],
+          "default": "preset",
+          "label": "Icon type"
+        },
+        {
+          "type": "select",
+          "id": "preset_icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "No Icon"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "checkmark",
+              "label": "Checkmark"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "shield",
+              "label": "Shield"
+            },
+            {
+              "value": "gift",
+              "label": "Gift"
+            },
+            {
+              "value": "stopwatch",
+              "label": "Stopwatch"
+            },
+            {
+              "value": "phone",
+              "label": "Phone"
+            },
+            {
+              "value": "email",
+              "label": "Email"
+            },
+            {
+              "value": "location",
+              "label": "Location"
+            },
+            {
+              "value": "support",
+              "label": "Support"
+            },
+            {
+              "value": "quality",
+              "label": "Quality"
+            },
+            {
+              "value": "delivery",
+              "label": "Delivery"
+            },
+            {
+              "value": "payment",
+              "label": "Payment"
+            },
+            {
+              "value": "security",
+              "label": "Security"
+            },
+            {
+              "value": "warranty",
+              "label": "Warranty"
+            },
+            {
+              "value": "cart",
+              "label": "Cart"
+            },
+            {
+              "value": "account",
+              "label": "Account"
+            },
+            {
+              "value": "search",
+              "label": "Search"
+            },
+            {
+              "value": "chat-bubble",
+              "label": "Chat Bubble"
+            }
+          ],
+          "default": "truck",
+          "label": "Preset icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Custom icon image"
+        },
+        {
+          "type": "header",
+          "content": "Content Settings"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "FEATURE HEADING"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Add your feature description here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shipping Feature Banner",
+      "blocks": [
+        {
+          "type": "feature_item",
+          "settings": {
+            "preset_icon": "box",
+            "heading": "LARGEST RANGE OF PRODUCTS",
+            "text": "BONJOUR offers over 3000+ styles of premium quality products."
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "preset_icon": "star",
+            "heading": "11M+ HAPPY CUSTOMERS",
+            "text": "Privilege to have a 10M+ happy customers"
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "preset_icon": "truck",
+            "heading": "COD & FREE SHIPPING",
+            "text": "Free shipping on all order above ₹399"
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "preset_icon": "checkmark",
+            "heading": "07 DAYS HASSEL FREE RETURN",
+            "text": "Simply return it within 07 days for an Exchange & Return. T&C"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

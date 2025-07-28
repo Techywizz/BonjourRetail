@@ -1204,8 +1204,8 @@ button.shopify-payment-button__button--unbranded {
 .shopify-challenge__button,
 .customer button,
 button.shopify-payment-button__button--unbranded {
-  min-width: calc(12rem + var(--buttons-border-width) * 2);
-  min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+  min-width: auto;
+  min-height: auto;
 }
 
 .button,
@@ -1214,17 +1214,23 @@ button.shopify-payment-button__button--unbranded {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 0;
-  padding: 0 3rem;
+  border: 1px solid #e0e0e0;
+  padding: 14px 20px;
   cursor: pointer;
   font: inherit;
-  font-size: 1.5rem;
+  font-size: 13px;
+  font-weight: 600;
   text-decoration: none;
-  color: rgb(var(--color-button-text));
-  transition: box-shadow var(--duration-short) ease;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .button:before,
@@ -1261,14 +1267,12 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
 }
 
-.button:not([disabled]):hover::after,
-.shopify-challenge__button:hover::after,
-.customer button:hover::after,
-.shopify-payment-button__button--unbranded:hover::after {
-  --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
-      rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+.button:not([disabled]):hover,
+.shopify-challenge__button:hover,
+.customer button:hover {
+  background-color: #e9ecef;
+  border-color: #ccc;
+  color: #000;
 }
 
 .button--secondary:after {
@@ -1300,20 +1304,23 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
-  line-height: calc(1 + 0.2 / var(--font-body-scale));
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .button--tertiary {
-  font-size: 1.2rem;
-  padding: 1rem 1.5rem;
-  min-width: calc(9rem + var(--buttons-border-width) * 2);
-  min-height: calc(3.5rem + var(--buttons-border-width) * 2);
+  font-size: 12px;
+  padding: 12px 16px;
+  min-width: auto;
+  min-height: auto;
 }
 
 .button--small {
-  padding: 1.2rem 2.6rem;
+  padding: 10px 14px;
+  font-size: 11px;
 }
 
 /* Shopify Accelerated Checkout */
@@ -1341,6 +1348,9 @@ shopify-accelerated-checkout-cart {
 .quantity__button.disabled {
   cursor: not-allowed;
   opacity: 0.5;
+  background-color: #ccc;
+  border-color: #ddd;
+  color: #888;
 }
 
 .button--full-width {
@@ -3628,6 +3638,18 @@ display: none;
 .product-form__submit {
     background: #000000 !important;
     color: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    padding: 14px 20px !important;
+}
+
+.product-form__submit:hover {
+    background: #333 !important;
+    border-color: #ccc !important;
 }
 
 .collection-hero__title {
@@ -3663,6 +3685,18 @@ display: none !important
 .product-form__submit {
     background: #000000 !important;
     color: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    padding: 14px 20px !important;
+}
+
+.product-form__submit:hover {
+    background: #333 !important;
+    border-color: #ccc !important;
 }
 
 @media only screen and (max-width: 749px){ 
@@ -3670,3 +3704,33 @@ display: none !important
     display: none !important;
 }
 }
+
+/* Collection page add to cart button styling - Black background with white text */
+/* Target only the specific add to cart buttons in collection product cards */
+.collection .product-grid .card .quick-add__submit,
+.collection .product-grid .card .button--secondary,
+.collection .product-grid .card .button--primary,
+.collection .product-grid .card .product-form__submit {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  padding: 14px 20px !important;
+}
+
+.collection .product-grid .card .quick-add__submit:hover,
+.collection .product-grid .card .button--secondary:hover,
+.collection .product-grid .card .button--primary:hover,
+.collection .product-grid .card .product-form__submit:hover {
+  background: #333 !important;
+  border-color: #ccc !important;
+}
+
+modal-opener.product-popup-modal__opener.quick-add-hidden {
+  margin: 0;
+}
+.product-popup-modal__button { min-height: auto !important;}

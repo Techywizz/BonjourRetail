@@ -418,6 +418,36 @@
         "name": "metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "sold_hours",
+      "namespace": "custom",
+      "name": "Sold Hours",
+      "description": "Used in Sold fire Badge",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "sold_quantity",
+      "namespace": "custom",
+      "name": "Sold Quantity",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "fire_image",
+      "namespace": "custom",
+      "name": "Fire Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
