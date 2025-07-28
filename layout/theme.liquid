@@ -45,6 +45,34 @@
       .card__information {
         margin-top: auto !important;
         }
+        
+      /* Prevent horizontal scroll while keeping smooth slider functionality */
+      html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+      
+      /* Ensure sliders don't cause horizontal scroll */
+      .news-slider {
+        overflow: hidden;
+      }
+      
+      .news-slider__container {
+        overflow: hidden;
+      }
+      
+      .news-slider__wrapper {
+        overflow: hidden;
+      }
+      
+      .news-slider__slider {
+        overflow: hidden;
+      }
+      
+      /* Keep smooth transitions but prevent overflow */
+      .news-slider__item {
+        overflow: hidden;
+      }
     </style>
 
     {%- if settings.animations_reveal_on_scroll -%}
