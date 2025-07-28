@@ -1,0 +1,1328 @@
+{{ 'section-popular-searches.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .popular-searches {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .popular-searches {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="popular-searches color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding{% if section.settings.full_width %} popular-searches--full-width{% endif %}">
+  <div class="{% if section.settings.full_width %}page-width-full{% else %}page-width{% endif %}">
+    <div class="popular-searches__container">
+      {%- if section.settings.main_heading != blank -%}
+        <h2 class="popular-searches__heading {{ section.settings.main_heading_alignment }}" 
+            style="font-size: {{ section.settings.main_heading_size }}px; font-weight: {{ section.settings.main_heading_weight }};">
+          {{ section.settings.main_heading }}
+        </h2>
+      {%- endif -%}
+      
+      <div class="popular-searches__content">
+        <!-- Men's Links -->
+        <div class="popular-searches__category">
+          <h3 class="popular-searches__category-heading" 
+              style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
+            {{ section.settings.men_category_heading | default: 'Men' }}
+          </h3>
+          <div class="popular-searches__links-container">
+            {%- for i in (1..15) -%}
+              {%- assign link_key_text = 'men_link_' | append: i | append: '_text' -%}
+              {%- assign link_key_url = 'men_link_' | append: i | append: '_url' -%}
+              {%- assign link_text = section.settings[link_key_text] -%}
+              {%- assign link_url = section.settings[link_key_url] -%}
+              {%- if link_text != blank and link_url != blank -%}
+                <a href="{{ link_url }}" 
+                   class="popular-searches__link link link--text"
+                   style="font-size: {{ section.settings.link_size }}px; font-weight: {{ section.settings.link_weight }}; color: {{ section.settings.link_color }};">
+                  {{ link_text }}
+                </a>
+                {%- unless forloop.last -%}
+                  <span class="popular-searches__separator">|</span>
+                {%- endunless -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <!-- Women's Links -->
+        <div class="popular-searches__category">
+          <h3 class="popular-searches__category-heading" 
+              style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
+            {{ section.settings.women_category_heading | default: 'Women' }}
+          </h3>
+          <div class="popular-searches__links-container">
+            {%- for i in (1..15) -%}
+              {%- assign link_key_text = 'women_link_' | append: i | append: '_text' -%}
+              {%- assign link_key_url = 'women_link_' | append: i | append: '_url' -%}
+              {%- assign link_text = section.settings[link_key_text] -%}
+              {%- assign link_url = section.settings[link_key_url] -%}
+              {%- if link_text != blank and link_url != blank -%}
+                <a href="{{ link_url }}" 
+                   class="popular-searches__link link link--text"
+                   style="font-size: {{ section.settings.link_size }}px; font-weight: {{ section.settings.link_weight }}; color: {{ section.settings.link_color }};">
+                  {{ link_text }}
+                </a>
+                {%- unless forloop.last -%}
+                  <span class="popular-searches__separator">|</span>
+                {%- endunless -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <!-- Juniors' Links -->
+        <div class="popular-searches__category">
+          <h3 class="popular-searches__category-heading" 
+              style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
+            {{ section.settings.juniors_category_heading | default: 'Juniors' }}
+          </h3>
+          <div class="popular-searches__links-container">
+            {%- for i in (1..15) -%}
+              {%- assign link_key_text = 'juniors_link_' | append: i | append: '_text' -%}
+              {%- assign link_key_url = 'juniors_link_' | append: i | append: '_url' -%}
+              {%- assign link_text = section.settings[link_key_text] -%}
+              {%- assign link_url = section.settings[link_key_url] -%}
+              {%- if link_text != blank and link_url != blank -%}
+                <a href="{{ link_url }}" 
+                   class="popular-searches__link link link--text"
+                   style="font-size: {{ section.settings.link_size }}px; font-weight: {{ section.settings.link_weight }}; color: {{ section.settings.link_color }};">
+                  {{ link_text }}
+                </a>
+                {%- unless forloop.last -%}
+                  <span class="popular-searches__separator">|</span>
+                {%- endunless -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <!-- Accessories Links -->
+        <div class="popular-searches__category">
+          <h3 class="popular-searches__category-heading" 
+              style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
+            {{ section.settings.accessories_category_heading | default: 'Accessories' }}
+          </h3>
+          <div class="popular-searches__links-container">
+            {%- for i in (1..15) -%}
+              {%- assign link_key_text = 'accessories_link_' | append: i | append: '_text' -%}
+              {%- assign link_key_url = 'accessories_link_' | append: i | append: '_url' -%}
+              {%- assign link_text = section.settings[link_key_text] -%}
+              {%- assign link_url = section.settings[link_key_url] -%}
+              {%- if link_text != blank and link_url != blank -%}
+                <a href="{{ link_url }}" 
+                   class="popular-searches__link link link--text"
+                   style="font-size: {{ section.settings.link_size }}px; font-weight: {{ section.settings.link_weight }}; color: {{ section.settings.link_color }};">
+                  {{ link_text }}
+                </a>
+                {%- unless forloop.last -%}
+                  <span class="popular-searches__separator">|</span>
+                {%- endunless -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <!-- Home & Living Links -->
+        <div class="popular-searches__category">
+          <h3 class="popular-searches__category-heading" 
+              style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
+            {{ section.settings.home_living_category_heading | default: 'Home & Living' }}
+          </h3>
+          <div class="popular-searches__links-container">
+            {%- for i in (1..15) -%}
+              {%- assign link_key_text = 'home_living_link_' | append: i | append: '_text' -%}
+              {%- assign link_key_url = 'home_living_link_' | append: i | append: '_url' -%}
+              {%- assign link_text = section.settings[link_key_text] -%}
+              {%- assign link_url = section.settings[link_key_url] -%}
+              {%- if link_text != blank and link_url != blank -%}
+                <a href="{{ link_url }}" 
+                   class="popular-searches__link link link--text"
+                   style="font-size: {{ section.settings.link_size }}px; font-weight: {{ section.settings.link_weight }}; color: {{ section.settings.link_color }};">
+                  {{ link_text }}
+                </a>
+                {%- unless forloop.last -%}
+                  <span class="popular-searches__separator">|</span>
+                {%- endunless -%}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Popular searches",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false,
+      "info": "Enable to make the section span the full width of the page"
+    },
+    {
+      "type": "text",
+      "id": "main_heading",
+      "label": "Main Heading",
+      "default": "Popular Searches"
+    },
+    {
+      "type": "select",
+      "id": "main_heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left"
+    },
+    {
+      "type": "range",
+      "id": "main_heading_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading Size",
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "main_heading_weight",
+      "label": "Heading Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "category_heading_size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Category Heading Size",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "category_heading_weight",
+      "label": "Category Heading Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "link_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Link Size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "link_weight",
+      "label": "Link Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link Hover Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Separator Color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "separator_margin",
+      "min": 4,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Separator Margin",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Category Headings"
+    },
+    {
+      "type": "text",
+      "id": "men_category_heading",
+      "label": "Men Category Heading",
+      "default": "Men"
+    },
+    {
+      "type": "text",
+      "id": "women_category_heading",
+      "label": "Women Category Heading",
+      "default": "Women"
+    },
+    {
+      "type": "text",
+      "id": "juniors_category_heading",
+      "label": "Juniors Category Heading",
+      "default": "Juniors"
+    },
+    {
+      "type": "text",
+      "id": "accessories_category_heading",
+      "label": "Accessories Category Heading",
+      "default": "Accessories"
+    },
+    {
+      "type": "text",
+      "id": "home_living_category_heading",
+      "label": "Home & Living Category Heading",
+      "default": "Home & Living"
+    },
+    {
+      "type": "header",
+      "content": "Men's Links"
+    },
+    {
+      "type": "text",
+      "id": "men_link_1_text",
+      "label": "Link 1 Text",
+      "default": "Underwear For Men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_1_url",
+      "label": "Link 1 URL",
+      "default": "/collections/underwear-men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_2_text",
+      "label": "Link 2 Text",
+      "default": "Briefs"
+    },
+    {
+      "type": "text",
+      "id": "men_link_2_url",
+      "label": "Link 2 URL",
+      "default": "/collections/briefs"
+    },
+    {
+      "type": "text",
+      "id": "men_link_3_text",
+      "label": "Link 3 Text",
+      "default": "Trunks For Men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_3_url",
+      "label": "Link 3 URL",
+      "default": "/collections/trunks-men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_4_text",
+      "label": "Link 4 Text",
+      "default": "Vests"
+    },
+    {
+      "type": "text",
+      "id": "men_link_4_url",
+      "label": "Link 4 URL",
+      "default": "/collections/vests"
+    },
+    {
+      "type": "text",
+      "id": "men_link_5_text",
+      "label": "Link 5 Text",
+      "default": "T-Shirts For Men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_5_url",
+      "label": "Link 5 URL",
+      "default": "/collections/t-shirts-men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_6_text",
+      "label": "Link 6 Text",
+      "default": "Sleeveless Vests For Men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_6_url",
+      "label": "Link 6 URL",
+      "default": "/collections/sleeveless-vests-men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_7_text",
+      "label": "Link 7 Text",
+      "default": "Gym Vests For Men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_7_url",
+      "label": "Link 7 URL",
+      "default": "/collections/gym-vests-men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_8_text",
+      "label": "Link 8 Text",
+      "default": "Tops For Men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_8_url",
+      "label": "Link 8 URL",
+      "default": "/collections/tops-men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_9_text",
+      "label": "Link 9 Text",
+      "default": "Tank Tops For Men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_9_url",
+      "label": "Link 9 URL",
+      "default": "/collections/tank-tops-men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_10_text",
+      "label": "Link 10 Text",
+      "default": "Henley T-Shirts For Men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_10_url",
+      "label": "Link 10 URL",
+      "default": "/collections/henley-t-shirts-men"
+    },
+    {
+      "type": "text",
+      "id": "men_link_11_text",
+      "label": "Link 11 Text",
+      "default": "Boxer Briefs"
+    },
+    {
+      "type": "text",
+      "id": "men_link_11_url",
+      "label": "Link 11 URL",
+      "default": "/collections/boxer-briefs"
+    },
+    {
+      "type": "text",
+      "id": "men_link_12_text",
+      "label": "Link 12 Text",
+      "default": "Boxer Shorts"
+    },
+    {
+      "type": "text",
+      "id": "men_link_12_url",
+      "label": "Link 12 URL",
+      "default": "/collections/boxer-shorts"
+    },
+    {
+      "type": "text",
+      "id": "men_link_13_text",
+      "label": "Link 13 Text",
+      "default": "Thermal Underwear"
+    },
+    {
+      "type": "text",
+      "id": "men_link_13_url",
+      "label": "Link 13 URL",
+      "default": "/collections/thermal-underwear"
+    },
+    {
+      "type": "text",
+      "id": "men_link_14_text",
+      "label": "Link 14 Text",
+      "default": "Compression Wear"
+    },
+    {
+      "type": "text",
+      "id": "men_link_14_url",
+      "label": "Link 14 URL",
+      "default": "/collections/compression-wear"
+    },
+    {
+      "type": "text",
+      "id": "men_link_15_text",
+      "label": "Link 15 Text",
+      "default": "Sleepwear"
+    },
+    {
+      "type": "text",
+      "id": "men_link_15_url",
+      "label": "Link 15 URL",
+      "default": "/collections/sleepwear"
+    },
+    {
+      "type": "header",
+      "content": "Women's Links"
+    },
+    {
+      "type": "text",
+      "id": "women_link_1_text",
+      "label": "Link 1 Text",
+      "default": "Bras"
+    },
+    {
+      "type": "text",
+      "id": "women_link_1_url",
+      "label": "Link 1 URL",
+      "default": "/collections/bras"
+    },
+    {
+      "type": "text",
+      "id": "women_link_2_text",
+      "label": "Link 2 Text",
+      "default": "Daily Wear Bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_2_url",
+      "label": "Link 2 URL",
+      "default": "/collections/daily-wear-bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_3_text",
+      "label": "Link 3 Text",
+      "default": "T-Shirt Bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_3_url",
+      "label": "Link 3 URL",
+      "default": "/collections/t-shirt-bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_4_text",
+      "label": "Link 4 Text",
+      "default": "Sports Bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_4_url",
+      "label": "Link 4 URL",
+      "default": "/collections/sports-bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_5_text",
+      "label": "Link 5 Text",
+      "default": "Plus Size Bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_5_url",
+      "label": "Link 5 URL",
+      "default": "/collections/plus-size-bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_6_text",
+      "label": "Link 6 Text",
+      "default": "Push Up Bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_6_url",
+      "label": "Link 6 URL",
+      "default": "/collections/push-up-bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_7_text",
+      "label": "Link 7 Text",
+      "default": "Strapless Bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_7_url",
+      "label": "Link 7 URL",
+      "default": "/collections/strapless-bra"
+    },
+    {
+      "type": "text",
+      "id": "women_link_8_text",
+      "label": "Link 8 Text",
+      "default": "Lingerie"
+    },
+    {
+      "type": "text",
+      "id": "women_link_8_url",
+      "label": "Link 8 URL",
+      "default": "/collections/lingerie"
+    },
+    {
+      "type": "text",
+      "id": "women_link_9_text",
+      "label": "Link 9 Text",
+      "default": "Panties"
+    },
+    {
+      "type": "text",
+      "id": "women_link_9_url",
+      "label": "Link 9 URL",
+      "default": "/collections/panties"
+    },
+    {
+      "type": "text",
+      "id": "women_link_10_text",
+      "label": "Link 10 Text",
+      "default": "Shapewear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_10_url",
+      "label": "Link 10 URL",
+      "default": "/collections/shapewear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_11_text",
+      "label": "Link 11 Text",
+      "default": "Sleepwear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_11_url",
+      "label": "Link 11 URL",
+      "default": "/collections/sleepwear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_12_text",
+      "label": "Link 12 Text",
+      "default": "Thermal Wear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_12_url",
+      "label": "Link 12 URL",
+      "default": "/collections/thermal-wear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_13_text",
+      "label": "Link 13 Text",
+      "default": "Compression Wear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_13_url",
+      "label": "Link 13 URL",
+      "default": "/collections/compression-wear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_14_text",
+      "label": "Link 14 Text",
+      "default": "Activewear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_14_url",
+      "label": "Link 14 URL",
+      "default": "/collections/activewear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_15_text",
+      "label": "Link 15 Text",
+      "default": "Loungewear"
+    },
+    {
+      "type": "text",
+      "id": "women_link_15_url",
+      "label": "Link 15 URL",
+      "default": "/collections/loungewear"
+    },
+    {
+      "type": "header",
+      "content": "Juniors' Links"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_1_text",
+      "label": "Link 1 Text",
+      "default": "Underwear For Boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_1_url",
+      "label": "Link 1 URL",
+      "default": "/collections/underwear-boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_2_text",
+      "label": "Link 2 Text",
+      "default": "T-Shirts For Boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_2_url",
+      "label": "Link 2 URL",
+      "default": "/collections/t-shirts-boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_3_text",
+      "label": "Link 3 Text",
+      "default": "Panties For Girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_3_url",
+      "label": "Link 3 URL",
+      "default": "/collections/panties-girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_4_text",
+      "label": "Link 4 Text",
+      "default": "Tops For Girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_4_url",
+      "label": "Link 4 URL",
+      "default": "/collections/tops-girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_5_text",
+      "label": "Link 5 Text",
+      "default": "Underwear For Girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_5_url",
+      "label": "Link 5 URL",
+      "default": "/collections/underwear-girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_6_text",
+      "label": "Link 6 Text",
+      "default": "Bras For Girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_6_url",
+      "label": "Link 6 URL",
+      "default": "/collections/bras-girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_7_text",
+      "label": "Link 7 Text",
+      "default": "Sleepwear For Boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_7_url",
+      "label": "Link 7 URL",
+      "default": "/collections/sleepwear-boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_8_text",
+      "label": "Link 8 Text",
+      "default": "Sleepwear For Girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_8_url",
+      "label": "Link 8 URL",
+      "default": "/collections/sleepwear-girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_9_text",
+      "label": "Link 9 Text",
+      "default": "Thermal Wear For Boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_9_url",
+      "label": "Link 9 URL",
+      "default": "/collections/thermal-wear-boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_10_text",
+      "label": "Link 10 Text",
+      "default": "Thermal Wear For Girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_10_url",
+      "label": "Link 10 URL",
+      "default": "/collections/thermal-wear-girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_11_text",
+      "label": "Link 11 Text",
+      "default": "Activewear For Boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_11_url",
+      "label": "Link 11 URL",
+      "default": "/collections/activewear-boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_12_text",
+      "label": "Link 12 Text",
+      "default": "Activewear For Girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_12_url",
+      "label": "Link 12 URL",
+      "default": "/collections/activewear-girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_13_text",
+      "label": "Link 13 Text",
+      "default": "Loungewear For Boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_13_url",
+      "label": "Link 13 URL",
+      "default": "/collections/loungewear-boys"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_14_text",
+      "label": "Link 14 Text",
+      "default": "Loungewear For Girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_14_url",
+      "label": "Link 14 URL",
+      "default": "/collections/loungewear-girls"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_15_text",
+      "label": "Link 15 Text",
+      "default": "Kids Sleepwear"
+    },
+    {
+      "type": "text",
+      "id": "juniors_link_15_url",
+      "label": "Link 15 URL",
+      "default": "/collections/kids-sleepwear"
+    },
+    {
+      "type": "header",
+      "content": "Accessories Links"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_1_text",
+      "label": "Link 1 Text",
+      "default": "Socks For Men"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_1_url",
+      "label": "Link 1 URL",
+      "default": "/collections/socks-men"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_2_text",
+      "label": "Link 2 Text",
+      "default": "Towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_2_url",
+      "label": "Link 2 URL",
+      "default": "/collections/towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_3_text",
+      "label": "Link 3 Text",
+      "default": "Socks For Women"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_3_url",
+      "label": "Link 3 URL",
+      "default": "/collections/socks-women"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_4_text",
+      "label": "Link 4 Text",
+      "default": "Kids Socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_4_url",
+      "label": "Link 4 URL",
+      "default": "/collections/kids-socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_5_text",
+      "label": "Link 5 Text",
+      "default": "Bath Towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_5_url",
+      "label": "Link 5 URL",
+      "default": "/collections/bath-towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_6_text",
+      "label": "Link 6 Text",
+      "default": "Hand Towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_6_url",
+      "label": "Link 6 URL",
+      "default": "/collections/hand-towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_7_text",
+      "label": "Link 7 Text",
+      "default": "Face Towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_7_url",
+      "label": "Link 7 URL",
+      "default": "/collections/face-towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_8_text",
+      "label": "Link 8 Text",
+      "default": "Beach Towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_8_url",
+      "label": "Link 8 URL",
+      "default": "/collections/beach-towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_9_text",
+      "label": "Link 9 Text",
+      "default": "Gym Towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_9_url",
+      "label": "Link 9 URL",
+      "default": "/collections/gym-towels"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_10_text",
+      "label": "Link 10 Text",
+      "default": "Sports Socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_10_url",
+      "label": "Link 10 URL",
+      "default": "/collections/sports-socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_11_text",
+      "label": "Link 11 Text",
+      "default": "Ankle Socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_11_url",
+      "label": "Link 11 URL",
+      "default": "/collections/ankle-socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_12_text",
+      "label": "Link 12 Text",
+      "default": "Knee High Socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_12_url",
+      "label": "Link 12 URL",
+      "default": "/collections/knee-high-socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_13_text",
+      "label": "Link 13 Text",
+      "default": "Thermal Socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_13_url",
+      "label": "Link 13 URL",
+      "default": "/collections/thermal-socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_14_text",
+      "label": "Link 14 Text",
+      "default": "Compression Socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_14_url",
+      "label": "Link 14 URL",
+      "default": "/collections/compression-socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_15_text",
+      "label": "Link 15 Text",
+      "default": "Fashion Socks"
+    },
+    {
+      "type": "text",
+      "id": "accessories_link_15_url",
+      "label": "Link 15 URL",
+      "default": "/collections/fashion-socks"
+    },
+    {
+      "type": "header",
+      "content": "Home & Living Links"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_1_text",
+      "label": "Link 1 Text",
+      "default": "Bed Sheets"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_1_url",
+      "label": "Link 1 URL",
+      "default": "/collections/bed-sheets"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_2_text",
+      "label": "Link 2 Text",
+      "default": "Pillow Covers"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_2_url",
+      "label": "Link 2 URL",
+      "default": "/collections/pillow-covers"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_3_text",
+      "label": "Link 3 Text",
+      "default": "Bed Covers"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_3_url",
+      "label": "Link 3 URL",
+      "default": "/collections/bed-covers"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_4_text",
+      "label": "Link 4 Text",
+      "default": "Curtains"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_4_url",
+      "label": "Link 4 URL",
+      "default": "/collections/curtains"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_5_text",
+      "label": "Link 5 Text",
+      "default": "Table Cloths"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_5_url",
+      "label": "Link 5 URL",
+      "default": "/collections/table-cloths"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_6_text",
+      "label": "Link 6 Text",
+      "default": "Kitchen Towels"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_6_url",
+      "label": "Link 6 URL",
+      "default": "/collections/kitchen-towels"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_7_text",
+      "label": "Link 7 Text",
+      "default": "Bathroom Towels"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_7_url",
+      "label": "Link 7 URL",
+      "default": "/collections/bathroom-towels"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_8_text",
+      "label": "Link 8 Text",
+      "default": "Cushion Covers"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_8_url",
+      "label": "Link 8 URL",
+      "default": "/collections/cushion-covers"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_9_text",
+      "label": "Link 9 Text",
+      "default": "Rugs"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_9_url",
+      "label": "Link 9 URL",
+      "default": "/collections/rugs"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_10_text",
+      "label": "Link 10 Text",
+      "default": "Carpets"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_10_url",
+      "label": "Link 10 URL",
+      "default": "/collections/carpets"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_11_text",
+      "label": "Link 11 Text",
+      "default": "Bedding Sets"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_11_url",
+      "label": "Link 11 URL",
+      "default": "/collections/bedding-sets"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_12_text",
+      "label": "Link 12 Text",
+      "default": "Quilts"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_12_url",
+      "label": "Link 12 URL",
+      "default": "/collections/quilt"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_13_text",
+      "label": "Link 13 Text",
+      "default": "Blankets"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_13_url",
+      "label": "Link 13 URL",
+      "default": "/collections/blankets"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_14_text",
+      "label": "Link 14 Text",
+      "default": "Throws"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_14_url",
+      "label": "Link 14 URL",
+      "default": "/collections/throws"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_15_text",
+      "label": "Link 15 Text",
+      "default": "Home Decor"
+    },
+    {
+      "type": "text",
+      "id": "home_living_link_15_url",
+      "label": "Link 15 URL",
+      "default": "/collections/home-decor"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Popular searches"
+    }
+  ]
+}
+{% endschema %} 
