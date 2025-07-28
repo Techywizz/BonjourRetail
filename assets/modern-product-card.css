@@ -425,5 +425,5 @@
 }
 
 ul.icon-with-text.icon-with-text--vertical.list-unstyled.icon-with-text--text-only {
-    display: none;
+    display: none!important;
 }
