@@ -427,3 +427,6 @@
 ul.icon-with-text.icon-with-text--vertical.list-unstyled.icon-with-text--text-only {
     display: none!important;
 }
+h2.footer-block__heading.inline-richtext.block-collapsed {
+    color: #fff;
+}
