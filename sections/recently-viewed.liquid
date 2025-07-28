@@ -14,11 +14,14 @@ function setRecentlyViewedProducts() {
     productImg: "{{ product.featured_media | img_url: '300x' }}",
     productPrice: "{{ product.price | money }}",
     productUrl: "{{ product.url }}",
-    productImageAltText: "{{product.featured_media.alt | escape }}"
+    productImageAltText: "{{product.featured_media.alt | escape }}",
+    productRating: "{{ product.metafields.reviews.rating.value.rating | default: 0 }}",
+    productRatingCount: "{{ product.metafields.reviews.rating_count | default: 0 }}",
+    productRatingMax: "{{ product.metafields.reviews.rating.value.scale_max | default: 5 }}"
   };
   const productList = [];
   let jsonResp, jsonRespArr, jsonRespArrStr;
-  const numberOfProducts = 4;
+  const numberOfProducts = 8;
   productList.push(productData);
   const currProductPageTitle = productData.productTitle;
   const productDataString = JSON.stringify(productList);

@@ -3159,7 +3159,7 @@ details-disclosure > details {
   border-radius: var(--media-radius);
   box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
     rgba(var(--color-shadow), var(--media-shadow-opacity));
-  margin-bottom: var(--media-shadow-vertical-offset);
+  /* margin-bottom: var(--media-shadow-vertical-offset); */
 }
 
 .rte ul,
@@ -3653,12 +3653,12 @@ display: none !important
     flex-grow: initial;
 }
 .card__inner {
-   margin-bottom: auto;
+   margin-bottom: 0;
 }
-.card__heading a {
+/* .card__heading a {
  height: 35px;
  overflow: hidden;
-}
+} */
 
 .product-form__submit {
     background: #000000 !important;

@@ -1,0 +1,405 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="{{ 'section-recently-viewed-collection.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'component-rating.css' | asset_url }}">
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .recently-viewed-collection-{{ section.id }} {
+    background-color: {{ section.settings.background_color }};
+    {% if section.settings.background_image %}
+      background-image: url({{ section.settings.background_image | image_url: width: 1920 }});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    {% endif %}
+  }
+
+  .recently-viewed-collection-{{ section.id }} .recently-viewed-collection__heading {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: {{ section.settings.heading_weight }};
+    color: {{ section.settings.heading_color }};
+    text-align: {{ section.settings.heading_alignment }};
+    margin-bottom: {{ section.settings.heading_margin_bottom }}px;
+  }
+
+  .recently-viewed-collection-{{ section.id }} .recently-viewed-collection__heading h2 {
+    font-size: {{ section.settings.heading_size }}px;
+    font-weight: {{ section.settings.heading_weight }};
+    color: {{ section.settings.heading_color }};
+    text-align: {{ section.settings.heading_alignment }};
+    margin-bottom: {{ section.settings.heading_margin_bottom }}px;
+  }
+
+
+{%- endstyle -%}
+
+<div class="recently-viewed-collection recently-viewed-collection-{{ section.id }} recently-viewed-collection--{{ section.settings.layout }} section-{{ section.id }}-padding" data-section-id="{{ section.id }}">
+  <div class="{% if section.settings.layout == 'boxed' %}page-width{% else %}page-width-full{% endif %}">
+    <h2 class="recently-viewed-collection__heading">{{ section.settings.heading | default: 'Recently Viewed Products' }}</h2>
+    <div class="recently-viewed-products">
+      <div class="product-slider" data-show-arrows="{{ section.settings.show_arrows }}" data-show-dots="{{ section.settings.show_dots }}">
+        <!-- Recently viewed products will be loaded here via JavaScript -->
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const sectionId = '{{ section.id }}';
+  const sliderContainer = document.querySelector('.recently-viewed-collection[data-section-id="' + sectionId + '"] .product-slider');
+  
+  if (!sliderContainer) {
+    console.log('Slider container not found');
+    return;
+  }
+  
+  function loadRecentlyViewedProducts() {
+    try {
+      const recentlyViewedData = localStorage.getItem('recentlyViewedProduct');
+      
+      if (!recentlyViewedData) {
+        sliderContainer.innerHTML = '<p>No recently viewed products yet.</p>';
+        return;
+      }
+      
+      const products = JSON.parse(recentlyViewedData);
+      const maxProductsToShow = {{ section.settings.max_products_to_show | json }};
+      
+      if (!products || products.length === 0) {
+        sliderContainer.innerHTML = '<p>No recently viewed products yet.</p>';
+        return;
+      }
+      
+      // Limit the number of products to show
+      const limitedProducts = products.slice(0, maxProductsToShow);
+      
+      // Generate HTML for each product using custom category slider structure
+      let html = '';
+      
+      limitedProducts.forEach((product, index) => {
+        html += '<div class="slider-product-card">';
+        html += '<div class="card-top">';
+        html += '<a href="' + product.productUrl + '" class="product-image-link">';
+        html += '<img src="' + product.productImg + '" alt="' + (product.productImageAltText || product.productTitle) + '" class="product-image">';
+        html += '</a>';
+        html += '</div>';
+        html += '<div class="card-bottom">';
+        
+        // Product Title
+        html += '<h3 class="product-title">';
+        html += '<a href="' + product.productUrl + '">' + product.productTitle + '</a>';
+        html += '</h3>';
+        
+        // Product Rating and Reviews
+        if (product.productRating && product.productRating > 0) {
+          html += '<div class="product-rating">';
+          html += '<div class="rating-stars">';
+          html += '<span class="star-icon">★</span>';
+          html += '<span class="rating-value">' + parseFloat(product.productRating).toFixed(1) + '</span>';
+          html += '</div>';
+          html += '<span class="rating-separator">|</span>';
+          html += '<div class="verified-badge">';
+          html += '<span class="checkmark-icon">✓</span>';
+          html += '</div>';
+          if (product.productRatingCount && product.productRatingCount > 0) {
+            html += '<span class="reviews-count">(' + product.productRatingCount + ' Reviews)</span>';
+          }
+          html += '</div>';
+        } else {
+          html += '<div class="product-rating">';
+          html += '<span class="no-review-text">No Review</span>';
+          html += '</div>';
+        }
+        
+        // Product Price
+        html += '<div class="price-container">';
+        html += '<div class="price-wrapper">';
+        html += '<span class="current-price">' + product.productPrice + '</span>';
+        html += '</div>';
+        html += '</div>';
+        
+        html += '</div>';
+        html += '</div>';
+      });
+      
+      sliderContainer.innerHTML = html;
+      
+      // Initialize Slick slider
+      initializeSlider();
+      
+    } catch (error) {
+      console.error('Error loading recently viewed products:', error);
+      sliderContainer.innerHTML = '<p>Error loading recently viewed products.</p>';
+    }
+  }
+  
+  function initializeSlider() {
+    const slider = $(sliderContainer);
+    if (slider.length && !slider.hasClass('slick-initialized')) {
+      const showArrows = {{ section.settings.show_arrows | json }};
+      const showDots = {{ section.settings.show_dots | json }};
+      const slidesToShow = {{ section.settings.slides_to_show | json }};
+      const slidesToShowTablet = {{ section.settings.slides_to_show_tablet | json }};
+      const slidesToShowMobile = {{ section.settings.slides_to_show_mobile | json }};
+      
+      slider.slick({
+        dots: showDots,
+        arrows: showArrows,
+        infinite: true,
+        slidesToShow: slidesToShow,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        responsive: [
+          { breakpoint: 1024, settings: { slidesToShow: slidesToShowTablet } },
+          { breakpoint: 600, settings: { slidesToShow: slidesToShowMobile } },
+          { breakpoint: 480, settings: { slidesToShow: 1 } }
+        ]
+      });
+    }
+  }
+  
+  // Load products and initialize slider
+  loadRecentlyViewedProducts();
+});
+</script>
+
+{% schema %}
+{
+  "name": "Recently Viewed Products",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout Style",
+      "options": [
+        {
+          "value": "boxed",
+          "label": "Boxed"
+        },
+        {
+          "value": "full_width",
+          "label": "Full Width"
+        }
+      ],
+      "default": "boxed"
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Recently Viewed Products",
+      "label": "Heading"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "default": 32,
+      "label": "Heading Font Size (px)"
+    },
+    {
+      "type": "select",
+      "id": "heading_weight",
+      "label": "Heading Font Weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi Bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "800",
+          "label": "Extra Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_bottom",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "default": 40,
+      "label": "Heading Bottom Margin (px)"
+    },
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Slider Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "default": true,
+      "label": "Show Navigation Arrows"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "default": true,
+      "label": "Show Navigation Dots"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "label": "Slides to Show (Desktop)"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_tablet",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "Slides to Show (Tablet)"
+    },
+    {
+      "type": "range",
+      "id": "slides_to_show_mobile",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2,
+      "label": "Slides to Show (Mobile)"
+    },
+    {
+      "type": "range",
+      "id": "max_products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Maximum Products to Show"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recently Viewed Products",
+      "settings": {
+        "layout": "boxed",
+        "heading": "Recently Viewed Products",
+        "heading_size": 32,
+        "heading_weight": "600",
+        "heading_alignment": "center",
+        "heading_margin_bottom": 40,
+        "background_color": "#f8f8f8",
+        "show_arrows": true,
+        "show_dots": true,
+        "slides_to_show": 4,
+        "slides_to_show_tablet": 3,
+        "slides_to_show_mobile": 2,
+        "max_products_to_show": 8,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  ]
+}
+{% endschema %} 
