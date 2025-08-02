@@ -248,43 +248,6 @@
         "padding_bottom": 36
       }
     },
-    "ss_back_to_top_button_DBkBxj": {
-      "type": "ss-back-to-top-button",
-      "settings": {
-        "hide_on_mobile": false,
-        "show_when_precent_of_page": 30,
-        "pos": "right",
-        "bg_color": "#f4f2f2",
-        "border_color": "#cec5c5",
-        "arrow_color": "#333333",
-        "button_size": 54,
-        "arrow_size": 30,
-        "horizontal_dst_to_edge": 20,
-        "vertical_dst_to_edge": 20
-      }
-    },
-    "ss_wave_2_9pbCHA": {
-      "type": "ss-wave-2",
-      "settings": {
-        "wave_height": 30,
-        "wave_height_mobile": 30,
-        "wave_animation": true,
-        "wave_rotate": false,
-        "wave_color": "#121212",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0
-      }
-    },
     "popular_searches_xWbqFi": {
       "type": "popular-searches",
       "name": "Popular searches",
@@ -462,15 +425,52 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "ss_back_to_top_button_DBkBxj": {
+      "type": "ss-back-to-top-button",
+      "settings": {
+        "hide_on_mobile": false,
+        "show_when_precent_of_page": 30,
+        "pos": "right",
+        "bg_color": "#f4f2f2",
+        "border_color": "#cec5c5",
+        "arrow_color": "#333333",
+        "button_size": 54,
+        "arrow_size": 30,
+        "horizontal_dst_to_edge": 20,
+        "vertical_dst_to_edge": 20
+      }
+    },
+    "ss_wave_2_9pbCHA": {
+      "type": "ss-wave-2",
+      "settings": {
+        "wave_height": 30,
+        "wave_height_mobile": 30,
+        "wave_animation": true,
+        "wave_rotate": false,
+        "wave_color": "#121212",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120,
+        "border_thickness": 0
+      }
     }
   },
   "order": [
     "shipping_feature_banner_ME7rJE",
     "expandable_content_xGBFyJ",
+    "popular_searches_xWbqFi",
     "news_slider_mNqRLr",
     "footer",
     "ss_back_to_top_button_DBkBxj",
-    "ss_wave_2_9pbCHA",
-    "popular_searches_xWbqFi"
+    "ss_wave_2_9pbCHA"
   ]
 }
