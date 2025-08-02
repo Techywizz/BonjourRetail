@@ -178,76 +178,6 @@
         "padding_bottom": 40
       }
     },
-    "footer": {
-      "type": "footer",
-      "blocks": {
-        "link_list": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick Shop",
-            "menu": "footer-shop"
-          }
-        },
-        "link_list_WDdgMW": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Bonjour Retail",
-            "menu": "footer-bonjour-retail"
-          }
-        },
-        "link_list_xYtAzD": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Customer Support",
-            "menu": "footer-customer-service"
-          }
-        },
-        "link_list_47xjTD": {
-          "type": "link_list",
-          "disabled": true,
-          "settings": {
-            "heading": "Policies",
-            "menu": "footer"
-          }
-        },
-        "image_7nECKp": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/logo-in-th-dimention-of-wt.png",
-            "image_link": "",
-            "image_width": 400,
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "link_list",
-        "link_list_WDdgMW",
-        "link_list_xYtAzD",
-        "link_list_47xjTD",
-        "image_7nECKp"
-      ],
-      "settings": {
-        "color_scheme": "scheme-4",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": false,
-        "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": true,
-        "payment_enable": true,
-        "show_policy": true,
-        "enable_expandable_content": false,
-        "expandable_title": "BONJOUR India - Clothing Mankind Since 1876",
-        "expandable_description": "<p>Founded in 1876, BONJOUR pioneered innerwear, evolving and innovating not only the product, but also the way it has been marketed over the years. BONJOUR is a leading manufacturer and marketer of comfort apparel sold in more than 140 countries around the world. The company is committed to quality, comfort, fashion, innovation and value. As BONJOUR grows and sophistication, the simple commitment to serve its consumer's need for comfort continues to be the brand's hallmark.</p>",
-        "expandable_expanded_content": "<h3>BONJOUR.in - India's Official Online Store for BONJOUR Products</h3><p>BONJOUR was set up under Page Industries Ltd. in 1994 with the key objective of bringing the world-renowned brand BONJOUR to India. BONJOUR manufactures, distributes and markets products for the whole family – Men, Women and Kids.</p><h3>Page Industries Limited</h3><p>Page Industries Limited, located in Bangalore, India is the exclusive licensee of BONJOUR International Inc. (USA) for manufacture, distribution and marketing of the BONJOUR brand in India, Sri Lanka, Oman, Bangladesh, Nepal and UAE. Page Industries Ltd. became public limited in March 2007 and is listed on the BSE and the NSE of India.</p><p>The promoters of BONJOUR in India are the Genomal family, who have been associated with BONJOUR International Inc. for over 65 years as their sole licensee in Philippines.</p>",
-        "expandable_button_text": "KNOW MORE",
-        "expandable_button_text_expanded": "SEE LESS",
-        "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "popular_searches_xWbqFi": {
       "type": "popular-searches",
       "name": "Popular searches",
@@ -426,6 +356,76 @@
         "padding_bottom": 36
       }
     },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick Shop",
+            "menu": "footer-shop"
+          }
+        },
+        "link_list_WDdgMW": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Bonjour Retail",
+            "menu": "footer-bonjour-retail"
+          }
+        },
+        "link_list_xYtAzD": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Support",
+            "menu": "footer-customer-service"
+          }
+        },
+        "link_list_47xjTD": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Policies",
+            "menu": "footer"
+          }
+        },
+        "image_7nECKp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-in-th-dimention-of-wt.png",
+            "image_link": "",
+            "image_width": 400,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "link_list",
+        "link_list_WDdgMW",
+        "link_list_xYtAzD",
+        "link_list_47xjTD",
+        "image_7nECKp"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "enable_expandable_content": false,
+        "expandable_title": "BONJOUR India - Clothing Mankind Since 1876",
+        "expandable_description": "<p>Founded in 1876, BONJOUR pioneered innerwear, evolving and innovating not only the product, but also the way it has been marketed over the years. BONJOUR is a leading manufacturer and marketer of comfort apparel sold in more than 140 countries around the world. The company is committed to quality, comfort, fashion, innovation and value. As BONJOUR grows and sophistication, the simple commitment to serve its consumer's need for comfort continues to be the brand's hallmark.</p>",
+        "expandable_expanded_content": "<h3>BONJOUR.in - India's Official Online Store for BONJOUR Products</h3><p>BONJOUR was set up under Page Industries Ltd. in 1994 with the key objective of bringing the world-renowned brand BONJOUR to India. BONJOUR manufactures, distributes and markets products for the whole family – Men, Women and Kids.</p><h3>Page Industries Limited</h3><p>Page Industries Limited, located in Bangalore, India is the exclusive licensee of BONJOUR International Inc. (USA) for manufacture, distribution and marketing of the BONJOUR brand in India, Sri Lanka, Oman, Bangladesh, Nepal and UAE. Page Industries Ltd. became public limited in March 2007 and is listed on the BSE and the NSE of India.</p><p>The promoters of BONJOUR in India are the Genomal family, who have been associated with BONJOUR International Inc. for over 65 years as their sole licensee in Philippines.</p>",
+        "expandable_button_text": "KNOW MORE",
+        "expandable_button_text_expanded": "SEE LESS",
+        "margin_top": 0,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "ss_back_to_top_button_DBkBxj": {
       "type": "ss-back-to-top-button",
       "settings": {
@@ -467,8 +467,8 @@
   "order": [
     "shipping_feature_banner_ME7rJE",
     "expandable_content_xGBFyJ",
-    "popular_searches_xWbqFi",
     "news_slider_mNqRLr",
+    "popular_searches_xWbqFi",
     "footer",
     "ss_back_to_top_button_DBkBxj",
     "ss_wave_2_9pbCHA"
