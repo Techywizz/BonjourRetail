@@ -363,6 +363,7 @@
     },
     "featured_collection1": {
       "type": "featured-collection",
+      "disabled": true,
       "custom_css": [
         "@media (min-width: 990px) {slider-component {display: flex; flex-direction: column-reverse; margin-top: -6rem !important; } .slider-buttons {justify-content: flex-end; } .collection__title {padding-right: 20rem; }}"
       ],
@@ -1548,6 +1549,7 @@
     "dynamic_slick_slider_YhHB6p",
     "multicolumn",
     "featured_collection1",
+    "custom_category_slider_Q3XAhD",
     "multicolumn_ECPVXk",
     "video_slider_KNkzH7",
     "multicolumn_9WdbwV",
@@ -1564,7 +1566,6 @@
     "ss_instafeed_2_8Mwc7c",
     "17392805844af3f031",
     "featured_blog_DPGB7Q",
-    "custom_category_slider_Q3XAhD",
     "collapsible_content_dMFYbT",
     "feature_banner_6CNMWC"
   ]
