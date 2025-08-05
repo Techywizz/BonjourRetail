@@ -449,6 +449,68 @@
         "show_verified_badge": true
       }
     },
+    "feature_banner_6CNMWC": {
+      "type": "feature-banner",
+      "blocks": {
+        "feature_item_3dkQa4": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "box",
+            "heading": "LARGEST RANGE OF PRODUCTS",
+            "text": "BONJOUR offers over 3000+ styles of premium quality products."
+          }
+        },
+        "feature_item_A8qrk8": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "star",
+            "heading": "11M+ HAPPY CUSTOMERS",
+            "text": "Privilege to have a 10M+ happy customers"
+          }
+        },
+        "feature_item_tjeiVy": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "truck",
+            "heading": "COD & FREE SHIPPING",
+            "text": "Free shipping on all order above ₹399"
+          }
+        },
+        "feature_item_eRKt6y": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "checkmark",
+            "heading": "07 DAYS HASSEL FREE RETURN",
+            "text": "Simply return it within 07 days for an Exchange & Return. T&C"
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_3dkQa4",
+        "feature_item_A8qrk8",
+        "feature_item_tjeiVy",
+        "feature_item_eRKt6y"
+      ],
+      "name": "Shipping Feature Banner",
+      "settings": {
+        "full_width": false,
+        "item_spacing": 20,
+        "heading_size": 16,
+        "heading_weight": "700",
+        "text_size": 14,
+        "text_weight": "400",
+        "background_color": "#f5f5f5",
+        "heading_color": "#000000",
+        "text_color": "#666666",
+        "icon_size": 40,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "multicolumn_ECPVXk": {
       "type": "multicolumn",
       "blocks": {
@@ -615,7 +677,7 @@
         "heading_size": "h1",
         "heading_alignment": "left",
         "heading_tag": "h2",
-        "padding_top": 20,
+        "padding_top": 12,
         "padding_bottom": 36
       }
     },
@@ -627,9 +689,9 @@
           "settings": {
             "image": "shopify://shop_images/Tshirt.png",
             "image_link": "https://www.bonjourretail.com/collections/men-tshirts",
-            "title": "T Shirt",
-            "text": "<p>Buy 2 @ 999</p>",
-            "link_label": "Buy Now",
+            "title": "",
+            "text": "",
+            "link_label": "T-Shirt",
             "link": "https://www.bonjourretail.com/collections/men-tshirts"
           }
         },
@@ -978,7 +1040,7 @@
         "columns_desktop": 6,
         "column_alignment": "center",
         "background_style": "none",
-        "button_label": "View All",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
         "column_spacing": 8,
@@ -1069,7 +1131,7 @@
         "columns_desktop": 5,
         "column_alignment": "center",
         "background_style": "none",
-        "button_label": "View All",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
         "column_spacing": 8,
@@ -1108,6 +1170,7 @@
       "block_order": [
         "slidy_clickable_banner_slider_free_slider_block_dcDcY8"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -1480,68 +1543,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "feature_banner_6CNMWC": {
-      "type": "feature-banner",
-      "blocks": {
-        "feature_item_3dkQa4": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "box",
-            "heading": "LARGEST RANGE OF PRODUCTS",
-            "text": "BONJOUR offers over 3000+ styles of premium quality products."
-          }
-        },
-        "feature_item_A8qrk8": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "star",
-            "heading": "11M+ HAPPY CUSTOMERS",
-            "text": "Privilege to have a 10M+ happy customers"
-          }
-        },
-        "feature_item_tjeiVy": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "truck",
-            "heading": "COD & FREE SHIPPING",
-            "text": "Free shipping on all order above ₹399"
-          }
-        },
-        "feature_item_eRKt6y": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "checkmark",
-            "heading": "07 DAYS HASSEL FREE RETURN",
-            "text": "Simply return it within 07 days for an Exchange & Return. T&C"
-          }
-        }
-      },
-      "block_order": [
-        "feature_item_3dkQa4",
-        "feature_item_A8qrk8",
-        "feature_item_tjeiVy",
-        "feature_item_eRKt6y"
-      ],
-      "name": "Shipping Feature Banner",
-      "settings": {
-        "full_width": false,
-        "item_spacing": 20,
-        "heading_size": 16,
-        "heading_weight": "700",
-        "text_size": 14,
-        "text_weight": "400",
-        "background_color": "#f5f5f5",
-        "heading_color": "#000000",
-        "text_color": "#666666",
-        "icon_size": 40,
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
     }
   },
   "order": [
@@ -1550,6 +1551,7 @@
     "multicolumn",
     "featured_collection1",
     "custom_category_slider_Q3XAhD",
+    "feature_banner_6CNMWC",
     "multicolumn_ECPVXk",
     "video_slider_KNkzH7",
     "multicolumn_9WdbwV",
@@ -1566,7 +1568,6 @@
     "ss_instafeed_2_8Mwc7c",
     "17392805844af3f031",
     "featured_blog_DPGB7Q",
-    "collapsible_content_dMFYbT",
-    "feature_banner_6CNMWC"
+    "collapsible_content_dMFYbT"
   ]
 }
