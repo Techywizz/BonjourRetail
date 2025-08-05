@@ -13,6 +13,7 @@
   "sections": {
     "shipping_feature_banner_ME7rJE": {
       "type": "shipping-feature-banner",
+      "disabled": true,
       "name": "Shipping Feature Banner",
       "settings": {
         "color_scheme": "",
