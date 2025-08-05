@@ -153,6 +153,7 @@
         "news_item_gbEKHa",
         "news_item_iLjgPx"
       ],
+      "disabled": true,
       "name": "News Slider",
       "settings": {
         "title": "Bonjour in News",
