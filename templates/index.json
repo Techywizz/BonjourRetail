@@ -56,14 +56,14 @@
             "desktop_image": "shopify://shop_images/banner1_1b096208-b6cb-4a3f-8db6-7e48ee929ce7.jpg",
             "mobile_image": "shopify://shop_images/1_09973414-12cb-4b51-a3b0-2eb2816d78b3.jpg",
             "link": "shopify://collections/ankle-men-socks",
-            "heading": "Heading One",
+            "heading": "",
             "heading_color": "#1c2228",
             "heading_margin": "0 0 0.5rem 0",
             "heading_padding": "0",
             "heading_font_size": "2.6rem",
             "heading_font_weight": "bold",
             "heading_text_shadow": "0 2px 12px rgba(0,0,0,0.30)",
-            "subheading": "Sub Heading One",
+            "subheading": "",
             "subheading_color": "#ffffff",
             "subheading_margin": "0 0 1rem 0",
             "subheading_padding": "0",
@@ -82,7 +82,7 @@
             "button_box_shadow": "0 2px 8px rgba(0,0,0,0.08)",
             "overlay_opacity": 80,
             "overlay_color": "#de3a3a",
-            "paragraph": "Check Content",
+            "paragraph": "",
             "paragraph_color": "#ffffff",
             "paragraph_font_size": "1rem",
             "paragraph_margin": "0 0 1rem 0",
@@ -391,6 +391,62 @@
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_category_slider_Q3XAhD": {
+      "type": "custom-category-slider",
+      "blocks": {
+        "category_tab_BiDhw8": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Bestseller",
+            "collection": "best-selling-products",
+            "view_all_text": "View All Products",
+            "view_all_link": ""
+          }
+        },
+        "category_tab_ctqBAt": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "New Products",
+            "collection": "baby-socks",
+            "view_all_text": "View All Products",
+            "view_all_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_tab_BiDhw8",
+        "category_tab_ctqBAt"
+      ],
+      "name": "Custom Category Slider",
+      "settings": {
+        "layout": "boxed",
+        "show_arrows": true,
+        "show_dots": false,
+        "top_badge_metafield": "",
+        "top_badge_bg_color": "#eabf7c",
+        "top_badge_text_color": "#ffffff",
+        "discount_badge_bg_color": "#4caf50",
+        "discount_badge_text_color": "#ffffff",
+        "button_bg_color": "#000000",
+        "button_text_color": "#ffffff",
+        "heading_font": "jost_n4",
+        "title_font_size": 18,
+        "top_badge_padding_horizontal": 10,
+        "top_badge_padding_vertical": 5,
+        "top_badge_margin_top": 10,
+        "top_badge_margin_left": 10,
+        "discount_badge_padding_horizontal": 10,
+        "discount_badge_padding_vertical": 5,
+        "discount_badge_margin_bottom": 10,
+        "discount_badge_margin_left": 10,
+        "top_badge_font_size": 11,
+        "discount_badge_font_size": 11,
+        "show_rating": true,
+        "rating_display_type": "number",
+        "show_review_count": true,
+        "show_verified_badge": true
       }
     },
     "multicolumn_ECPVXk": {
@@ -1351,62 +1407,6 @@
         "show_view_all": false,
         "padding_top": 20,
         "padding_bottom": 20
-      }
-    },
-    "custom_category_slider_Q3XAhD": {
-      "type": "custom-category-slider",
-      "blocks": {
-        "category_tab_BiDhw8": {
-          "type": "category_tab",
-          "settings": {
-            "tab_title": "Bestseller",
-            "collection": "best-selling-products",
-            "view_all_text": "View All Products",
-            "view_all_link": ""
-          }
-        },
-        "category_tab_ctqBAt": {
-          "type": "category_tab",
-          "settings": {
-            "tab_title": "New Products",
-            "collection": "baby-socks",
-            "view_all_text": "View All Products",
-            "view_all_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "category_tab_BiDhw8",
-        "category_tab_ctqBAt"
-      ],
-      "name": "Custom Category Slider",
-      "settings": {
-        "layout": "boxed",
-        "show_arrows": true,
-        "show_dots": false,
-        "top_badge_metafield": "",
-        "top_badge_bg_color": "#eabf7c",
-        "top_badge_text_color": "#ffffff",
-        "discount_badge_bg_color": "#4caf50",
-        "discount_badge_text_color": "#ffffff",
-        "button_bg_color": "#000000",
-        "button_text_color": "#ffffff",
-        "heading_font": "jost_n4",
-        "title_font_size": 18,
-        "top_badge_padding_horizontal": 10,
-        "top_badge_padding_vertical": 5,
-        "top_badge_margin_top": 10,
-        "top_badge_margin_left": 10,
-        "discount_badge_padding_horizontal": 10,
-        "discount_badge_padding_vertical": 5,
-        "discount_badge_margin_bottom": 10,
-        "discount_badge_margin_left": 10,
-        "top_badge_font_size": 11,
-        "discount_badge_font_size": 11,
-        "show_rating": true,
-        "rating_display_type": "number",
-        "show_review_count": true,
-        "show_verified_badge": true
       }
     },
     "collapsible_content_dMFYbT": {
