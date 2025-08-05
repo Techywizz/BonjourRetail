@@ -457,8 +457,8 @@
           "settings": {
             "icon_type": "preset",
             "preset_icon": "box",
-            "heading": "LARGEST RANGE OF PRODUCTS",
-            "text": "BONJOUR offers over 3000+ styles of premium quality products."
+            "heading": "LARGEST RANGE OF SOCKS",
+            "text": "BONJOUR offers over 1500+ styles of premium quality socks."
           }
         },
         "feature_item_A8qrk8": {
@@ -466,8 +466,8 @@
           "settings": {
             "icon_type": "preset",
             "preset_icon": "star",
-            "heading": "11M+ HAPPY CUSTOMERS",
-            "text": "Privilege to have a 10M+ happy customers"
+            "heading": "100M+ HAPPY CUSTOMERS",
+            "text": "Privilege to have a 100M+ happy customers"
           }
         },
         "feature_item_tjeiVy": {
@@ -475,8 +475,8 @@
           "settings": {
             "icon_type": "preset",
             "preset_icon": "truck",
-            "heading": "COD & FREE SHIPPING",
-            "text": "Free shipping on all order above ₹399"
+            "heading": "Pioneers since 1988",
+            "text": "A legacy of quality, comfort, and trust."
           }
         },
         "feature_item_eRKt6y": {
@@ -507,8 +507,8 @@
         "heading_color": "#000000",
         "text_color": "#666666",
         "icon_size": 40,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 12,
+        "padding_bottom": 4
       }
     },
     "multicolumn_ECPVXk": {
@@ -620,8 +620,8 @@
         "content_spacing": 12,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 24,
-        "padding_bottom": 20
+        "padding_top": 12,
+        "padding_bottom": 24
       }
     },
     "video_slider_KNkzH7": {
@@ -677,8 +677,8 @@
         "heading_size": "h1",
         "heading_alignment": "left",
         "heading_tag": "h2",
-        "padding_top": 12,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 16
       }
     },
     "multicolumn_9WdbwV": {
