@@ -70,7 +70,7 @@
             "subheading_font_size": "1.2rem",
             "subheading_font_weight": "normal",
             "subheading_text_shadow": "0 2px 10px rgba(0,0,0,0.22)",
-            "button_label": "View All",
+            "button_label": "",
             "button_link": "shopify://pages/bamboo-socks",
             "button_bg_color": "#ffffff",
             "button_text_color": "#111111",
