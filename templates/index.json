@@ -1512,6 +1512,15 @@
             "row_content": "<p>Orders are usually delivered within <strong>3-7 business days</strong>, depending on your location.</p>",
             "page": ""
           }
+        },
+        "collapsible_row_QTYaYX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How should I wash and care for my socks?",
+            "icon": "check_mark",
+            "row_content": "<p>For <strong>longer-lasting</strong> socks:</p><ul><li>Wash in <strong>cold water</strong></li><li>Avoid <strong>harsh detergents and bleach</strong></li><li>Air dry instead of using a dryer</li></ul>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -1520,7 +1529,8 @@
         "collapsible_row_UR6VzP",
         "collapsible_row_qUWyrb",
         "collapsible_row_n3z4cf",
-        "collapsible_row_WPPVgb"
+        "collapsible_row_WPPVgb",
+        "collapsible_row_QTYaYX"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
