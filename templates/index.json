@@ -1462,9 +1462,9 @@
         "collapsible_row_d3iEdE": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "What is Bonjour?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Bonjour is a leading brand specializing in <strong>premium socks, apparel, and accessories </strong>for men, women, and kids. With over <strong>38 years of experience</strong>, we are known for our <strong>high-quality products, innovative designs, and unmatched comfort</strong>.</p>",
             "page": ""
           }
         },
