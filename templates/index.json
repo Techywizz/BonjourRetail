@@ -1486,21 +1486,30 @@
             "page": ""
           }
         },
+        "collapsible_row_qUWyrb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What other products does Bonjour offer?",
+            "icon": "check_mark",
+            "row_content": "<p>Apart from socks, Bonjour offers <strong>handkerchiefs, tights, leggings, arm shields, gloves, beanies, caps, and other accessories </strong>along with <strong>apparels </strong>for men, women, and kids.<br/></p>",
+            "page": ""
+          }
+        },
         "collapsible_row_n3z4cf": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How can I contact Bonjour for any queries?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>You can reach us via:<br/>📧<strong>Email:</strong>brcc@bonjourgroup.net<br/>📞<strong>Call/WhatsApp:</strong>+91 9711611690<br/>💬<strong>Live Chat:</strong>Available on our website<br/><br/></p>",
             "page": ""
           }
         },
         "collapsible_row_WPPVgb": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How long does it take to deliver my order?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Orders are usually delivered within <strong>3-7 business days</strong>, depending on your location.</p>",
             "page": ""
           }
         }
@@ -1509,6 +1518,7 @@
         "collapsible_row_d3iEdE",
         "collapsible_row_H6fyYN",
         "collapsible_row_UR6VzP",
+        "collapsible_row_qUWyrb",
         "collapsible_row_n3z4cf",
         "collapsible_row_WPPVgb"
       ],
