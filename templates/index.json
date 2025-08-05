@@ -1480,9 +1480,9 @@
         "collapsible_row_UR6VzP": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Do we offer socks for different occasions?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Absolutely! We have a variety of socks, including <strong>formal socks, sports socks, casual socks, invisible socks</strong>, and more to match every need.</p>",
             "page": ""
           }
         },
