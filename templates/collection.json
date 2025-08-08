@@ -19,7 +19,6 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "disabled": true,
       "custom_css": [
         ".product-form__submit {background: #000000 !important; color: #ffffff !important;}"
       ],
@@ -69,15 +68,6 @@
         "sale_deals_margin_bottom": 32
       }
     },
-    "custom_liquid_wDfmnd": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div class= page-width rte>\n{{ collection.description }}</div>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 52
-      }
-    },
     "recently_viewed_collection": {
       "type": "recently-viewed-collection",
       "settings": {
@@ -124,6 +114,15 @@
         "swipe_on_mobile": false,
         "padding_top": 28,
         "padding_bottom": 36
+      }
+    },
+    "custom_liquid_wDfmnd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class= page-width rte>\n{{ collection.description }}</div>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     }
   },
