@@ -51,7 +51,7 @@
         "featured_title_color": "#1a1a1a",
         "featured_margin_top": 32,
         "featured_margin_bottom": 32,
-        "show_sale_deals_slider": true,
+        "show_sale_deals_slider": false,
         "sale_deals_title": "Bonjour Top Sale Deals",
         "sale_deals_content_type": "collection",
         "sale_deals_collection": "clearance-sale-kids",
