@@ -94,12 +94,11 @@
         },
         "slide_ei88tz": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/banner_2_0d2d3897-6ea6-47a0-a3d0-85a343c07756.jpg",
-            "mobile_image": "shopify://shop_images/2_56e441d3-0a29-4c6c-b477-cf0e725a787c.jpg",
+            "desktop_image": "shopify://shop_images/EMPOWER.jpg",
+            "mobile_image": "shopify://shop_images/EMPOWER-mob.jpg",
             "link": "shopify://collections/3-ply-face-mask",
             "heading": "",
             "heading_color": "#ffffff",
@@ -143,8 +142,8 @@
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/eoss50_-web-banner_444aebf6-e550-4f99-a08d-b50a8356911e.jpg",
-            "mobile_image": "shopify://shop_images/eoss50_-mob-banner.jpg",
+            "desktop_image": "shopify://shop_images/EMPOWER.jpg",
+            "mobile_image": "shopify://shop_images/EMPOWER-mob.jpg",
             "link": "shopify://collections/3-ply-face-mask",
             "heading": "",
             "heading_color": "#ffffff",
