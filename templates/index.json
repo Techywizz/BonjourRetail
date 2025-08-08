@@ -94,6 +94,7 @@
         },
         "slide_ei88tz": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "media_type": "image",
             "video_url": "",
