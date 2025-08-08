@@ -138,6 +138,7 @@
         },
         "slide_NyU9gq": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "media_type": "image",
             "video_url": "",
@@ -182,6 +183,7 @@
         },
         "slide_t67dtE": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "media_type": "image",
             "video_url": "",
@@ -226,6 +228,7 @@
         },
         "slide_x4MUnh": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "media_type": "image",
             "video_url": "",
