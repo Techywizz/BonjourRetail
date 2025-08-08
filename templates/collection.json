@@ -19,6 +19,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "custom_css": [
         ".product-form__submit {background: #000000 !important; color: #ffffff !important;}"
       ],
@@ -129,8 +130,8 @@
   "order": [
     "banner",
     "product-grid",
-    "custom_liquid_wDfmnd",
     "recently_viewed_collection",
-    "featured_collection_gM8Eqc"
+    "featured_collection_gM8Eqc",
+    "custom_liquid_wDfmnd"
   ]
 }
