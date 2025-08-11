@@ -138,13 +138,12 @@
         },
         "slide_NyU9gq": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "media_type": "image",
             "video_url": "",
             "desktop_image": "shopify://shop_images/desktop.jpg",
             "mobile_image": "shopify://shop_images/bamboo_mobile.jpg",
-            "link": "shopify://collections/3-ply-face-mask",
+            "link": "shopify://collections/bamboo-socks",
             "heading": "",
             "heading_color": "#ffffff",
             "heading_margin": "0 0 0.5rem 0",
