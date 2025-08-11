@@ -452,68 +452,6 @@
         "show_verified_badge": true
       }
     },
-    "feature_banner_6CNMWC": {
-      "type": "feature-banner",
-      "blocks": {
-        "feature_item_3dkQa4": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "box",
-            "heading": "LARGEST RANGE OF SOCKS",
-            "text": "BONJOUR offers over 1500+ styles of premium quality socks."
-          }
-        },
-        "feature_item_A8qrk8": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "star",
-            "heading": "100M+ HAPPY CUSTOMERS",
-            "text": "Privilege to have a 100M+ happy customers"
-          }
-        },
-        "feature_item_tjeiVy": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "truck",
-            "heading": "Pioneers since 1988",
-            "text": "A legacy of quality, comfort, and trust."
-          }
-        },
-        "feature_item_eRKt6y": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "checkmark",
-            "heading": "07 DAYS HASSEL FREE RETURN",
-            "text": "Easy return & exchange within 7 days. *T&C Applied"
-          }
-        }
-      },
-      "block_order": [
-        "feature_item_3dkQa4",
-        "feature_item_A8qrk8",
-        "feature_item_tjeiVy",
-        "feature_item_eRKt6y"
-      ],
-      "name": "Shipping Feature Banner",
-      "settings": {
-        "full_width": false,
-        "item_spacing": 20,
-        "heading_size": 16,
-        "heading_weight": "700",
-        "text_size": 14,
-        "text_weight": "400",
-        "background_color": "#f5f5f5",
-        "heading_color": "#000000",
-        "text_color": "#666666",
-        "icon_size": 40,
-        "padding_top": 12,
-        "padding_bottom": 4
-      }
-    },
     "multicolumn_ECPVXk": {
       "type": "multicolumn",
       "blocks": {
@@ -1567,6 +1505,69 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "feature_banner_6CNMWC": {
+      "type": "feature-banner",
+      "blocks": {
+        "feature_item_3dkQa4": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "box",
+            "heading": "LARGEST RANGE OF SOCKS",
+            "text": "BONJOUR offers over 1500+ styles of premium quality socks."
+          }
+        },
+        "feature_item_A8qrk8": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "star",
+            "heading": "100M+ HAPPY CUSTOMERS",
+            "text": "Privilege to have a 100M+ happy customers"
+          }
+        },
+        "feature_item_tjeiVy": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "truck",
+            "heading": "Pioneers since 1988",
+            "text": "A legacy of quality, comfort, and trust."
+          }
+        },
+        "feature_item_eRKt6y": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "checkmark",
+            "heading": "07 DAYS HASSEL FREE RETURN",
+            "text": "Easy return & exchange within 7 days. *T&C Applied"
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_3dkQa4",
+        "feature_item_A8qrk8",
+        "feature_item_tjeiVy",
+        "feature_item_eRKt6y"
+      ],
+      "disabled": true,
+      "name": "Shipping Feature Banner",
+      "settings": {
+        "full_width": false,
+        "item_spacing": 20,
+        "heading_size": 16,
+        "heading_weight": "700",
+        "text_size": 14,
+        "text_weight": "400",
+        "background_color": "#f5f5f5",
+        "heading_color": "#000000",
+        "text_color": "#666666",
+        "icon_size": 40,
+        "padding_top": 12,
+        "padding_bottom": 4
+      }
     }
   },
   "order": [
@@ -1575,7 +1576,6 @@
     "multicolumn",
     "featured_collection1",
     "custom_category_slider_Q3XAhD",
-    "feature_banner_6CNMWC",
     "multicolumn_ECPVXk",
     "video_slider_KNkzH7",
     "multicolumn_9WdbwV",
@@ -1592,6 +1592,7 @@
     "ss_instafeed_2_8Mwc7c",
     "17392805844af3f031",
     "collapsible_content_dMFYbT",
-    "featured_blog_DPGB7Q"
+    "featured_blog_DPGB7Q",
+    "feature_banner_6CNMWC"
   ]
 }
