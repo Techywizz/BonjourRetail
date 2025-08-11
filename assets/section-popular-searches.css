@@ -107,6 +107,6 @@
   }
 
   .popular-searches__separator {
-    display: none;
+    display: block;
   }
 } 
