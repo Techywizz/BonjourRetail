@@ -55,7 +55,7 @@
 @media screen and (max-width: 749px) {
   .breadcrumb {
     padding: 0.6rem 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   
   .breadcrumb__list {
