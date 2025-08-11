@@ -147,6 +147,8 @@ cart-remove-button .button:not([disabled]):hover {
   cart-remove-button .button {
     min-width: 3.5rem;
     min-height: 3.5rem;
+    justify-content: center;
+    display: flex;
   }
 }
 
