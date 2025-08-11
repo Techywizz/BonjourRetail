@@ -150,7 +150,7 @@
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
-    "cart_drawer_style": "modern",
+    "cart_drawer_style": "default",
     "show_security_section": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
