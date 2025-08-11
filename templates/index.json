@@ -97,8 +97,8 @@
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/desktop.jpg",
-            "mobile_image": "shopify://shop_images/bamboo_mobile.jpg",
+            "desktop_image": "shopify://shop_images/desktop_6d161abf-526e-48ea-9b14-2e481c0a0be1.jpg",
+            "mobile_image": "shopify://shop_images/bamboo_mobile_09b9ed49-ceac-4be7-8c8e-778c9d601c6a.jpg",
             "link": "shopify://collections/bamboo-socks",
             "heading": "",
             "heading_color": "#ffffff",
@@ -619,6 +619,68 @@
         "heading_tag": "h2",
         "padding_top": 0,
         "padding_bottom": 16
+      }
+    },
+    "feature_banner_6CNMWC": {
+      "type": "feature-banner",
+      "blocks": {
+        "feature_item_3dkQa4": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "box",
+            "heading": "LARGEST RANGE OF SOCKS",
+            "text": "BONJOUR offers over 1500+ styles of premium quality socks."
+          }
+        },
+        "feature_item_A8qrk8": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "star",
+            "heading": "100M+ HAPPY CUSTOMERS",
+            "text": "Privilege to have a 100M+ happy customers"
+          }
+        },
+        "feature_item_tjeiVy": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "truck",
+            "heading": "Pioneers since 1988",
+            "text": "A legacy of quality, comfort, and trust."
+          }
+        },
+        "feature_item_eRKt6y": {
+          "type": "feature_item",
+          "settings": {
+            "icon_type": "preset",
+            "preset_icon": "checkmark",
+            "heading": "07 DAYS HASSEL FREE RETURN",
+            "text": "Easy return & exchange within 7 days. *T&C Applied"
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_3dkQa4",
+        "feature_item_A8qrk8",
+        "feature_item_tjeiVy",
+        "feature_item_eRKt6y"
+      ],
+      "name": "Shipping Feature Banner",
+      "settings": {
+        "full_width": false,
+        "item_spacing": 20,
+        "heading_size": 16,
+        "heading_weight": "700",
+        "text_size": 14,
+        "text_weight": "400",
+        "background_color": "#f5f5f5",
+        "heading_color": "#000000",
+        "text_color": "#666666",
+        "icon_size": 40,
+        "padding_top": 12,
+        "padding_bottom": 4
       }
     },
     "multicolumn_9WdbwV": {
@@ -1503,68 +1565,6 @@
         "show_view_all": false,
         "padding_top": 20,
         "padding_bottom": 20
-      }
-    },
-    "feature_banner_6CNMWC": {
-      "type": "feature-banner",
-      "blocks": {
-        "feature_item_3dkQa4": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "box",
-            "heading": "LARGEST RANGE OF SOCKS",
-            "text": "BONJOUR offers over 1500+ styles of premium quality socks."
-          }
-        },
-        "feature_item_A8qrk8": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "star",
-            "heading": "100M+ HAPPY CUSTOMERS",
-            "text": "Privilege to have a 100M+ happy customers"
-          }
-        },
-        "feature_item_tjeiVy": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "truck",
-            "heading": "Pioneers since 1988",
-            "text": "A legacy of quality, comfort, and trust."
-          }
-        },
-        "feature_item_eRKt6y": {
-          "type": "feature_item",
-          "settings": {
-            "icon_type": "preset",
-            "preset_icon": "checkmark",
-            "heading": "07 DAYS HASSEL FREE RETURN",
-            "text": "Easy return & exchange within 7 days. *T&C Applied"
-          }
-        }
-      },
-      "block_order": [
-        "feature_item_3dkQa4",
-        "feature_item_A8qrk8",
-        "feature_item_tjeiVy",
-        "feature_item_eRKt6y"
-      ],
-      "name": "Shipping Feature Banner",
-      "settings": {
-        "full_width": false,
-        "item_spacing": 20,
-        "heading_size": 16,
-        "heading_weight": "700",
-        "text_size": 14,
-        "text_weight": "400",
-        "background_color": "#f5f5f5",
-        "heading_color": "#000000",
-        "text_color": "#666666",
-        "icon_size": 40,
-        "padding_top": 12,
-        "padding_bottom": 4
       }
     }
   },
