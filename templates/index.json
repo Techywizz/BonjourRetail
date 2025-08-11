@@ -1551,7 +1551,6 @@
         "feature_item_tjeiVy",
         "feature_item_eRKt6y"
       ],
-      "disabled": true,
       "name": "Shipping Feature Banner",
       "settings": {
         "full_width": false,
@@ -1577,6 +1576,7 @@
     "custom_category_slider_Q3XAhD",
     "multicolumn_ECPVXk",
     "video_slider_KNkzH7",
+    "feature_banner_6CNMWC",
     "multicolumn_9WdbwV",
     "174039878305c9095b",
     "featured_collection_3UQ6KQ",
@@ -1591,7 +1591,6 @@
     "ss_instafeed_2_8Mwc7c",
     "17392805844af3f031",
     "collapsible_content_dMFYbT",
-    "featured_blog_DPGB7Q",
-    "feature_banner_6CNMWC"
+    "featured_blog_DPGB7Q"
   ]
 }
