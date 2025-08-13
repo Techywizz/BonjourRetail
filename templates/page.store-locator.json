@@ -80,6 +80,16 @@
             "link": ""
           }
         },
+        "column_GqNC3f": {
+          "type": "column",
+          "settings": {
+            "image_link": "",
+            "title": "NOIDA",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_hY7CER": {
           "type": "column",
           "settings": {
@@ -95,16 +105,6 @@
           "settings": {
             "image_link": "",
             "title": "GHAZIABAD",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_GqNC3f": {
-          "type": "column",
-          "settings": {
-            "image_link": "",
-            "title": "NOIDA",
             "text": "",
             "link_label": "",
             "link": ""
@@ -143,9 +143,9 @@
       },
       "block_order": [
         "column_3BxexP",
+        "column_GqNC3f",
         "column_hY7CER",
         "column_DXQ6fk",
-        "column_GqNC3f",
         "column_ahPVet",
         "column_h9PH8h",
         "column_McVALA"
@@ -216,6 +216,83 @@
       ],
       "settings": {
         "title": "DELHI",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "column_spacing": 8,
+        "image_spacing": 16,
+        "title_spacing": 4,
+        "content_spacing": 12,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_84yNwe": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_qiGqaN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2023-06-09_at_12.56.26_PM.jpg",
+            "image_link": "",
+            "title": "NOIDA WORLD ONE",
+            "text": "<p>Shop no.G3, Tower C, Plot no-1, Sector-90, (Opp. Sector 137),</p><p><strong>+91 </strong>xxxxxxxxxxx</p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://goo.gl/maps/D8arQHTskwwxyjeAA"
+          }
+        },
+        "column_tDnGtB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Store_imafe_sec75_1.jpg",
+            "image_link": "",
+            "title": "SPECTRUM METRO MALL",
+            "text": "<p>Shop No 29 A, Ground floor Tower C, Sector 75</p><p><strong>+91 9354029488</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://maps.app.goo.gl/LyF3fWrgMKpbfSdW8"
+          }
+        },
+        "column_RQMtq9": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/lucknow_store.jpg",
+            "image_link": "",
+            "title": "<strong>SAHARA PLAZA</strong>",
+            "text": "<p>Bonjour, D-215, Patrakarpuram Crossing Rd, Vikas Khand 1, Gomti Nagar, Lucknow,</p><p><strong>+91 9911434363</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x399be33da8721023:0x4379daf5548c62c6?sa=X&ved=1t:3061&hl=en-GB&ictx=111"
+          }
+        },
+        "column_VQGaXh": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/store_3_cf3fe5cf-f59e-40bf-b813-6d26d6f118c4.webp",
+            "image_link": "",
+            "title": "<strong>MM MALL</strong>",
+            "text": "<p>Shop No. LGF-10, Mahagun Metro Mall, Vaishali</p><p><strong> 9654917423</strong></p><p>11AM - 9PM</p>",
+            "link_label": "Get Direction",
+            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+No.+LGF-10,+Mahagun+Metro+Mall,+Vaishali,+Ghaziabad,+Uttar+Pradesh+201010/@28.6449021,77.3325383,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfbc2d2d0ada5:0x92f7e6d83cd26269!2m2!1d77.334727!2d28.6449021!3e0?hl=en"
+          }
+        }
+      },
+      "block_order": [
+        "column_qiGqaN",
+        "column_tDnGtB",
+        "column_RQMtq9",
+        "column_VQGaXh"
+      ],
+      "settings": {
+        "title": "NOIDA",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -385,83 +462,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_84yNwe": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_qiGqaN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/WhatsApp_Image_2023-06-09_at_12.56.26_PM.jpg",
-            "image_link": "",
-            "title": "NOIDA WORLD ONE",
-            "text": "<p>Shop no.G3, Tower C, Plot no-1, Sector-90, (Opp. Sector 137),</p><p><strong>+91 </strong>xxxxxxxxxxx</p><p>11AM - 9PM</p>",
-            "link_label": "Get Direction",
-            "link": "https://goo.gl/maps/D8arQHTskwwxyjeAA"
-          }
-        },
-        "column_tDnGtB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Store_imafe_sec75_1.jpg",
-            "image_link": "",
-            "title": "SPECTRUM METRO MALL",
-            "text": "<p>Shop No 29 A, Ground floor Tower C, Sector 75</p><p><strong>+91 9354029488</strong></p><p>11AM - 9PM</p>",
-            "link_label": "Get Direction",
-            "link": "https://maps.app.goo.gl/LyF3fWrgMKpbfSdW8"
-          }
-        },
-        "column_RQMtq9": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/lucknow_store.jpg",
-            "image_link": "",
-            "title": "<strong>SAHARA PLAZA</strong>",
-            "text": "<p>Bonjour, D-215, Patrakarpuram Crossing Rd, Vikas Khand 1, Gomti Nagar, Lucknow,</p><p><strong>+91 9911434363</strong></p><p>11AM - 9PM</p>",
-            "link_label": "Get Direction",
-            "link": "https://www.google.com/maps/dir//Bonjour/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x399be33da8721023:0x4379daf5548c62c6?sa=X&ved=1t:3061&hl=en-GB&ictx=111"
-          }
-        },
-        "column_VQGaXh": {
-          "type": "column",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/store_3_cf3fe5cf-f59e-40bf-b813-6d26d6f118c4.webp",
-            "image_link": "",
-            "title": "<strong>MM MALL</strong>",
-            "text": "<p>Shop No. LGF-10, Mahagun Metro Mall, Vaishali</p><p><strong> 9654917423</strong></p><p>11AM - 9PM</p>",
-            "link_label": "Get Direction",
-            "link": "https://www.google.com/maps/dir//Bonjour,+Shop+No.+LGF-10,+Mahagun+Metro+Mall,+Vaishali,+Ghaziabad,+Uttar+Pradesh+201010/@28.6449021,77.3325383,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfbc2d2d0ada5:0x92f7e6d83cd26269!2m2!1d77.334727!2d28.6449021!3e0?hl=en"
-          }
-        }
-      },
-      "block_order": [
-        "column_qiGqaN",
-        "column_tDnGtB",
-        "column_RQMtq9",
-        "column_VQGaXh"
-      ],
-      "settings": {
-        "title": "NOIDA",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "column_spacing": 8,
-        "image_spacing": 16,
-        "title_spacing": 4,
-        "content_spacing": 12,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "multicolumn_hg8Abe": {
       "type": "multicolumn",
       "blocks": {
@@ -544,9 +544,9 @@
     "image_banner_9Ux9Dy",
     "multicolumn_9UJabq",
     "multicolumn_pVpx3k",
+    "multicolumn_84yNwe",
     "multicolumn_ELwe7N",
     "multicolumn_7jxinH",
-    "multicolumn_84yNwe",
     "multicolumn_hg8Abe"
   ]
 }
