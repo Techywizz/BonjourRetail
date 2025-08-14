@@ -254,6 +254,7 @@
     },
     "popular_searches_xWbqFi": {
       "type": "popular-searches",
+      "disabled": true,
       "name": "Popular searches",
       "settings": {
         "color_scheme": "scheme-4",
@@ -512,9 +513,9 @@
     "shipping_feature_banner_ME7rJE",
     "expandable_content_xGBFyJ",
     "news_slider_mNqRLr",
-    "footer",
     "popular_searches_xWbqFi",
     "expandable_content_fN6VQW",
+    "footer",
     "ss_back_to_top_button_DBkBxj",
     "ss_wave_2_9pbCHA"
   ]
