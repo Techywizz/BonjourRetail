@@ -116,12 +116,13 @@
         "news_item_iR796k": {
           "type": "news_item",
           "settings": {
-            "image": "shopify://shop_images/local_samosa_f7f60d25-cab1-4e72-819f-1854a3e8248c.jpg",
+            "image": "shopify://shop_images/MSN-Logo.png",
             "link": ""
           }
         },
         "news_item_xpUf9X": {
           "type": "news_item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/HZ_cc0bcfd7-444d-4e16-84d3-8d77781b03d1.png",
             "link": ""
@@ -129,6 +130,7 @@
         },
         "news_item_gbEKHa": {
           "type": "news_item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/IG_ad06a78b-0b32-45f9-ade7-90b476c91446.png",
             "link": ""
@@ -136,6 +138,7 @@
         },
         "news_item_iLjgPx": {
           "type": "news_item",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/AR_3d4e79e7-f2c1-4fb3-ac42-db2f90900dd2.png",
             "link": ""
