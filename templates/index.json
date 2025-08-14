@@ -141,8 +141,8 @@
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/Untitled_design_11.jpg",
-            "mobile_image": "shopify://shop_images/Untitled_1080_x_1280_px.jpg",
+            "desktop_image": "shopify://shop_images/sports_socks_1920x600_9b843205-d3f9-421e-8881-8ae83a6fb6d9.jpg",
+            "mobile_image": "shopify://shop_images/sports_socks_1080x1280_d6ee2e51-4034-4bf8-99b8-813be5938ac4.jpg",
             "link": "shopify://collections/men-sports-socks",
             "heading": "",
             "heading_color": "#ffffff",
@@ -185,8 +185,8 @@
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/Apperals-banner-up3.jpg",
-            "mobile_image": "shopify://shop_images/Apparels-banner-mob2.jpg",
+            "desktop_image": "shopify://shop_images/Apperals-banner.jpg",
+            "mobile_image": "shopify://shop_images/Apparels-banner-mob.jpg",
             "link": "shopify://collections/apparels",
             "heading": "",
             "heading_color": "#ffffff",
@@ -543,7 +543,7 @@
         "column_MaK8Qn"
       ],
       "settings": {
-        "title": "<em><strong>Shop Trending</strong></em><strong> </strong>Categories",
+        "title": "<em><strong>Shop Trending </strong></em>Socks<strong> </strong>Categories",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
