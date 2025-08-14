@@ -254,6 +254,7 @@
     },
     "popular_searches_xWbqFi": {
       "type": "popular-searches",
+      "disabled": true,
       "name": "Popular searches",
       "settings": {
         "color_scheme": "scheme-4",
