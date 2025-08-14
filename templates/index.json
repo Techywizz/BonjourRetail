@@ -185,8 +185,8 @@
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/Apperals-banner.jpg",
-            "mobile_image": "shopify://shop_images/Apparels-banner-mob.jpg",
+            "desktop_image": "shopify://shop_images/Apperals-banner-up3.jpg",
+            "mobile_image": "shopify://shop_images/Apparels-banner-mob2.jpg",
             "link": "shopify://collections/apparels",
             "heading": "",
             "heading_color": "#ffffff",
