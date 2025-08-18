@@ -230,9 +230,9 @@
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/banner_2_0d2d3897-6ea6-47a0-a3d0-85a343c07756.jpg",
-            "mobile_image": "shopify://shop_images/2_56e441d3-0a29-4c6c-b477-cf0e725a787c.jpg",
-            "link": "shopify://collections/3-ply-face-mask",
+            "desktop_image": "shopify://shop_images/bontact_banner_desktop.png",
+            "mobile_image": "shopify://shop_images/bontact_banner_mobile.jpg",
+            "link": "shopify://collections/bontact",
             "heading": "",
             "heading_color": "#ffffff",
             "heading_margin": "0 0 0.5rem 0",
