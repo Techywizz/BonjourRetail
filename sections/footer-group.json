@@ -189,7 +189,7 @@
         "color_scheme": "scheme-4",
         "full_width": false,
         "main_heading": "Popular Searches",
-        "main_heading_alignment": "text-left",
+        "main_heading_alignment": "text-right",
         "main_heading_size": 24,
         "main_heading_weight": "700",
         "category_heading_size": 18,
@@ -440,6 +440,14 @@
             "image_width": 400,
             "alignment": "center"
           }
+        },
+        "link_list_ixcYH3": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
         }
       },
       "block_order": [
@@ -447,7 +455,8 @@
         "link_list_WDdgMW",
         "link_list_xYtAzD",
         "link_list_47xjTD",
-        "image_7nECKp"
+        "image_7nECKp",
+        "link_list_ixcYH3"
       ],
       "settings": {
         "color_scheme": "scheme-4",
@@ -512,10 +521,10 @@
     "shipping_feature_banner_ME7rJE",
     "expandable_content_xGBFyJ",
     "news_slider_mNqRLr",
-    "popular_searches_xWbqFi",
     "expandable_content_fN6VQW",
     "footer",
     "ss_back_to_top_button_DBkBxj",
-    "ss_wave_2_9pbCHA"
+    "ss_wave_2_9pbCHA",
+    "popular_searches_xWbqFi"
   ]
 }
