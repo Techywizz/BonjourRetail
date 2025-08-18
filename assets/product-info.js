@@ -90,25 +90,39 @@ if (!customElements.get('product-info')) {
           this.productModal?.remove();
 
           const selector = updateFullPage ? "product-info[id^='MainProduct']" : 'product-info';
-          const variant = this.getSelectedVariant(html.querySelector(selector));
+          const productInfoElement = html.querySelector(selector);
+          if (!productInfoElement) return;
+          
+          const variant = this.getSelectedVariant(productInfoElement);
           this.updateURL(productUrl, variant?.id);
 
           if (updateFullPage) {
-            document.querySelector('head title').innerHTML = html.querySelector('head title').innerHTML;
+            const titleElement = html.querySelector('head title');
+            const mainTitleElement = document.querySelector('head title');
+            if (titleElement && mainTitleElement) {
+              mainTitleElement.innerHTML = titleElement.innerHTML;
+            }
 
-            HTMLUpdateUtility.viewTransition(
-              document.querySelector('main'),
-              html.querySelector('main'),
-              this.preProcessHtmlCallbacks,
-              this.postProcessHtmlCallbacks
-            );
+            const mainElement = document.querySelector('main');
+            const htmlMainElement = html.querySelector('main');
+            if (mainElement && htmlMainElement) {
+              HTMLUpdateUtility.viewTransition(
+                mainElement,
+                htmlMainElement,
+                this.preProcessHtmlCallbacks,
+                this.postProcessHtmlCallbacks
+              );
+            }
           } else {
-            HTMLUpdateUtility.viewTransition(
-              this,
-              html.querySelector('product-info'),
-              this.preProcessHtmlCallbacks,
-              this.postProcessHtmlCallbacks
-            );
+            const htmlProductInfo = html.querySelector('product-info');
+            if (htmlProductInfo) {
+              HTMLUpdateUtility.viewTransition(
+                this,
+                htmlProductInfo,
+                this.preProcessHtmlCallbacks,
+                this.postProcessHtmlCallbacks
+              );
+            }
           }
         };
       }
@@ -126,7 +140,8 @@ if (!customElements.get('product-info')) {
           })
           .then(() => {
             // set focus to last clicked option value
-            document.querySelector(`#${targetId}`)?.focus();
+            const targetElement = document.querySelector(`#${targetId}`);
+            if (targetElement) targetElement.focus();
           })
           .catch((error) => {
             if (error.name === 'AbortError') {
@@ -156,7 +171,7 @@ if (!customElements.get('product-info')) {
 
       updateOptionValues(html) {
         const variantSelects = html.querySelector('variant-selects');
-        if (variantSelects) {
+        if (variantSelects && this.variantSelectors) {
           HTMLUpdateUtility.viewTransition(this.variantSelectors, variantSelects, this.preProcessHtmlCallbacks);
         }
       }
@@ -212,12 +227,15 @@ if (!customElements.get('product-info')) {
       }
 
       updateVariantInputs(variantId) {
-        this.querySelectorAll(
+        const productForms = this.querySelectorAll(
           `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`
-        ).forEach((productForm) => {
+        );
+        productForms.forEach((productForm) => {
           const input = productForm.querySelector('input[name="id"]');
-          input.value = variantId ?? '';
-          input.dispatchEvent(new Event('change', { bubbles: true }));
+          if (input) {
+            input.value = variantId ?? '';
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+          }
         });
       }
 
@@ -247,6 +265,7 @@ if (!customElements.get('product-info')) {
 
         const refreshSourceData = () => {
           if (this.hasAttribute('data-zoom-on-hover')) enableZoomOnHover(2);
+          if (!mediaGallerySource) return [[], new Set(), new Map()];
           const mediaGallerySourceItems = Array.from(mediaGallerySource.querySelectorAll('li[data-media-id]'));
           const sourceSet = new Set(mediaGallerySourceItems.map((item) => item.dataset.mediaId));
           const sourceMap = new Map(
@@ -299,10 +318,13 @@ if (!customElements.get('product-info')) {
         }
 
         // set featured media as active in the media gallery
-        this.querySelector(`media-gallery`)?.setActiveMedia?.(
-          `${this.dataset.section}-${variantFeaturedMediaId}`,
-          true
-        );
+        const mediaGallery = this.querySelector(`media-gallery`);
+        if (mediaGallery?.setActiveMedia) {
+          mediaGallery.setActiveMedia(
+            `${this.dataset.section}-${variantFeaturedMediaId}`,
+            true
+          );
+        }
 
         // update media modal
         const modalContent = this.productModal?.querySelector(`.product-media-modal__content`);
@@ -311,6 +333,8 @@ if (!customElements.get('product-info')) {
       }
 
       setQuantityBoundries() {
+        if (!this.quantityInput) return;
+        
         const data = {
           cartQuantity: this.quantityInput.dataset.cartQuantity ? parseInt(this.quantityInput.dataset.cartQuantity) : 0,
           min: this.quantityInput.dataset.min ? parseInt(this.quantityInput.dataset.min) : 1,
@@ -339,7 +363,9 @@ if (!customElements.get('product-info')) {
         const currentVariantId = this.productForm?.variantIdInput?.value;
         if (!currentVariantId) return;
 
-        this.querySelector('.quantity__rules-cart .loading__spinner').classList.remove('hidden');
+        const loadingSpinner = this.querySelector('.quantity__rules-cart .loading__spinner');
+        if (loadingSpinner) loadingSpinner.classList.remove('hidden');
+        
         fetch(`${this.dataset.url}?variant=${currentVariantId}&section_id=${this.dataset.section}`)
           .then((response) => response.text())
           .then((responseText) => {
@@ -347,14 +373,18 @@ if (!customElements.get('product-info')) {
             this.updateQuantityRules(this.dataset.section, html);
           })
           .catch((e) => console.error(e))
-          .finally(() => this.querySelector('.quantity__rules-cart .loading__spinner').classList.add('hidden'));
+          .finally(() => {
+            if (loadingSpinner) loadingSpinner.classList.add('hidden');
+          });
       }
 
       updateQuantityRules(sectionId, html) {
-        if (!this.quantityInput) return;
+        if (!this.quantityInput || !this.quantityForm) return;
         this.setQuantityBoundries();
 
         const quantityFormUpdated = html.getElementById(`Quantity-Form-${sectionId}`);
+        if (!quantityFormUpdated) return;
+        
         const selectors = ['.quantity__input', '.quantity__rules', '.quantity__label'];
         for (let selector of selectors) {
           const current = this.quantityForm.querySelector(selector);
