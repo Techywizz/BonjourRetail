@@ -226,7 +226,6 @@
         },
         "slide_x4MUnh": {
           "type": "slide",
-          "disabled": true,
           "settings": {
             "media_type": "image",
             "video_url": "",
