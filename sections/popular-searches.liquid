@@ -34,6 +34,19 @@
       
       <div class="popular-searches__content">
         <!-- Men's Links -->
+        {%- assign men_has_links = false -%}
+        {%- for i in (1..15) -%}
+          {%- assign link_key_text = 'men_link_' | append: i | append: '_text' -%}
+          {%- assign link_key_url = 'men_link_' | append: i | append: '_url' -%}
+          {%- assign link_text = section.settings[link_key_text] -%}
+          {%- assign link_url = section.settings[link_key_url] -%}
+          {%- if link_text != blank and link_url != blank -%}
+            {%- assign men_has_links = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        {%- if section.settings.men_category_heading != blank and men_has_links -%}
         <div class="popular-searches__category">
           <h3 class="popular-searches__category-heading" 
               style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
@@ -58,8 +71,22 @@
             {%- endfor -%}
           </div>
         </div>
+        {%- endif -%}
 
         <!-- Women's Links -->
+        {%- assign women_has_links = false -%}
+        {%- for i in (1..15) -%}
+          {%- assign link_key_text = 'women_link_' | append: i | append: '_text' -%}
+          {%- assign link_key_url = 'women_link_' | append: i | append: '_url' -%}
+          {%- assign link_text = section.settings[link_key_text] -%}
+          {%- assign link_url = section.settings[link_key_url] -%}
+          {%- if link_text != blank and link_url != blank -%}
+            {%- assign women_has_links = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        {%- if section.settings.women_category_heading != blank and women_has_links -%}
         <div class="popular-searches__category">
           <h3 class="popular-searches__category-heading" 
               style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
@@ -84,8 +111,22 @@
             {%- endfor -%}
           </div>
         </div>
+        {%- endif -%}
 
         <!-- Juniors' Links -->
+        {%- assign juniors_has_links = false -%}
+        {%- for i in (1..15) -%}
+          {%- assign link_key_text = 'juniors_link_' | append: i | append: '_text' -%}
+          {%- assign link_key_url = 'juniors_link_' | append: i | append: '_url' -%}
+          {%- assign link_text = section.settings[link_key_text] -%}
+          {%- assign link_url = section.settings[link_key_url] -%}
+          {%- if link_text != blank and link_url != blank -%}
+            {%- assign juniors_has_links = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        {%- if section.settings.juniors_category_heading != blank and juniors_has_links -%}
         <div class="popular-searches__category">
           <h3 class="popular-searches__category-heading" 
               style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
@@ -110,8 +151,22 @@
             {%- endfor -%}
           </div>
         </div>
+        {%- endif -%}
 
         <!-- Accessories Links -->
+        {%- assign accessories_has_links = false -%}
+        {%- for i in (1..15) -%}
+          {%- assign link_key_text = 'accessories_link_' | append: i | append: '_text' -%}
+          {%- assign link_key_url = 'accessories_link_' | append: i | append: '_url' -%}
+          {%- assign link_text = section.settings[link_key_text] -%}
+          {%- assign link_url = section.settings[link_key_url] -%}
+          {%- if link_text != blank and link_url != blank -%}
+            {%- assign accessories_has_links = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        {%- if section.settings.accessories_category_heading != blank and accessories_has_links -%}
         <div class="popular-searches__category">
           <h3 class="popular-searches__category-heading" 
               style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
@@ -136,8 +191,22 @@
             {%- endfor -%}
           </div>
         </div>
+        {%- endif -%}
 
         <!-- Home & Living Links -->
+        {%- assign home_living_has_links = false -%}
+        {%- for i in (1..15) -%}
+          {%- assign link_key_text = 'home_living_link_' | append: i | append: '_text' -%}
+          {%- assign link_key_url = 'home_living_link_' | append: i | append: '_url' -%}
+          {%- assign link_text = section.settings[link_key_text] -%}
+          {%- assign link_url = section.settings[link_key_url] -%}
+          {%- if link_text != blank and link_url != blank -%}
+            {%- assign home_living_has_links = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        
+        {%- if section.settings.home_living_category_heading != blank and home_living_has_links -%}
         <div class="popular-searches__category">
           <h3 class="popular-searches__category-heading" 
               style="font-size: {{ section.settings.category_heading_size }}px; font-weight: {{ section.settings.category_heading_weight }};">
@@ -162,6 +231,7 @@
             {%- endfor -%}
           </div>
         </div>
+        {%- endif -%}
       </div>
     </div>
   </div>
