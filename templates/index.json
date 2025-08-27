@@ -180,14 +180,14 @@
             "video_height": "auto"
           }
         },
-        "slide_t67dtE": {
+        "slide_MQYHRk": {
           "type": "slide",
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/Apperals-banner-up3_7e094194-9bdb-4cef-904f-90e05b971398.jpg",
-            "mobile_image": "shopify://shop_images/Apparels-banner-mob_cea58837-d0f6-430b-b6af-3c34484e1eef.jpg",
-            "link": "shopify://collections/apparels",
+            "desktop_image": "shopify://shop_images/Vest-banner-3.jpg",
+            "mobile_image": "shopify://shop_images/Vest-banner-mob.jpg",
+            "link": "shopify://collections/men-innerwear-vests",
             "heading": "",
             "heading_color": "#ffffff",
             "heading_margin": "0 0 0.5rem 0",
@@ -224,14 +224,14 @@
             "video_height": "auto"
           }
         },
-        "slide_MQYHRk": {
+        "slide_t67dtE": {
           "type": "slide",
           "settings": {
             "media_type": "image",
             "video_url": "",
-            "desktop_image": "shopify://shop_images/Vest-banner-3.jpg",
-            "mobile_image": "shopify://shop_images/Vest-banner-mob.jpg",
-            "link": "shopify://collections/men-innerwear-vests",
+            "desktop_image": "shopify://shop_images/Apperals-banner-up3_7e094194-9bdb-4cef-904f-90e05b971398.jpg",
+            "mobile_image": "shopify://shop_images/Apparels-banner-mob_cea58837-d0f6-430b-b6af-3c34484e1eef.jpg",
+            "link": "shopify://collections/apparels",
             "heading": "",
             "heading_color": "#ffffff",
             "heading_margin": "0 0 0.5rem 0",
@@ -317,8 +317,8 @@
         "slide_fYzgGH",
         "slide_NyU9gq",
         "slide_ei88tz",
-        "slide_t67dtE",
         "slide_MQYHRk",
+        "slide_t67dtE",
         "slide_x4MUnh"
       ],
       "name": "Dynamic Slick Slider",
