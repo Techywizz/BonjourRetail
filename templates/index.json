@@ -1061,6 +1061,7 @@
         "column_HmH3Ri": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Belts_for_men.png",
             "image_link": "shopify://collections/buy-men-belts",
             "title": "",
             "text": "",
