@@ -732,7 +732,7 @@
         "column_HBHkGB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Tshirt.png",
+            "image": "shopify://shop_images/Artboard_1_4f7e5a89-4fa5-4a2c-93f5-1b491868f67d.webp",
             "image_link": "https://www.bonjourretail.com/collections/men-tshirts",
             "title": "",
             "text": "",
@@ -743,7 +743,7 @@
         "column_iYnCLx": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/107A9837_0011_107A9838.webp",
+            "image": "shopify://shop_images/Artboard_4_9a57cb98-2ede-4c6b-b9e3-77fa2b48378c.webp",
             "image_link": "https://www.bonjourretail.com/collections/men-short-kurta",
             "title": "",
             "text": "",
@@ -754,7 +754,7 @@
         "column_eD8tUe": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/7.png",
+            "image": "shopify://shop_images/Artboard_2_323922c9-07f1-4690-aadd-8f6d80d7ffd0.webp",
             "image_link": "https://www.bonjourretail.com/collections/men-lowers",
             "title": "",
             "text": "",
@@ -765,7 +765,7 @@
         "column_kn6icL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/8.png",
+            "image": "shopify://shop_images/Artboard_3_e3c85181-0d12-431d-8990-9fa8b096f0bc.webp",
             "image_link": "https://www.bonjourretail.com/collections/men-shorts",
             "title": "",
             "text": "",
@@ -885,9 +885,9 @@
         "column_C4fk4w": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/invisible_socks_2.png",
+            "image": "shopify://shop_images/Artboard_5_f54e1bda-9a9b-46b5-9dad-3f11613d697b.webp",
             "image_link": "shopify://collections/women-shorts",
-            "title": "",
+            "title": "Shorts",
             "text": "",
             "link_label": "",
             "link": ""
@@ -1027,7 +1027,7 @@
         "column_xLaBa7": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/brief_22455ba3-a14f-40cc-94ff-fafa247c0a24.png",
+            "image": "shopify://shop_images/cycling_shorts.webp",
             "image_link": "shopify://collections/women-cycling-shorts",
             "title": "",
             "text": "",
