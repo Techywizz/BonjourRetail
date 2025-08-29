@@ -454,7 +454,7 @@
           "type": "category_tab",
           "settings": {
             "tab_title": "New Products",
-            "collection": "baby-socks",
+            "collection": "new-product",
             "view_all_text": "View All Products",
             "view_all_link": ""
           }
