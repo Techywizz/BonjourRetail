@@ -39,7 +39,7 @@
       "type": "expandable-content",
       "name": "Expandable Content",
       "settings": {
-        "title": "BONJOUR India- Trusted Since 1988 in Socks & Essentials",
+        "title": "BONJOUR India- Trusted Since 1988",
         "description": "<p>Bonjour was founded in 1988, with a vision as to be a global leader in fashion-knit and fashion wear by empowering innovation, technology, and design to provide complete<br/>customer satisfaction</p><p>\"Bonjour is a trusted brand name for men’s socks, handkerchiefs,<br/>tights, stockings, undergarments, underskirt shorts for school kids. With a<br/>mission to spread its services to the b2b segment, bonjour manufactures socks<br/>for various renowned brands and enjoys over a decade long business association<br/>with our business partners.\"</p>",
         "expanded_content": "<p><strong>Global Presence:-</strong></p><p>The<br/>popularity of the organization has been to such on global context that our<br/>reach has touched the <strong>United States, Gulf countries, and other European markets</strong>.</p><p><strong>Technologies & Capabilities:-</strong></p><p>Bonjour is the only brand which<br/>uses imported patented technologies to provide the most durable products to its<br/>consumers. <strong>Anti-microbial treatment </strong>is used which provides<br/>long lasting freshness, anti-odor and bacteria free products.<br/><br/><br/><br/></p><ul><li>500+ Computerized Knitting Machines</li><li>20 ROSSO Linking Machines & and 25 Hand<br/>     Linked Machines</li><li>Own Silicon Printing Machines</li><li>N9 SILVER TECHNOLOGY</li></ul><p><br/><br/>Products manufactured under highly integrated<br/>process with 400 state-of-the-art, fully computerized socks knitting machines<br/>providing capacities of <strong>100,000 pairs/day</strong><br/><br/><br/><br/><br/><br/></p><p><strong>Network:-</strong></p><p> </p><p>Bonjour, today serves more than 16000+<br/>retailers and over 180+ distributors PAN India and is known as the most<br/>versatile and the largest socks manufacturer.</p><p> </p><p>Bonjour products are available across<br/>leading online marketplaces like Amazon, Flipkart, Myntra, Blinkit and others.</p>",
         "button_text": "KNOW MORE",
@@ -184,6 +184,7 @@
     },
     "expandable_content_fN6VQW": {
       "type": "expandable-content",
+      "disabled": true,
       "name": "Expandable Content",
       "settings": {
         "title": "About BONJOUR",
